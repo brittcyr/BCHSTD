@@ -1,0 +1,21 @@
+#top
+{
+	height: 40px;
+}
+
+#Logo
+{
+	position: relative;
+	float: left;
+}
+
+#NavBar
+{
+	position: relative;
+	float: right;
+}
+
+#NavBar a
+{
+	text-decoration: none;
+}
