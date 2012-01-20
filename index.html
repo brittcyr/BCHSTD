@@ -11,8 +11,8 @@
 				<img src="icon_images/icon-usmap.png"/>
 			</div>
 			<div id="NavBar">
-				<a href="#" onclick="viewSignup()"> Sign Up </a>
-				<a href="#" onclick="viewLogin()"> Login </a>
+				<a id="link1" href="#" onclick="view('signup')"> Sign Up </a>
+				<a id="link2" href="#" onclick="view('login')"> Login </a>
 			</div>
 		</div>
 		<div id="main">
@@ -36,7 +36,7 @@
 		</div>
 		<div id="signup">
 			<form class="forms">
-				<a href="#" onclick="closeSignup()"> Close </a>
+				<a href="#" onclick="hide('signup')"> Close </a>
 				Email: <input type="text" name="user_email"/> <br/>
 				Password: <input type="password" name="user_password"/> <br/>
 				Confirm Password: <input type="password" name="confirm_password"/> <br/>
@@ -45,7 +45,7 @@
 		</div>
 		<div id="login">
 			<form class="forms">
-				<a href="#" onclick="closeLogin()"> Close </a>
+				<a href="#" onclick="hide('login')"> Close </a>
 				Email: <input type="text" name="user_email"/> <br/>
 				Password: <input type="password" name="user_password"/> <br/>
 				<input type="submit" value="Login" />	

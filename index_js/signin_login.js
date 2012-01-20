@@ -1,19 +1,18 @@
-function viewSignup()
+var menu_open = false;
+
+
+function view(id)
 {
-	document.getElementById("signup").style.display="block";
+	if (!(menu_open))
+	{
+		document.getElementById(id).style.display="block";
+		menu_open = true;
+	}
 }
 
-function viewLogin()
+function hide(id)
 {
-	document.getElementById("login").style.display="block";
+	document.getElementById(id).style.display="none";
+	menu_open = false;
 }
 
-function closeSignup()
-{
-	document.getElementById("signup").style.display="none";
-}
-
-function closeLogin()
-{
-	document.getElementById("login").style.display="none";
-}
