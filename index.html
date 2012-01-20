@@ -3,11 +3,16 @@
 		<title> Fantasy Politics </title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/signup_login.css"/>
+		<script type="text/javascript" src="index_js/signin_login.js"></script>
 	</head>
 	<body>
 		<div id="top">
 			<div id="Logo">
 				<img src="icon_images/icon-usmap.png"/>
+			</div>
+			<div id="NavBar">
+				<a href="#" onclick="viewSignup()"> Sign Up </a>
+				<a href="#" onclick="viewLogin()"> Login </a>
 			</div>
 		</div>
 		<div id="main">
@@ -30,7 +35,8 @@
 			</div>	
 		</div>
 		<div id="signup">
-			<form>
+			<form class="forms">
+				<a href="#" onclick="closeSignup()"> Close </a>
 				Email: <input type="text" name="user_email"/> <br/>
 				Password: <input type="password" name="user_password"/> <br/>
 				Confirm Password: <input type="password" name="confirm_password"/> <br/>
@@ -38,7 +44,8 @@
 			</form>
 		</div>
 		<div id="login">
-			<form>
+			<form class="forms">
+				<a href="#" onclick="closeLogin()"> Close </a>
 				Email: <input type="text" name="user_email"/> <br/>
 				Password: <input type="password" name="user_password"/> <br/>
 				<input type="submit" value="Login" />	
