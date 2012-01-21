@@ -19,7 +19,7 @@ if (isset($_POST['user_email'])) {
 	} else {
 		$query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
 		$result = mysql_query($query) or die(mysql_error());
-                require 'home.php';
+                include 'home.php';
 	}
 }
 
