@@ -1,5 +1,6 @@
-<!-- Home Page --!>
-
+<?php
+echo 'Welcome, ' . $_SESSION['user'];
+?>
 
 <html>
 	<head>
@@ -20,19 +21,19 @@
 		</div>
 		<div id="main">
 			<div id="news_feed">
-				<!-- RSS News Feed --!>
+
 			</div>
 			<div id="profile">
 				<h1> Profile </h1>
-				<!-- Profile (Picture, email, et cetera --!>
+
 			</div>
 		</div>
 		<div id="bottom">
 			<div id="friend_scoreboard">
-				<!-- Friend scoreboard --!>
+
 			</div>
 			<div id="overall_scoreboard">
-				<!-- Overall scoreboard --!>
+
 			</div>
 		</div>
 	</body>
