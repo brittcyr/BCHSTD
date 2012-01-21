@@ -15,7 +15,8 @@ if (isset($_POST['user_email'])) {
         $result = $result[0];
 
 	if ($result>0) {
-		echo 'Error, email already used';		
+		echo 'Error, email already used';
+		include 'index.php';		
 	} else {
 		$query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
 		$result = mysql_query($query) or die(mysql_error());
@@ -25,16 +26,3 @@ if (isset($_POST['user_email'])) {
 
 mysql_close($db);
 ?>
-
-<!--
-<html>
-	<head></head>
-	<body>
-		<form action="signup.php" method="post">
-			Email: <input type="text" name="user_email"></input><br />
-			Password: <input type="password" name="user_password"></input><br />
-			<input type="submit" />
-		</form>
-	</body>
-</html>
---!>

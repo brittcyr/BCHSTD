@@ -1,9 +1,5 @@
 <!-- Home Page --!>
-<?php
-if (isset($_POST['user_email'])) {
-echo 'its here';
-}
-?>
+
 
 <html>
 	<head>
