@@ -1,16 +1,4 @@
 <!-- Home Page --!>
-<?php
-session_start();
-$_SESSION['test'] = 'hi';
-require 'db.php';
-$email = htmlspecialchars($_POST['user_email']);
-$password = htmlspecialchars($_POST['user_password']);
-$confirm = htmlspecialchars($_POST['confirm_password']);
-$password = sha1($password);
-$query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
-$result = mysql_query($query) or die(mysql_error());
-mysql_close($db);
-?>
 
 <html>
 	<head>
