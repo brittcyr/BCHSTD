@@ -18,8 +18,7 @@ if (isset($_POST['user_email'])) {
  
 
 	if ($result>0) {
-		echo 'Error, email already used';
-		include 'index.php';		
+                header('Location:index.html');	
 	} else {
 		$query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
 		$result = mysql_query($query) or die(mysql_error());
