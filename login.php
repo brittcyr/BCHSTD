@@ -12,7 +12,7 @@ if (isset($_POST['user_email'])) {
         $result = $result[0];
 
 	if ($result<1) {
-		      header('Location:index.html');		
+		      header('Location:index.php');		
 	} else {
 	$query = "SELECT password FROM users WHERE email='$email'";
 	$result = mysql_query($query) or die('bad query');
@@ -21,7 +21,7 @@ if (isset($_POST['user_email'])) {
 
         if($result==$password){echo 'Success   '; 
 		       $_SESSION['user']  = $email;
-		       include 'home.php';}
+		       header(Location:'home.php');}
 
 		       else{
 		       header('Location:index.php');
