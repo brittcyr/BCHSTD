@@ -14,8 +14,6 @@ $result = mysql_query($query) or die('bad query');
         $result = mysql_fetch_array($result);
         $result = $result[0];
 
- 
-
 if ($result>0) {
                 header('Location:index.php');
 } else {

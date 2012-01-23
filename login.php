@@ -6,6 +6,10 @@ if (isset($_POST['user_email'])) {
 	$password = htmlspecialchars($_POST['user_password']);
 	$password = sha1($password);
 
+        $parts = explode("@",$email);
+        $count = count($parts);
+        echo '$count';
+
 	$query = "SELECT COUNT(*) FROM users WHERE email='$email'";
 	$result = mysql_query($query) or die('bad query');
         $result = mysql_fetch_array($result);
