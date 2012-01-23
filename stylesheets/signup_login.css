@@ -20,3 +20,9 @@
 	float: right;
 	color: black;
 }
+
+
+#check
+{
+	display: none;
+}

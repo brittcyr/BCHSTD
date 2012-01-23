@@ -40,8 +40,8 @@
 			<form class="forms" action="signup.php" method="post">
 				<a href="#" onclick="hide('signup')"> Close </a>
 				Email: <input type="text" name="user_email"/> <br/>
-				Password: <input type="password" name="user_password"/> <br/>
-				Confirm Password: <input type="password" name="confirm_password"/> <br/>
+				Password: <input id="text1" type="password" name="user_password" onchange="passwordCheck()"/> <br/>
+				Confirm Password: <input id="text2" type="password" name="confirm_password" onchange="passwordCheck()"/> <img id="x" src="images/x.png"/> <img id="check" src="images/check.png"/> <br/>
 				<input type="submit" value="Sign Up!!" />	
 			</form>
 		</div>

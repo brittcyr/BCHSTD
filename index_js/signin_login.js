@@ -17,11 +17,21 @@ function hide(id)
 	menu_open = false;
 }
 
-//confirm passwords are equivalent
-function passwordCheck(pass1, pass2)
+//confirm passwords are equivalent by displaying either "x.png" or "check.png"
+function passwordCheck()
 {
+
+	var pass1 = document.getElementById("text1").select();
+	var pass2 = document.getElementById("text2").select();
+	alert(pass1);
+	alert(pass2);
+
 	if (pass1 == pass2){
-		//code
+		document.getElementById("x").style.display="none";
+		document.getElementById("check").style.display="inline";
+
 	}else{
-		//code
+		document.getElementById("x").style.display="inline";
+		document.getElementById("check").style.display="none";
 	}
+}
