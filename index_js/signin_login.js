@@ -21,10 +21,10 @@ function hide(id)
 function passwordCheck()
 {
 
-	var pass1 = document.getElementById("text1").select();
-	var pass2 = document.getElementById("text2").select();
-	//alert(pass1);
-	//alert(pass2);
+	var pass1 = document.getElementById("text1").value;
+	var pass2 = document.getElementById("text2").value;
+	alert(pass1);
+	alert(pass2);
 
 	if (pass1 == pass2){
 		document.getElementById("x").style.display="none";
