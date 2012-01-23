@@ -30,10 +30,14 @@
 	</a>
       </div>
       <div class="bottom_third">
-	<img src="images/leaderboard.jpg"/>
+	<a href="leaderboard.php">
+	  <img src="images/leaderboard.jpg"/>
+	</a>
       </div>
       <div class="bottom_third">
-	<img src="images/about_us.jpg"/>
+	<a href="about_us.php">
+	  <img src="images/about_us.jpg"/>
+	</a>
       </div>
     </div>
     <div id="signup">
