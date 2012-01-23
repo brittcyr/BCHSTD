@@ -1,5 +1,6 @@
 <?php
-echo 'Welcome, ' . $_SESSION['user'];
+if isset($_SESSION['user']){
+echo 'Welcome, ' . $_SESSION['user'];}
 ?>
 
 <html>
