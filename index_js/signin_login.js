@@ -1,7 +1,7 @@
 var menu_open = false;
 var long_enough = false;
 var pass_confirm = false;
-
+var email_used=false;
 
 //Opens menu for login or signup if no menu is open already
 function view(id)
@@ -9,6 +9,7 @@ function view(id)
 	if (!(menu_open))
 	{
 		document.getElementById(id).style.display="block";
+		document.getElementById("button1").disabled=true;
 		menu_open = true;
 	}
 }
@@ -54,4 +55,24 @@ function passwordCheck()
 		document.getElementById("x").style.display="inline";
 		document.getElementById("check").style.display="none";
 	}
+}
+
+function emailCheck()
+{
+	email = document.getElementById("text3").value;
+	if (email==""){
+		return;
+	}
+	xmlhttp=new XMLHttpRequest();
+/*
+	xmlhttp.onreadychangestate=function(){
+		if xmlhttp.readyState==4 && xmlhttp.status==200){
+			email_used = xmlhttp.responseText;
+			alert(email_used);
+		}
+	}
+
+	xmlhttp.open("GET","check_email.php?email="+email);
+	xmlhttp.send();
+*/
 }
