@@ -13,10 +13,10 @@ echo 'Welcome, ' . $_SESSION['user'];
 				<img src="icon_images/icon-usmap.png"/>
 			</div>
 			<div id="NavBar">
-				<a href="candidates.html"> Candidates </a>
+				<a href="candidates.php"> Candidates </a>
 				<a href="home.php"> Home </a>
 				<a href="map.php"> Map </a>
-				<a href="logout.php"> Logout </a>
+				<a href="php/logout.php"> Logout </a>
 			</div>
 		</div>
 		<div id="main">
