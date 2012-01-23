@@ -1,3 +1,7 @@
+<?php
+require_once 'db.php';
+?>
+
 <html>
 	<head>
 		<title>Leaderboard</title>
@@ -23,3 +27,8 @@
 
 	</body>
 </html>
+
+
+<?php
+mysql_close($db);
+?>

@@ -24,24 +24,28 @@
 			</div>
 		</div>
 		<div id="bottom">
-			<div class="bottom_third">
+			<div id="left_bottom">
 				<a href="candidates.php">
 				  <img src="images/candidates.jpg"/>
 				</a>
 			</div>
-			<div class="bottom_third">
-				<img src="images/leaderboard.jpg"/>
+			<div id="center_bottom">
+				<a href="leaderboard.php">
+				  <img src="images/leaderboard.jpg"/>
+				</a>
 			</div>
-			<div class="bottom_third">
-				<img src="images/about_us.jpg"/>
+			<div id="right_bottom">
+			  	<a href="about_us.php">
+				  <img src="images/about_us.jpg"/>
+				</a>
 			</div>	
 		</div>
 		<div id="signup">
 			<form class="forms" action="signup.php" method="post">
 				<a href="#" onclick="hide('signup')"> Close </a>
 				Email: <input type="text" name="user_email"/> <br/>
-				Password: <input id="text1" type="password" name="user_password" onchange="passwordCheck()"/> <br/>
-				Confirm Password: <input id="text2" type="password" name="confirm_password" onchange="passwordCheck()"/> <img id="x" src="images/x.png"/> <img id="check" src="images/check.png"/> <br/>
+				Password: <input type="password" name="user_password"/> <br/>
+				Confirm Password: <input type="password" name="confirm_password"/> <br/>
 				<input type="submit" value="Sign Up!!" />	
 			</form>
 		</div>
