@@ -8,9 +8,9 @@ $query = "SELECT * FROM users WHERE email='$email'";
 $result = mysql_query($query) or die('bad query');
 
 if (count($result) == 0){
-	echo true;
+	echo "true";
 } else {
-	echo false
+	echo "false";
 }
 
 mysql_close($db);
