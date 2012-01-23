@@ -31,7 +31,7 @@ header('Location:index.php');}
 
 			</div>
 
-			<div id="map>
+			<div id="map"
 
 			</div>
 
@@ -42,3 +42,8 @@ header('Location:index.php');}
 
 	</body>
 </html>
+
+
+<?php
+mysql_close($db);
+?>

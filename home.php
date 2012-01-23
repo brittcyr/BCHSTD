@@ -44,3 +44,8 @@ header('Location:index.php');}
 		</div>
 	</body>
 </html>
+
+
+<?php
+mysql_close($db);
+?>
