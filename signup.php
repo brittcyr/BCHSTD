@@ -17,12 +17,12 @@ $result = mysql_query($query) or die('bad query');
  
 
 if ($result>0) {
-                include('Location:index.html');
+                header('Location:index.php');
 } else {
 $query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
 $result = mysql_query($query) or die(mysql_error());
                 $_SESSION['user'] = $email;
-                include 'home.php';
+                header(Location:'home.php');
 }
 }
 
