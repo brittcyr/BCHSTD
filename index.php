@@ -1,5 +1,5 @@
 <html>
-  <head>
+ <head>
     <title> Fantasy Politics </title>
     <link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/signup_login.css"/>

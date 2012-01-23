@@ -32,7 +32,12 @@ echo 'Welcome, ' . $_SESSION['user'];
 			</div>
 			<div id="profile">
 				<h1> Profile </h1>
-
+ <form class="forms" action="update_profile.php" method="post">
+	Email: <input type="text" name="user_email"/> <br/>
+	Password: <input id="text1" type="password" name="user_password"/> <br/>
+	Confirm Password: <input id="text2" type="password" name="confirm_password"/> <br/>
+	<input id="button1" type="submit" value="Submit!" />
+      </form>
 			</div>
 		</div>
 		<div id="bottom">
