@@ -5,7 +5,7 @@ if (!isset($_SESSION['user']))
 {
 session_destroy();
 header('Location:index.php');}
-echo 'Welcome' . $_SESSION['user'];
+echo 'Welcome, ' . $_SESSION['user'];
 ?>
 
 
