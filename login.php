@@ -12,8 +12,7 @@ if (isset($_POST['user_email'])) {
         $result = $result[0];
 
 	if ($result<1) {
-		       echo 'Invalid email or password';
-		include 'index.php';		
+		      header('Location:index.html');		
 	} else {
 	$query = "SELECT password FROM users WHERE email='$email'";
 	$result = mysql_query($query) or die('bad query');
@@ -25,7 +24,7 @@ if (isset($_POST['user_email'])) {
 		       include 'home.php';}
 
 		       else{
-		       echo 'Invalid email or password'; include 'index.php';
+		       header('Location:index.html');
 		       }
 	}
 }
