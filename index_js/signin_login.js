@@ -2,6 +2,7 @@ var menu_open = false;
 var long_enough = false;
 var pass_confirm = false;
 
+
 //Opens menu for login or signup if no menu is open already
 function view(id)
 {
@@ -37,19 +38,20 @@ function passwordCheck()
 
 
 	if (pass1 == pass2){
-		document.getElementById("x").style.display="none";
-		document.getElementById("check").style.display="inline";
 		pass_confirm = true;
 
 	}else{
-		document.getElementById("x").style.display="inline";
-		document.getElementById("check").style.display="none";
 		pass_confirm = false;
 	}
 
 	if (long_enough && pass_confirm){
 		document.getElementById("button1").disabled=false;
+		document.getElementById("x").style.display="none";
+		document.getElementById("check").style.display="inline";
+
 	}else{
 		document.getElementById("button1").disabled=true;
+		document.getElementById("x").style.display="inline";
+		document.getElementById("check").style.display="none";
 	}
 }
