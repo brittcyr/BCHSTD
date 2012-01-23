@@ -37,7 +37,7 @@
 			</div>	
 		</div>
 		<div id="signup">
-			<form class="forms" action="php/signup.php" method="post">
+			<form class="forms" action="signup.php" method="post">
 				<a href="#" onclick="hide('signup')"> Close </a>
 				Email: <input type="text" name="user_email"/> <br/>
 				Password: <input type="password" name="user_password"/> <br/>
@@ -46,7 +46,7 @@
 			</form>
 		</div>
 		<div id="login">
-			<form class="forms" action="php/login.php" method="post">
+			<form class="forms" action="login.php" method="post">
 				<a href="#" onclick="hide('login')"> Close </a>
 				Email: <input type="text" name="user_email"/> <br/>
 				Password: <input type="password" name="user_password"/> <br/>

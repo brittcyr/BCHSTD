@@ -16,7 +16,7 @@ echo 'Welcome, ' . $_SESSION['user'];
 				<a href="candidates.php"> Candidates </a>
 				<a href="home.php"> Home </a>
 				<a href="map.php"> Map </a>
-				<a href="php/logout.php"> Logout </a>
+				<a href="logout.php"> Logout </a>
 			</div>
 		</div>
 		<div id="main">

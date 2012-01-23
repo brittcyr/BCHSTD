@@ -10,7 +10,7 @@
 				<img src="icon_images/icon-usmap.png" />
 			</div>
 			<div id="navbar">
-				<a href="candidates.html"> Candidates </a>
+				<a href="candidates.php"> Candidates </a>
 				<a href="home.php"> Home </a>
 				<a href="map.php"> Map </a>
 				<a href="logout.php"> Logout </a>

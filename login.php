@@ -24,7 +24,7 @@ if (isset($_POST['user_email'])) {
 		       include 'home.php';}
 
 		       else{
-		       header('Location:index.html');
+		       header('Location:index.php');
 		       }
 	}
 }
