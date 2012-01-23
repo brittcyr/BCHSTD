@@ -1,3 +1,12 @@
+<?php
+require_once 'db.php';
+session_start();
+if (!isset($_SESSION['user']))
+{
+session_destroy();
+header('Location:index.php');}
+?>
+
 <html>
 	<head>
 		<title>Map</title>
@@ -22,7 +31,7 @@
 
 			</div>
 
-			<div id="map>
+			<div id="map"
 
 			</div>
 
@@ -33,3 +42,8 @@
 
 	</body>
 </html>
+
+
+<?php
+mysql_close($db);
+?>

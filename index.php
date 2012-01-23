@@ -24,15 +24,15 @@
 			</div>
 		</div>
 		<div id="bottom">
-			<div id="left_bottom">
+			<div class="bottom_third">
 				<a href="candidates.php">
 				  <img src="images/candidates.jpg"/>
 				</a>
 			</div>
-			<div id="center_bottom">
+			<div class="bottom_third">
 				<img src="images/leaderboard.jpg"/>
 			</div>
-			<div id="right_bottom">
+			<div class="bottom_third">
 				<img src="images/about_us.jpg"/>
 			</div>	
 		</div>

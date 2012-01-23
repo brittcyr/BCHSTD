@@ -1,7 +1,12 @@
 <?php
-if isset($_SESSION['user']){
-echo 'Welcome, ' . $_SESSION['user'];}
+require_once 'db.php';
+session_start();
+if (!isset($_SESSION['user']))
+{
+session_destroy();
+header('Location:index.php');}
 ?>
+
 
 <html>
 	<head>
@@ -39,3 +44,8 @@ echo 'Welcome, ' . $_SESSION['user'];}
 		</div>
 	</body>
 </html>
+
+
+<?php
+mysql_close($db);
+?>
