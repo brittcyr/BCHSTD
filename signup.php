@@ -6,7 +6,7 @@ $email = htmlspecialchars($_POST['user_email']);
 $password = htmlspecialchars($_POST['user_password']);
 $confirm = htmlspecialchars($_POST['confirm_password']);
         if ($password <> $confirm)
-        {echo 'Error, confirm password, try again'; include 'index.php';}
+        {header('Location:index.php');}
 $password = sha1($password);
 
 $query = "SELECT COUNT(*) FROM users WHERE email='$email'";
@@ -23,6 +23,5 @@ $result = mysql_query($query) or die(mysql_error());
                 header('Location:home.php');
 }
 }
-
 mysql_close($db);
 ?>

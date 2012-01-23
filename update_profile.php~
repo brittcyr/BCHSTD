@@ -9,7 +9,6 @@ $confirm = htmlspecialchars($_POST['confirm_password']);
         {echo 'Error, confirm password, try again'; include 'index.php';}
 $password = sha1($password);
 
-
 $query = "SELECT COUNT(*) FROM users WHERE email='$email'";
 $result = mysql_query($query) or die('bad query');
         $result = mysql_fetch_array($result);
