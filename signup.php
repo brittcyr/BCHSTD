@@ -22,7 +22,7 @@ if ($result>0) {
 $query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
 $result = mysql_query($query) or die(mysql_error());
                 $_SESSION['user'] = $email;
-                header(Location:'home.php');
+                header('Location:home.php');
 }
 }
 

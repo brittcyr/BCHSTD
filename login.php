@@ -21,7 +21,7 @@ if (isset($_POST['user_email'])) {
 
         if($result==$password){echo 'Success   '; 
 		       $_SESSION['user']  = $email;
-		       header(Location:'home.php');}
+		       header('Location:home.php');}
 
 		       else{
 		       header('Location:index.php');
