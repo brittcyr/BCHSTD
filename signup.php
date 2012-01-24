@@ -9,6 +9,13 @@ $confirm = htmlspecialchars($_POST['confirm_password']);
         {header('Location:index.php');}
 $password = sha1($password);
 
+$email_split = explode('@',$email);
+$email = $email_split[0];
+if ( count($email_split) >  2){
+header('Location:index.php');
+}
+
+
 $query = "SELECT COUNT(*) FROM users WHERE email='$email'";
 $result = mysql_query($query) or die('bad query');
         $result = mysql_fetch_array($result);
