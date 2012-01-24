@@ -45,7 +45,7 @@ function passwordCheck()
 		pass_confirm = false;
 	}
 
-	if (long_enough && pass_confirm){
+	if (long_enough && pass_confirm && !email_used){
 		document.getElementById("button1").disabled=false;
 		document.getElementById("x").style.display="none";
 		document.getElementById("check").style.display="inline";
@@ -59,20 +59,27 @@ function passwordCheck()
 
 function emailCheck()
 {
+/*
 	email = document.getElementById("text3").value;
 	if (email==""){
 		return;
 	}
 	xmlhttp=new XMLHttpRequest();
-/*
-	xmlhttp.onreadychangestate=function(){
-		if xmlhttp.readyState==4 && xmlhttp.status==200){
-			email_used = xmlhttp.responseText;
-			alert(email_used);
+	xmlhttp.onreadystatechange = function(){
+		if (xmlhttp.readyState == 4){
+			var response =xmlhttp.responseText;
+			//alert(response);
+			if (response == "true"){
+				email_used = true;	
+			} else {
+				email_used = false;
+			}
 		}
 	}
+	var url = "check_email.php?email="+email;
+	
 
-	xmlhttp.open("GET","check_email.php?email="+email);
+	xmlhttp.open("GET",url, true);
 	xmlhttp.send();
 */
 }
