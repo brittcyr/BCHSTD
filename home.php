@@ -28,7 +28,7 @@ echo 'Welcome, ' . $_SESSION['user'];
 		</div>
 		<div id="main">
 			<div id="news_feed">
-
+			  
 			</div>
 			<div id="profile">
 				<h1> Profile </h1>
@@ -42,10 +42,10 @@ echo 'Welcome, ' . $_SESSION['user'];
 		</div>
 		<div id="bottom">
 			<div id="friend_scoreboard">
-
+			  <h1> Friend Scoreboard </h1>
 			</div>
 			<div id="overall_scoreboard">
-
+			  <h1> Overall Scoreboard </h1>
 			</div>
 		</div>
 	</body>
