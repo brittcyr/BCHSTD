@@ -1,13 +1,8 @@
 <?php
 session_start();
-
-//require ('/BCHSTD/library.php');
-//require ('/db.php');
-   $host = 'sql.mit.edu';
-   $username = 'hsharon';
-   $password = 'hsharon';
-   $db=mysql_connect($host, $username, $password) or die('Could not connect: ' . mysql_error());
-   mysql_select_db('hsharon+6.470');
+$source =  dirname(dirname(__FILE__));
+require_once  "$source" . "/db.php";
+require_once  "$source" . "/library.php";
 
 $_SESSION['user'] = 'abc@123.com';
 if(!isset($_SESSION['user'])){
