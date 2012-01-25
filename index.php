@@ -3,6 +3,7 @@
     <title> Fantasy Politics </title>
     <link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/signup_login.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/index_main.css"/>
     <script type="text/javascript" src="index_js/signin_login.js"></script>
   </head>
   <body>
@@ -20,7 +21,9 @@
 	<img src="icon_images/main_logo.png"/>
       </div>
       <div id="page_title">
-	<h1> Fantasy Politics </h1>
+	<h1> Fantasy Politics </h1> <br/>
+	<button id="signup_button" type="button" onclick="view('signup')"> Sign Up </button> <br/>
+	<button id="login_button" type="button" onclick="view('login')"> Login </button>
       </div>
     </div>
     <div id="bottom">
