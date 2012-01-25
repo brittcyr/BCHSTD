@@ -39,6 +39,7 @@ if (!isset($_SESSION['user']))
 		<div id="bottom">
 			<div id="upcoming_picks">
 			  <h1> Upcoming Picks </h1>
+			  <?php require ("home/upcoming_picks.php"); ?>
 			</div>
 			<div id="overall_scoreboard">
 			  <h1> Overall Scoreboard </h1>

@@ -8,7 +8,6 @@ if (isset($_POST['user_email'])) {
 
         $parts = explode("@",$email);
         $count = count($parts);
-        echo '$count';
 
 	$query = "SELECT COUNT(*) FROM users WHERE email='$email'";
 	$result = mysql_query($query) or die('bad query');

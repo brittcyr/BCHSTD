@@ -5,7 +5,7 @@ session_start();
 
 <?php
 echo	'Email: <input id="user_email" type="text" name="user_email" value="'
-                . $_SESSION['user'] .'"/> <br/>';
+                . $_SESSION['user'] .'"/> <br/>' . "\n";
 ?>
 	Password: <input id="text1" type="password" name="user_password"/> <br/>
 	Confirm Password: <input id="text2" type="password" name="confirm_password"/> <br/>
