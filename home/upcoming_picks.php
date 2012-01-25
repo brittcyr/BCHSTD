@@ -9,16 +9,17 @@ session_destroy(); echo 'not logged in';}
 
 $user = $_SESSION['user'];
 
-
-$query  = "SELECT A.*,
-	          B.date
+$query  = "SELECT A.STATE,
+	          B.DATE,
+                  B.CANDIDATE
 	   FROM user_selections AS A JOIN results AS B
 	     ON A.state = B.state
 	   WHERE A.is_locked='N'
 	     AND A.email = '$user'
-	   ORDER BY B.date";
+	   ORDER BY B.date
+	   LIMIT 10";
 
-$result = mysql_query($query) or die ('bad query');
+$result = mysql_query($query) or die ("$query");
 
 if (count($result)==0){exit();}
 
@@ -29,15 +30,15 @@ echo "<table>
       <th>State</th>
       </tr> </br> \n";
 
+
 while($row = mysql_fetch_array($result))
   {
   echo "<tr>" . "\n";
-  echo "<td>" . $row['date'] . "</td>" . "\n";
-  echo "<td>" . $row['candidate'] . "</td>" . "\n";
-  echo "<td>" . $row['state'] . "</td>" . "\n";
+  echo "<td>" . $row['DATE'] . "</td>" . "\n";
+  echo "<td>" . $row['CANDIDATE'] . "</td>" . "\n";
+  echo "<td>" . $row['STATE'] . "</td>" . "\n";
   echo "</tr> </br>" . "\n";
   }
-echo "\n </table>" . "\n";
 
-mysql_close($db);
+echo "\n </table>" . "\n";
 ?>
