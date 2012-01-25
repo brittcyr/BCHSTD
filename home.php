@@ -32,11 +32,11 @@ echo 'Welcome, ' . $_SESSION['user'];
 
 		<div id="main">
 			<div id="news_feed">
-			  
+			  <h1> Political News </h1>
 			</div>
 			<div id="profile">
 				<h1> Profile </h1>
- <form class="forms" action="update_profile.php" method="post">
+      <form class="forms" action="update_profile.php" method="post">
 
 <?php
 echo	'Email: <input id="user_email" type="text" name="user_email" value="'
@@ -46,13 +46,13 @@ echo	'Email: <input id="user_email" type="text" name="user_email" value="'
 	Confirm Password: <input id="text2" type="password" name="confirm_password"/> <br/>
 	Home State: <input id="home_state" type="text" name="home_state"/> <br/>
 	Political Party: <input id="party" type="text" name="party"/> <br/>
-	<input id="button1" type="submit" value="Submit!" />
+	<input id="button1" type="submit" value="Change Profile" />
       </form>
 			</div>
 		</div>
 		<div id="bottom">
-			<div id="friend_scoreboard">
-			  <h1> Friend Scoreboard </h1>
+			<div id="upcoming_picks">
+			  <h1> Upcoming Picks </h1>
 			</div>
 			<div id="overall_scoreboard">
 			  <h1> Overall Scoreboard </h1>
