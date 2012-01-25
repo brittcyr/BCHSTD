@@ -43,4 +43,13 @@ $result = 1 - min($result,1);
 return $result;
 }
 
+
+
+function getusername($email)
+{
+$email_split = explode('@',$email);
+return $email_split[0];
+}
+
+
 ?>

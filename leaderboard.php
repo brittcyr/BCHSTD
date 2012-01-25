@@ -1,5 +1,6 @@
 <?php
 require_once 'db.php';
+require_once 'library.php';
 ?>
 
 <html>
@@ -22,7 +23,34 @@ require_once 'db.php';
 		</div>
 
 		<div id="main">
-			
+<?php
+$query  = "SELECT email,
+	          current_score
+	   FROM users
+	   ORDER BY current_score
+	   DESC";
+
+$result = mysql_query($query) or die ('bad query');
+
+if (count($result)==0){exit();}
+
+echo "<table>
+      <tr>
+      <th>User</th>
+      <th>Score</th>
+      </tr> </br> \n";
+
+while($row = mysql_fetch_array($result))
+  {
+      $email = $row['email'];
+      $email = getusername($email);
+  echo "<tr>" . "\n";
+  echo "<td>" . "$email" . "</td>" . "\n";
+  echo "<td>" . $row['current_score'] . "</td>" . "\n";
+  echo "</tr> </br>" . "\n";
+  }
+echo "\n </table>" . "\n";
+?>	
 		</div>	
 
 	</body>

@@ -4,7 +4,6 @@ $source =  dirname(dirname(__FILE__));
 require_once  "$source" . "/db.php";
 require_once  "$source" . "/library.php";
 
-$_SESSION['user'] = 'abc@123.com';
 if(!isset($_SESSION['user'])){
 session_destroy(); echo 'not logged in';}
 
