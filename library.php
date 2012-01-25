@@ -3,16 +3,18 @@
 function checkemail($email)
 {
 $email_split = explode('@',$email);
-if ( count($email_split) <>  2){return 0;}
+if (count($email_split) <>  2){return 0;}
 
 $name = $email_split[0];
 $domain = $email_split[1];
 
 $domain_split = explode('.',$domain);
-if ( count($domain_split) <>  2){return 0;}
+if (count($domain_split) <>  2){return 0;}
 
 return 1;
 }
+
+
 
 function checkpassword($password, $confirm)
 {
@@ -24,6 +26,8 @@ if (strlen("$password")<6)
 
 return 1;
 }
+
+
 
 
 function isemailtaken($email)

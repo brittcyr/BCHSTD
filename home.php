@@ -1,10 +1,8 @@
 <?php
 require_once 'db.php';
 session_start();
-if (!isset($_SESSION['user'])){
-   session_destroy();
-   header('Location:index.php');
-   exit();}
+if (!isset($_SESSION['user']))
+   {require 'logout.php';  exit();}
 ?>
 
 
@@ -26,29 +24,17 @@ if (!isset($_SESSION['user'])){
 			</div>
 		</div>
 
-<?php
-echo 'Welcome, ' . $_SESSION['user'];
-?>
+<?php echo 'Welcome, ' . $_SESSION['user']; ?>
 
 		<div id="main">
 			<div id="news_feed">
 			  <h1> Political News </h1>
 			</div>
-			<div id="profile">
-				<h1> Profile </h1>
-      <form class="forms" action="update_profile.php" method="post">
 
-<?php
-echo	'Email: <input id="user_email" type="text" name="user_email" value="'
-                . $_SESSION['user'] .'"/> <br/>';
-?>
-	Password: <input id="text1" type="password" name="user_password"/> <br/>
-	Confirm Password: <input id="text2" type="password" name="confirm_password"/> <br/>
-	Home State: <input id="home_state" type="text" name="home_state"/> <br/>
-	Political Party: <input id="party" type="text" name="party"/> <br/>
-	<input id="button1" type="submit" value="Change Profile" />
-      </form>
-			</div>
+			<div id="profile">
+			  <h1> Profile </h1>
+			  <?php require ("home/profile.php"); ?>
+                        </div>
 		</div>
 		<div id="bottom">
 			<div id="upcoming_picks">

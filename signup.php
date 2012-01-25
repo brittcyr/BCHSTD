@@ -19,7 +19,7 @@ if (isset($_POST['user_email']))
    if ($isvalidpsswd == 0){
    header('Location:index.php'); mysql_close($db); exit();}
    
-   if ($isemailtaken==0) {
+   if ($isemailtaken == 0) {
    header('Location:index.php'); mysql_close($db); exit();}
    
    $query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
