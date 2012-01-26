@@ -33,9 +33,7 @@
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
-	font-size: 20px;
 	height: 100%;
-	width: 20%;
 	text-align: center;
 	text-size: 50%;
 }
