@@ -43,8 +43,9 @@ if (!isset($_SESSION['user']))
 			  <?php require ("home/upcoming_picks.php"); ?>
 			</div>
 
-			<div id="overall_scoreboard">
-			  <h1> Overall Scoreboard </h1>
+			<div id="my_results">
+			  <h1> My Results </h1>
+			  <?php require ("home/my_results.php"); ?>
 			</div>
 		</div>
 	</body>
