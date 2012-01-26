@@ -94,10 +94,11 @@ return $result;
 }
 
 
-function insert_user_selection($email, $state, $candidate)
+function insert_user_selection($state, $candidate)
 {
 require_once 'db.php';
-$email = htmlspecialchars($email);
+session_start();
+$email = $_SESSION['user'];
 $query = "SELECT count(*) FROM user_selections WHERE email='$email' AND state='$state'";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
@@ -110,5 +111,7 @@ if ($result == 0)
 $result = mysql_query($query) or die('bad query');
 mysql_close($db);
 }
+
+function testconnect($a){return $a;}
 
 ?>
