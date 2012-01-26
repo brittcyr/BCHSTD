@@ -32,10 +32,9 @@ $confirm = htmlspecialchars($_POST['confirm_password']);
 $user = $_SESSION['user'];
 
 if (checkpassword($password,$confirm)<>0)
-{ 
+{
 $password = sha1($password);
-$user = $_SESSION['user'];
-$query = "UPDATE users SET password='$password' WHERE email ='user'";
+$query = "UPDATE users SET password='$password' WHERE email ='$user'";
 $result = mysql_query($query) or die(mysql_error());
 }
 }
