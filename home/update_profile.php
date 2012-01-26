@@ -29,9 +29,10 @@ $_SESSION['user'] = $email;}
 if (isset($_POST['user_password']) && isset($_POST['confirm_password'])) {
 $password = htmlspecialchars($_POST['user_password']);
 $confirm = htmlspecialchars($_POST['confirm_password']);
+$user = $_SESSION['user'];
 
-if (!checkpassword($password,$confirm)==0)
-{
+if (checkpassword($password,$confirm)<>0)
+{ 
 $password = sha1($password);
 $user = $_SESSION['user'];
 $query = "UPDATE users SET password='$password' WHERE email ='user'";
