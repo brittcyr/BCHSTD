@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/signup_login.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesheets/index_main.css"/>
-    <script type="text/javascript" src="index_js/signin_login.js"></script>
+    <script type="text/javascript" src="javascript/signin_login.js"></script>
   </head>
   <body>
     <div id="top">

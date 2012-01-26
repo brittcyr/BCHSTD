@@ -29,6 +29,7 @@ function changeCandidate(candidate_id){
 	color = CANDIDATE_COLORS[candidate_id];
 }
 
+//save updates as user makes them
 function saveUpdate(state_id, candidate_id){
 	xmlhttp=new XMLHttpRequest();
 
@@ -50,6 +51,7 @@ function saveUpdate(state_id, candidate_id){
 	
 }
 
+// this function is called when the page loads to get the users selections
 function getUpdate(){
 
 	xmlhttp=new XMLHttpRequest();
@@ -61,8 +63,6 @@ function getUpdate(){
 			var i = 1;
 			for (i=1; i<= result.length; i++){
 				var temp = result[i].split('#');
-				var temp_state = temp[0];
-				var temp_color = CANDIDATE_COLORS[temp[1]];
 				document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
 
 			}
