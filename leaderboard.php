@@ -43,9 +43,9 @@ echo "<table>
 while($row = mysql_fetch_array($result))
   {
       $email = $row['email'];
-      $email = getusername($email);
+      $username = getusername($email);
   echo "<tr>" . "\n";
-  echo "<td>" . "$email" . "</td>" . "\n";
+  echo "<td>" . "$username" . "</td>" . "\n";
   echo "<td>" . $row['current_score'] . "</td>" . "\n";
   echo "</tr> </br>" . "\n";
   }

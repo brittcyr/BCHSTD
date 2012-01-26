@@ -31,6 +31,7 @@ echo "<table>
       <th>State</th>
       <th>Winner</th>
       <th>Delegates</th>
+      <th>Points</th>
       </tr> </br> \n";
 
 
@@ -42,6 +43,11 @@ while($row = mysql_fetch_array($result))
   echo "<td>" . $row['STATE'] . "</td>" . "\n";
   echo "<td>" . $row['WINNER'] . "</td>" . "\n";
   echo "<td>" . $row['DELEGATES'] . "</td>" . "\n";
+
+$score = 0;
+if ($row['PICK']==$row['WINNER']){$score = $row['DELEGATES'];}
+echo "<td>" . $score . "</td>" . "\n";
+
   echo "</tr> </br>" . "\n";
   }
 

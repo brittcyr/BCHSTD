@@ -1,8 +1,10 @@
 <?php
 require_once 'db.php';
+require_once 'library.php';
 session_start();
 if (!isset($_SESSION['user']))
    {require 'logout.php';  exit();}
+$user = $_SESSION['user'];
 ?>
 
 
@@ -23,12 +25,24 @@ if (!isset($_SESSION['user']))
 				<a href="logout.php"> Logout </a>
 			</div>
 		</div>
+</br>
 
-<?php echo 'Welcome, ' . $_SESSION['user']; ?>
+
+<?php echo 'Welcome, ' . $_SESSION['user']; ?> </br>
+Current Score is:
+<?php $score = getscore("$user"); echo "$score"; ?> </br>
+You are ranked: 
+<?php $score = getrank("$user"); echo "$score"; ?>
+ out of 
+<?php $score = gettotalplayers(); echo "$score"; ?> </br>
+
 
 		<div id="main">
 			<div id="news_feed">
 			  <h1> Political News </h1>
+
+INSERT RSS FEED HERE
+
 			</div>
 
 			<div id="profile">

@@ -52,4 +52,46 @@ return $email_split[0];
 }
 
 
+
+
+function getscore($email)
+{
+require_once 'db.php';
+$email = htmlspecialchars($email);
+$query = "SELECT current_score FROM users WHERE email='$email'";
+$result = mysql_query($query) or die('bad query');
+$result = mysql_fetch_array($result);
+$result = $result[0];
+mysql_close($db);
+return $result;
+}
+
+
+
+function getrank($email)
+{
+require_once 'db.php';
+$email = htmlspecialchars($email);
+$score = getscore("$email");
+$query = "SELECT COUNT(*) FROM users WHERE current_score > '$score'";
+$result = mysql_query($query) or die('bad query');
+$result = mysql_fetch_array($result);
+$result = $result[0] + 1;
+mysql_close($db);
+return $result;
+}
+
+
+function gettotalplayers()
+{
+require_once 'db.php';
+$query = "SELECT COUNT(*) FROM users";
+$result = mysql_query($query) or die('bad query');
+$result = mysql_fetch_array($result);
+$result = $result[0];
+mysql_close($db);
+return $result;
+}
+
+
 ?>
