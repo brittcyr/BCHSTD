@@ -122,7 +122,11 @@ session_start();
 $email = $_SESSION['user'];
 $query = "SELECT A.state, A.candidate FROM user_selections AS A WHERE email='$email'";
 $result = mysql_query($query) or die('bad query');
-return $result;
+$return = '';
+while($row = mysql_fetch_array($result))
+{
+$return = "$return" . "$row['state']" . "$row['candidate']";}
+return $return;
 mysql_close($db);
 }
 
