@@ -1,10 +1,10 @@
 var color="red";
 
 var CANDIDATE_COLORS = new Object();
-CANDIDATE_COLORS["Romney"]="red";
-CANDIDATE_COLORS["Paul"]="blue";
-CANDIDATE_COLORS["Santorum"]="green";
-CANDIDATE_COLORS["Gingrich"]="yellow"; 
+CANDIDATE_COLORS["ROMNEY"]="red";
+CANDIDATE_COLORS["PAUL"]="blue";
+CANDIDATE_COLORS["SANTORUM"]="green";
+CANDIDATE_COLORS["GINGRICH"]="yellow"; 
 
 var COLORS_CANDIDATES = new Object();
 COLORS_CANDIDATES["red"]="ROMNEY";
@@ -33,10 +33,9 @@ function saveUpdate(state_id, candidate_id){
 	xmlhttp=new XMLHttpRequest();
 
 	var params = "state="+state_id+"&candidate="+candidate_id;  
-
+	
 	xmlhttp.onreadystatechange=function(){
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-			alert(xmlhttp.responseText);
 		}
 	}
 /*
@@ -58,7 +57,15 @@ function getUpdate(){
 
 	xmlhttp.onreadystatechange=function(){
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-			alert(xmlhttp.responseText);
+			var result = xmlhttp.responseText.split('!');
+			var i = 1;
+			for (i=1; i<= result.length; i++){
+				var temp = result[i].split('#');
+				var temp_state = temp[0];
+				var temp_color = CANDIDATE_COLORS[temp[1]];
+				document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
+
+			}
 		}
 	}
 

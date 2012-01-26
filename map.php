@@ -98,11 +98,10 @@ header('Location:index.php');}
 			</div>
 			<div id="picks_or_results">
 				<div id="candidates">
-					<button id="Romney" onclick="changeCandidate('Romney')" type="button"> Romney </button>
-					<button id="Paul" onclick="changeCandidate('Paul')" type="button"> Paul </button>
-					<button id="Santorum" onclick="changeCandidate('Santorum')" type="button"> Santorum </button>
-					<button id="Gingrich" onclick="changeCandidate('Gingrich')" type="button"> Gingrich </button>
-				</div>
+					<button id="ROMNEY" onclick="changeCandidate('ROMNEY')" type="button"> Romney </button>
+					<button id="PAUL" onclick="changeCandidate('PAUL')" type="button"> Paul </button>
+					<button id="SANTORUM" onclick="changeCandidate('SANTORUM')" type="button"> Santorum </button>
+					<button id="GINGRICH" onclick="changeCandidate('GINGRICH')" type="button"> Gingrich </button> </div>
 			</div>
 		</div>	
 
