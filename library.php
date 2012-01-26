@@ -114,4 +114,19 @@ mysql_close($db);
 
 function testconnect($a){return $a;}
 
+
+function pull_user_selections()
+{
+require_once 'db.php';
+session_start();
+$email = $_SESSION['user'];
+$query = "SELECT A.state, A.candidate FROM user_selections AS A WHERE email='$email'";
+$result = mysql_query($query) or die('bad query');
+return $result;
+mysql_close($db);
+}
+
+}
+
+
 ?>
