@@ -11,10 +11,10 @@ $user = $_SESSION['user'];
 
 $query  = "SELECT A.STATE,
 	          B.DATE,
-                  B.CANDIDATE
+                  A.CANDIDATE
 	   FROM user_selections AS A JOIN results AS B
 	     ON A.state = B.state
-	   WHERE A.is_locked='N'
+	   WHERE B.DATE > CURDATE()
 	     AND A.email = '$user'
 	   ORDER BY B.date
 	   LIMIT 10";
