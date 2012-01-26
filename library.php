@@ -103,10 +103,10 @@ $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $result = $result[0];
 
+$query = "UPDATE user_selections SET candidate='$candidate' WHERE email='$email' AND state='$state'";
 if ($result == 0)
 {$query = "INSERT INTO user_selections (email, state, candidate) VALUES ('$email', '$state', '$candidate')";}
-else
-{$query = "UPDATE user_selections SET candidate='$candidate' WHERE email='$email' AND state='$state'";}
+
 $result = mysql_query($query) or die('bad query');
 mysql_close($db);
 }
