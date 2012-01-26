@@ -21,6 +21,11 @@ $user = $_SESSION['user'];
 			<div id="NavBar">
 				<a href="candidates.php"> Candidates </a>
 				<a href="home.php"> Home </a>
+
+
+
+
+
 				<a href="map.php"> Map </a>
 				<a href="logout.php"> Logout </a>
 			</div>

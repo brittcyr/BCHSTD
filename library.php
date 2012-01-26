@@ -126,7 +126,5 @@ return $result;
 mysql_close($db);
 }
 
-}
-
 
 ?>
