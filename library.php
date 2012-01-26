@@ -94,4 +94,21 @@ return $result;
 }
 
 
+function insert_user_selection($email, $state, $candidate)
+{
+require_once 'db.php';
+$email = htmlspecialchars($email);
+$query = "SELECT count(*) FROM user_selections WHERE email='$email' AND state='$state'";
+$result = mysql_query($query) or die('bad query');
+$result = mysql_fetch_array($result);
+$result = $result[0];
+
+if ($result == 0)
+{$query = "INSERT INTO user_selections (email, state, candidate) VALUES ('$email', '$state', '$candidate')";}
+else
+{$query = "UPDATE user_selections SET candidate='$candidate' WHERE email='$email' AND state='$state'";}
+$result = mysql_query($query) or die('bad query');
+mysql_close($db);
+}
+
 ?>
