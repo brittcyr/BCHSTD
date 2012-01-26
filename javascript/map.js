@@ -52,6 +52,7 @@ function saveUpdate(state_id, candidate_id){
 }
 
 function getUpdate(){
+
 	xmlhttp=new XMLHttpRequest();
 
 

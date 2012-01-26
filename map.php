@@ -15,7 +15,7 @@ header('Location:index.php');}
 		<script type="text/javascript" src="javascript/map.js"> </script>
 	</head>
 
-	<body>
+	<body onload="getUpdate()">
 		<div id="top">
 			<div id="logo">
 				<img src="icon_images/icon-usmap.png" />
@@ -96,7 +96,6 @@ header('Location:index.php');}
 
 
 			</div>
-
 			<div id="picks_or_results">
 				<div id="candidates">
 					<button id="Romney" onclick="changeCandidate('Romney')" type="button"> Romney </button>
