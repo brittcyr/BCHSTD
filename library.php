@@ -125,7 +125,8 @@ $result = mysql_query($query) or die('bad query');
 $return = '';
 while($row = mysql_fetch_array($result))
 {
-$return = "$return" . "$row['state']" . "$row['candidate']";}
+$return = "$return" . $row['state'] . $row['candidate'];
+}
 return $return;
 mysql_close($db);
 }
