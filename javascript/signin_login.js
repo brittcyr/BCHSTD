@@ -45,6 +45,42 @@ function passwordCheck()
 		pass_confirm = false;
 	}
 
+	checkSubmit();	
+}
+
+function emailCheck()
+{
+
+	var email = document.getElementById("text3").value;
+	if (email==""){
+		return;
+	}
+
+
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function(){
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+			var response =xmlhttp.responseText;
+			if (response == 0){
+				email_used = true;
+				alert("This email address is already being used.");
+			} else {
+				 email_used = false; 
+				checkSubmit();
+			}
+		}
+	}
+	var url = "ajax_php_files/check_email.php?email="+email;
+	
+
+	xmlhttp.open("GET",url, true);
+	xmlhttp.send();
+
+}
+
+function checkSubmit(){
+
+	//alert("Is it long enough? "+long_enough+" Do the passwords match? "+pass_confirm+" Is the email used? "+email_used);
 	if (long_enough && pass_confirm && !email_used){
 		document.getElementById("button1").disabled=false;
 		document.getElementById("x").style.display="none";
@@ -55,31 +91,4 @@ function passwordCheck()
 		document.getElementById("x").style.display="inline";
 		document.getElementById("check").style.display="none";
 	}
-}
-
-function emailCheck()
-{
-/*
-	email = document.getElementById("text3").value;
-	if (email==""){
-		return;
-	}
-	xmlhttp=new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function(){
-		if (xmlhttp.readyState == 4){
-			var response =xmlhttp.responseText;
-			//alert(response);
-			if (response == "true"){
-				email_used = true;	
-			} else {
-				email_used = false;
-			}
-		}
-	}
-	var url = "check_email.php?email="+email;
-	
-
-	xmlhttp.open("GET",url, true);
-	xmlhttp.send();
-*/
 }
