@@ -51,6 +51,20 @@ function saveUpdate(state_id, candidate_id){
 	
 }
 
+function getUpdate(){
+	xmlhttp=new XMLHttpRequest();
+
+
+	xmlhttp.onreadystatechange=function(){
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+			alert(xmlhttp.responseText);
+		}
+	}
+
+	xmlhttp.open("GET","ajax_php_files/get_choices.php",true);
+	xmlhttp.send();
+}
+
 
 
 
