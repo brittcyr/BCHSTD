@@ -16,7 +16,7 @@ require_once 'library.php';
 				<img src="icon_images/icon-usmap.png" />
 			</div>
 			<div id="navbar">
-<?php require_once 'navbar.php'; ?>
+			  <?php require_once 'navbar.php'; ?>
 			</div>		
 		</div>
 
