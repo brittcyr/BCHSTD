@@ -26,7 +26,7 @@ $user = $_SESSION['user'];
 </br>
 
 		<div id="main">
-
+			<div id="welcome">
 <?php echo 'Welcome, ' . $_SESSION['user']; ?> </br>
 Current Score is:
 <?php $score = getscore("$user"); echo "$score"; ?> </br>
@@ -35,7 +35,7 @@ You are ranked:
  out of 
 <?php $score = gettotalplayers(); echo "$score"; ?> </br>
 
-
+			</div>
 
 			<div id="profile">
 			  <h1> Profile </h1>
