@@ -26,7 +26,7 @@ body
 
 #profile
 {
-    width: 340px;
+    width: 380px;
     padding: 20px;
     padding-top: 10px;
     padding-bottom: 0px;
@@ -56,13 +56,9 @@ body
 #profile form select
 {
     margin-top: 10px;
-    height: 30px;
+    height: 35px;
     border-radius: 10px;
-}
-
-#political_party
-{
-    margin-right: 9px;
+    padding: 8px;
 }
 
 
@@ -70,16 +66,18 @@ body
 {
     width: 200px;
     border: solid;
+    border-width: 1px;
     margin-top: 20px;
     margin-right: 40px;
     border-radius: 10px;
+    font-size: 16px;
 }
 
 #my_results
 {       
-    margin-left: 390px;
-    margin-top: -480px;
-    width: 1000px;
+    margin-left: 435px;
+    margin-top: -490px;
+    width: 950px;
 }
 
 #my_results table
