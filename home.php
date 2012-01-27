@@ -20,20 +20,13 @@ $user = $_SESSION['user'];
 				<img src="icon_images/icon-usmap.png"/>
 			</div>
 			<div id="NavBar">
-				<a href="candidates.php"> Candidates </a>
-				<a href="home.php"> Home </a>
-
-
-
-
-
-				<a href="map.php"> Map </a>
-				<a href="logout.php"> Logout </a>
+			  <?php require_once 'navbar.php'; ?>
 			</div>
 		</div>
 </br>
 
 		<div id="main">
+
 <?php echo 'Welcome, ' . $_SESSION['user']; ?> </br>
 Current Score is:
 <?php $score = getscore("$user"); echo "$score"; ?> </br>
