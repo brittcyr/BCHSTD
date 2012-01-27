@@ -48,9 +48,9 @@
       </div>
     </div>
     <div id="signup">
+	<a href="#" onclick="hide('signup')"><img class="close_button" src="icon_images/close.gif"/></a>
       <form class="forms" action="signup.php" method="post">
-	<a href="#" onclick="hide('signup')"> Close </a>
-	Email: <input id="text3" type="text" name="user_email" onkeyup="emailCheck()"/> <br/>
+		Email: <input id="text3" type="text" name="user_email" onkeyup="emailCheck()"/> <br/>
 	Password: <input id="text1" type="password" name="user_password" onchange="passwordCheck()" onkeyup="passwordCheck()"/> <br/>
 	Confirm Password: <input id="text2" type="password" name="confirm_password" onchange="passwordCheck()" onkeyup="passwordCheck()"/> <img id="x" src="images/x.png"/> <img id="check" src="images/check.png"/> <br/>
 	<div id="help_message">Reminder: The password must be at least six characters or numbers </div>
@@ -58,8 +58,8 @@
       </form>
     </div>
     <div id="login">
+	<a href="#" onclick="hide('login')"> <img class="close_button" src="icon_images/close.gif"/></a>
       <form class="forms" action="login.php" method="post">
-	<a href="#" onclick="hide('login')"> Close </a>
 	Email: <input type="text" name="user_email"/> <br/>
 	Password: <input type="password" name="user_password"/> <br/>
 	<input id="button2" type="submit" value="Login" />

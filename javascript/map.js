@@ -35,11 +35,11 @@ function changeMode(new_mode){
 
 function changeColor(state_id){
 
-	if (state_id in finished_states){
-		alert("This state has already held its primary. You can no longer make or change this pick");
-		return;
-	}
 	if (mode == "choices"){	
+		if (state_id in finished_states){
+			alert("This state has already held its primary. You can no longer make or change this pick.");
+			return;
+		}
 		var current_color = document.getElementById(state_id).style.fill;
 		if (current_color != color){
 			document.getElementById(state_id).style.fill=color;
