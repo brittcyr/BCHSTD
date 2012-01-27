@@ -10,6 +10,15 @@ function view(id)
 	{
 		document.getElementById(id).style.display="block";
 		document.getElementById("button1").disabled=true;
+		if (id == "signup")
+		{
+			document.getElementById("text1").value="";
+			document.getElementById("text2").value="";
+			document.getElementById("text3").value="";
+			document.getElementById("text3").focus();
+		} else {
+			document.getElementById("text4").focus();
+		}
 		menu_open = true;
 	}
 }

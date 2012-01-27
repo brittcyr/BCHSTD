@@ -71,8 +71,7 @@ svg.state-map
 	color: yellow;
 }
 
-
-#state-map.state:hover
+.state:hover
 {
-    fill: grey;
+	fill: #00FF00;
 }

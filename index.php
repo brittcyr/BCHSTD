@@ -61,7 +61,7 @@
     <div id="login">
 	<a href="#" onclick="hide('login')"> <img class="close_button" src="icon_images/close.gif"/></a>
       <form class="forms" action="login.php" method="post">
-	Email: <input type="text" name="user_email"/> <br/>
+	Email: <input id="text4" type="text" name="user_email"/> <br/>
 	Password: <input type="password" name="user_password"/> <br/>
 	<input id="button2" type="submit" value="Login" />
       </form>
