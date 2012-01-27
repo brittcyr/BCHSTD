@@ -174,7 +174,8 @@ return $return;
 mysql_close($db);
 }
 
-/*function pull_popular_picks()
+/*
+function pull_popular_picks()
 {
 require_once 'db.php';
 $query = "SELECT INTO #temptable count(*) AS COUNT, state, candidate 
