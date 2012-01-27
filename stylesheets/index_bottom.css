@@ -8,12 +8,15 @@
 {
 	float: left;
 	border-style: solid;
-	width: 460px;
+	border-radius: 15px;
+	width: 440px;
 	text-align: center;
+	margin: 10px;
+	height: 400px;
 }
 
 #bottom div img
 {
-	width: 450px;
+	width: 430px;
 	height: 300px;
 }

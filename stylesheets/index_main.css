@@ -8,6 +8,8 @@
 	height: 500px;
 	width: 1400px;
 	border-style: solid;
+	border-radius: 15px;
+	margin-bottom: 10px;
 }
 
 #main_image
