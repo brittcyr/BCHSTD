@@ -16,9 +16,10 @@ $political_party = $result['political_party'];
 <?php
 echo	'Email: <input id="user_email" type="text" name="user_email" value="'
                 . $_SESSION['user'] .'"/> <br/>' . "\n";
-echo	'Password: <input id="text1" type="password" name="user_password"/> <br/>';
-echo	'Confirm Password: <input id="text2" type="password" name="confirm_password"/> <br/>';
 ?>
+Password: <input id="text1" type="password" name="user_password"/> <br/>
+Confirm Password: <input id="text2" type="password" name="confirm_password"/> <br/>
+
 Home State:
 <select id="home_state" name="home_state">
 <option></option>
@@ -72,14 +73,19 @@ Home State:
 <option value="WV">WEST VIRGINIA</option>
 <option value="WI">WISCONSIN</option>
 <option value="WY">WYOMING</option>
+</select>
 <br/>
 
-<?php
-echo '<br/>';
-if ($political_party == '')
-{echo	'Political Party: <input id="political_party" type="text" name="political_party" /> <br/>';}else
-{echo	'Political Party: <input id="political_party" type="text" name="political_party" value='. "$political_party" .  " /> <br/>";}
-?>
+
+Political Party:
+<select id="political_party" name="political_party">
+<option></option>
+<option value="DEMOCRAT">DEMOCRAT</option>
+<option value="INDEPENDENT">INDEPENDENT</option>
+<option value="REPUBLICAN">REPUBLICAN</option>
+<option value="OTHER_PARTY">OTHER PARTY</option>
+</select>
+
 	<input id="button1" type="submit" value="Change Profile" />
       </form>
 
