@@ -47,7 +47,7 @@ while($row = mysql_fetch_array($result))
   {
       $email = $row['EMAIL'];
       $username = getusername($email);
-if ($count == 0)
+if ($count == 1)
   {echo "<tr>" . "\n";}
 else {echo "<tr class='alt'>" . "\n";}
   echo "<td>" . "$username" . "</td>" . "\n";

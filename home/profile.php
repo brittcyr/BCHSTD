@@ -78,12 +78,27 @@ Home State:
 
 
 Political Party:
+<?php
+echo '
 <select id="political_party" name="political_party">
-<option></option>
-<option value="DEMOCRAT">DEMOCRAT</option>
-<option value="INDEPENDENT">INDEPENDENT</option>
-<option value="REPUBLICAN">REPUBLICAN</option>
-<option value="OTHER_PARTY">OTHER PARTY</option>
+<option></option>';
+if ($political_party == "DEMOCRAT")
+{echo '<option value="DEMOCRAT" selected="selected">DEMOCRAT</option>';}
+else
+{echo '<option value="DEMOCRAT">DEMOCRAT</option>';}
+if ($political_party == "REPUBLICAN")
+{echo '<option value="REPUBLICAN" selected="selected">REPUBLICAN</option>';}
+else
+{echo '<option value="REPUBLICAN">REPUBLICAN</option>';}
+if ($political_party == "INDEPENDENT")
+{echo '<option value="INDEPENDENT" selected="selected">INDEPENDENT</option>';}
+else
+{echo '<option value="INDEPENDENT">INDEPENDENT</option>';}
+if ($political_party == "OTHER")
+{echo '<option value="OTHER" selected="selected">OTHER</option>';}
+else
+{echo '<option value="OTHER">OTHER</option>';}
+?>
 </select>
 
 	<input id="button1" type="submit" value="Change Profile" />
