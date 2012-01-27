@@ -25,14 +25,17 @@ function changeMode(new_mode){
     mode=new_mode
 	if (mode == "choices")
 	{
+		document.getElementById('f1').style.display= "inline";
 		getUpdate();
 	}
 	if (mode == "results")
 	{
+		//document.getElementById('f1').style.display = "none";
 		getResults();
 	}
 	if (mode == "projections")
 	{
+		//document.getElementById('f1').style.display = "none";
 		getProjections();
 	}
 }

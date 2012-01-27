@@ -11,3 +11,34 @@
 }
 
 
+
+
+#main table
+{
+    width: 100%;
+    font-size: 20px;
+}
+
+#main td, #main th
+{
+    padding: 5px;
+    border: solid;
+    border-width: 2px;
+    text-align: center;
+}
+
+
+#main tr
+{
+    background-color: gray;
+}
+
+#main tr.alt
+{
+    background-color: white;
+}
+
+
+
+
+
