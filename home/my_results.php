@@ -34,16 +34,19 @@ echo "<table>
       <th>Points</th>
       </tr> </br> \n";
 
-
+$parity = 0;
 while($row = mysql_fetch_array($result))
   {
-  echo "<tr>" . "\n";
+if ($parity==0)
+ { echo "<tr class='alt'>" . "\n";}
+else
+ { echo "<tr>" . "\n";}
   echo "<td>" . $row['DATE'] . "</td>" . "\n";
   echo "<td>" . $row['PICK'] . "</td>" . "\n";
   echo "<td>" . $row['STATE'] . "</td>" . "\n";
   echo "<td>" . $row['WINNER'] . "</td>" . "\n";
   echo "<td>" . $row['DELEGATES'] . "</td>" . "\n";
-
+$parity = ($parity +1)%2;
 $score = 0;
 if ($row['PICK']==$row['WINNER']){$score = $row['DELEGATES'];}
 echo "<td>" . $score . "</td>" . "\n";
