@@ -1,0 +1,12 @@
+#main
+{
+	width: 1400px;
+	margin: auto;
+}
+
+#main div
+{
+	position: relative;
+	float: left;
+	padding: 10px;
+}

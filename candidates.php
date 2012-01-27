@@ -2,6 +2,7 @@
 	<head>
 		<title>Candidates</title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/candidates.css"/>
 	</head>
 
 	<body>

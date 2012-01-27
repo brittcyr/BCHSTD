@@ -7,11 +7,12 @@
 #bottom div
 {
 	float: left;
+	border-style: solid;
+	width: 460px;
 }
 
 #bottom div img
 {
-	width: 466px;
+	width: 450px;
 	height: 300px;
-	border-style: solid;
 }

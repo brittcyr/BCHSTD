@@ -12,6 +12,7 @@ $user = $_SESSION['user'];
 	<head>
 		<title> Fantasy Politics </title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/home.css"/>
 	</head>
 	<body>
 		<div id="top">
