@@ -19,6 +19,14 @@ var STATES = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 
 
 function changeMode(new_mode){
     mode=new_mode
+	if (mode == "choices")
+	{
+		getUpdate();
+	}
+	if (mode == "results")
+	{
+		getResults();
+	}
 }
 
 function changeColor(state_id){
