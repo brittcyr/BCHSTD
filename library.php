@@ -34,7 +34,9 @@ function isemailtaken($email)
 {
 require_once 'db.php';
 $email = htmlspecialchars($email);
-$query = "SELECT COUNT(*) FROM users WHERE email='$email'";
+$query = "SELECT COUNT(*) 
+	  FROM users 
+	  WHERE email='$email'";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $result = $result[0];
@@ -59,7 +61,8 @@ function getscore($email)
 require_once 'db.php';
 $email = htmlspecialchars($email);
 $query = "SELECT SUM(B.DELEGATES) 
-	  FROM user_selections AS A JOIN results AS B ON A.state = B.state 
+	  FROM user_selections AS A JOIN results AS B 
+	    ON A.state = B.state 
 	  WHERE A.email='$email' AND A.candidate = B.candidate";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
@@ -76,7 +79,8 @@ require_once 'db.php';
 $email = htmlspecialchars($email);
 $score = getscore("$email");
 $query = "SELECT SUM(B.DELEGATES) AS SCORE, A.EMAIL AS EMAIL 
-	  FROM user_selections AS A JOIN results AS B ON A.state = B.state 
+	  FROM user_selections AS A JOIN results AS B 
+	    ON A.state = B.state 
 	  WHERE A.candidate = B.candidate 
 	  GROUP BY A.EMAIL 
 	  ORDER BY SCORE DESC, A.EMAIL ASC";
@@ -96,12 +100,17 @@ return $count;
 function gettotalplayers()
 {
 require_once 'db.php';
-$query = "SELECT COUNT(*) FROM user_selections GROUP BY email";
+$query = "SELECT * 
+	  FROM user_selections 
+	  GROUP BY email";
 $result = mysql_query($query) or die('bad query');
-$result = mysql_fetch_array($result);
-$result = $result[0];
+$count = 0;
+while ($row = mysql_fetch_array($result))
+{
+$count++;
+}
 mysql_close($db);
-return $result;
+return $count;
 }
 
 
@@ -168,13 +177,19 @@ mysql_close($db);
 /*function pull_popular_picks()
 {
 require_once 'db.php';
-$query = "SELECT INTO #temptable count(*) AS COUNT, state, candidate FROM user_selections GROUP BY state, candidate";
+$query = "SELECT INTO #temptable count(*) AS COUNT, state, candidate 
+	  FROM user_selections 
+	  GROUP BY state, candidate";
 $result = mysql_query($query) or die('bad query');
 query = "SELECT INTO #temptable2 MAX(COUNT) AS COUNT, state FROM #temptable GROUP BY state";
 $result = mysql_query($query) or die('bad query');
-query = "SELECT INTO #temptable3 A.state, A.candidate FROM #temptable2 AS A JOIN #temptable AS B  WHERE A.COUNT = B.COUNT";
+query = "SELECT INTO #temptable3 A.state, A.candidate 
+	 FROM #temptable2 AS A JOIN #temptable AS B
+	 ON A.COUNT = B.COUNT";
 $result = mysql_query($query) or die('bad query');
-query = "SELECT state, FIRST(candidate) FROM #temptable3 GROUP BY state";
+query = "SELECT state, FIRST(candidate) 
+	 FROM #temptable3 
+	 GROUP BY state";
 $result = mysql_query($query) or die('bad query');
 
 mysql_query("DROP TABLE #temptable, #temptable2, #temptable3");

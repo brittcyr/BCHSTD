@@ -1,6 +1,5 @@
 Facebook connect
 Personalize Candidate Colors
 RSS Feed
-Dropdown Menus for home state and poltical party
 Scroll bar for leaderboard page
 
