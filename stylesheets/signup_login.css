@@ -1,6 +1,6 @@
 #signup, #login
 {
-	background-color: #948283;
+	background-color: black;
 	width: 80%;
 	height: 80%;
 	position: fixed;
@@ -12,6 +12,9 @@
 .forms 
 {
 	text-align: center;
+	margin: 5%;
+	background-color: gray;
+	height: 60%;
 }
 
 .forms a
