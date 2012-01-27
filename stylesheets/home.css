@@ -1,7 +1,6 @@
-
 body
 {
-        border: solid;
+    border: solid;
 	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
@@ -16,7 +15,33 @@ body
 {
 	width: 1400px;
 	margin: auto;
-	border: solid;
+	border: dashed;
+}
+
+#profile
+{
+    width: 300px;
+}
+
+#my_results
+{       
+    margin-left: 350px;
+    margin-top: -250px;
+    width: 1000px;
+}
+
+#my_results table
+{
+    width: 100%;
+    font-size: 20px;
+    margin-top: -220px;
+}
+
+#my_results td, #my_results th
+{
+    padding: 5px;
+    border: dashed;
+    text-align: center;
 }
 
 #bottom
@@ -35,13 +60,14 @@ div
 
 #upcoming_picks
 {
-       width: 400px;
-       height: 400px;
-       overflow: hidden;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
 }
 
 #upcoming_picks table
 {
+    font-size: 20px;
     border: dashed;
-    margin-top: -150px;
+    margin-top: -200px;
 }
