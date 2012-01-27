@@ -8,7 +8,6 @@ body
 {
 	width: 1400px;
 	margin: auto;
-	border: dotted;
 	overflow: hidden;
 	display: inline-block;
 }
@@ -17,7 +16,6 @@ body
 {
 	width: 1400px;
 	margin: auto;
-	border: dashed;
 }
 
 
@@ -25,7 +23,7 @@ body
 {
     width: 250px;
     margin-top: 150px;
-    margin-left: 25px;
+    margin-left: 50px;
 }
 
 #score
@@ -35,12 +33,17 @@ body
 
 #map
 {
-    width: 1100px;
-    margin-left: 300px;
-    margin-top: -300px;
+    width: 940px;
+    height: 593px;
+    margin-left: 350px;
+    margin-top: -400px;
     float: left;
 }
 
+svg.state-map
+{
+    width: 100%
+}
 #candidates
 {
     font-size: 20px;
