@@ -50,4 +50,24 @@ svg.state-map
     margin-top: 50px;
 }
 
+#ROMNEY
+{
+	color: red;
+}
+
+#PAUL
+{
+	color: blue;
+}
+
+#SANTORUM
+{
+	color: green;
+}
+
+#GINGRICH
+{
+	color: yellow;
+}
+
 

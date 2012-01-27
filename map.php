@@ -30,10 +30,10 @@ echo getscore($_SESSION['user']);
 			<div id="candidates">
 				<!--<ul id="candidates">-->
 				<form id='f1'>
-					<input type='radio' name='r1' value="ROMNEY" onClick="changeCandidate('ROMNEY')" checked> Romney</br>
-					<input type='radio' name='r1' value="PAUL" onClcik="changeCandidate('PAUL')"> Paul</br>
-					<input type='radio' name='r1' value="SANTORUM" onClick="changeCandidate('SANTORUM')"> Santorum</br>
-					<input type='radio' name='r1' value="GINGRICH" onClick="changeCandidate('GINGRICH')"> Gingrich</br>
+					<input type='radio' name='r1' value="ROMNEY" onClick="changeCandidate('ROMNEY')" checked/> <span id="ROMNEY"> Romney </span> </br>
+					<input type='radio' name='r1' value="PAUL" onClick="changeCandidate('PAUL')"/> <span id="PAUL">Paul</span> </br>
+					<input type='radio' name='r1' value="SANTORUM" onClick="changeCandidate('SANTORUM')"/> <span id="SANTORUM"> Santorum</span></br>
+					<input type='radio' name='r1' value="GINGRICH" onClick="changeCandidate('GINGRICH')"/> <span id="GINGRICH"> Gingrich </span></br>
 				</form>
 				<form id='f2'>
 					<input type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> Choices </br>
