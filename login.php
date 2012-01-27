@@ -31,5 +31,7 @@ if (isset($_POST['user_email'])) {
 		       }
 	}
 }
+else
+{header('Location:index.php');}
 mysql_close($db);
 ?>
