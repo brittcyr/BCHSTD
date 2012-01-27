@@ -2,12 +2,27 @@
 {
 	width: 1400px;
 	margin: auto;
+	border-style: solid;
+	border-radius: 15px;
+	height: 500px;
+	margin-top: 10px;
 }
 
 #top
 {
 	width: 1400px;
 	margin: auto;
+}
+
+#text
+{
+	width: 50em;
+	margin: auto;
+}
+
+h1
+{
+	text-align: center
 }
 
 
