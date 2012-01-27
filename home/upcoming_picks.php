@@ -30,14 +30,17 @@ echo "<table>
       <th>State</th>
       </tr> </br> \n";
 
-
+$count=0;
 while($row = mysql_fetch_array($result))
   {
-  echo "<tr>" . "\n";
+if ($count==1)
+ {echo "<tr>" . "\n";}
+else {echo "<tr class='alt'>" . "\n";}
   echo "<td>" . $row['DATE'] . "</td>" . "\n";
   echo "<td>" . $row['CANDIDATE'] . "</td>" . "\n";
   echo "<td>" . $row['STATE'] . "</td>" . "\n";
   echo "</tr> </br>" . "\n";
+$count=($count+1)%2;
   }
 
 echo "\n </table>" . "\n";

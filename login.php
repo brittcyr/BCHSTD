@@ -9,7 +9,9 @@ if (isset($_POST['user_email'])) {
         $parts = explode("@",$email);
         $count = count($parts);
 
-	$query = "SELECT COUNT(*) FROM users WHERE email='$email'";
+	$query = "SELECT COUNT(*) 
+		  FROM users 
+		  WHERE email='$email'";
 	$result = mysql_query($query) or die('bad query');
         $result = mysql_fetch_array($result);
         $result = $result[0];
@@ -17,7 +19,9 @@ if (isset($_POST['user_email'])) {
 	if ($result<1) {
 		      header('Location:index.php');		
 	} else {
-	$query = "SELECT password FROM users WHERE email='$email'";
+	$query = "SELECT password 
+		  FROM users 
+		  WHERE email='$email'";
 	$result = mysql_query($query) or die('bad query');
         $result = mysql_fetch_array($result);
         $result = $result[0];

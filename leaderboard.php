@@ -21,13 +21,14 @@ require_once 'library.php';
 		</div>
 
 		<div id="main">
+<h1>LEADERBOARD</h1> <br/>
 <?php
-$query  = "SELECT email,
-	          current_score
-	   FROM users
-	   ORDER BY current_score
-	   DESC
-	   LIMIT 10";
+$query = "SELECT SUM(B.DELEGATES) AS SCORE, A.EMAIL AS EMAIL 
+	  FROM user_selections AS A JOIN results AS B ON A.state = B.state 
+	  WHERE A.candidate = B.candidate 
+	  GROUP BY A.EMAIL 
+	  ORDER BY SCORE DESC, A.EMAIL ASC
+	  LIMIT 25";
 
 $result = mysql_query($query) or die ('bad query');
 
@@ -39,14 +40,18 @@ echo "<table>
       <th>Score</th>
       </tr> </br> \n";
 
+$count=0;
 while($row = mysql_fetch_array($result))
   {
-      $email = $row['email'];
+      $email = $row['EMAIL'];
       $username = getusername($email);
-  echo "<tr>" . "\n";
+if ($count == 0)
+  {echo "<tr>" . "\n";}
+else {echo "<tr class='alt'>" . "\n";}
   echo "<td>" . "$username" . "</td>" . "\n";
-  echo "<td>" . $row['current_score'] . "</td>" . "\n";
+  echo "<td>" . $row['SCORE'] . "</td>" . "\n";
   echo "</tr> </br>" . "\n";
+$count = ($count+1)%2;
   }
 echo "\n </table>" . "\n";
 ?>	
