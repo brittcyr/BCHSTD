@@ -1,6 +1,10 @@
+var init = true;
+
 var color="red";
 
 var mode="choices";
+
+var finished_states = new Object();
 
 var CANDIDATE_COLORS = new Object();
 CANDIDATE_COLORS["ROMNEY"]="red";
@@ -30,6 +34,11 @@ function changeMode(new_mode){
 }
 
 function changeColor(state_id){
+
+	if (state_id in finished_states){
+		alert("This state has already held its primary. You can no longer make or change this pick");
+		return;
+	}
 	if (mode == "choices"){	
 		var current_color = document.getElementById(state_id).style.fill;
 		if (current_color != color){
@@ -70,15 +79,18 @@ function getUpdate(){
 	
 	xmlhttp=new XMLHttpRequest();
 
-
 	xmlhttp.onreadystatechange=function(){
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
 			var result = xmlhttp.responseText.split('!');
 			var i = 1;
-			for (i=1; i<= result.length; i++){
+			for (i=1; i< result.length; i++){
 				var temp = result[i].split('#');
 				document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
 
+			}
+			if (init){
+				init = false;
+				getResults();
 			}
 		}
 	}
@@ -93,9 +105,12 @@ function getResults()
 	
 	var j;
 	var temp_state;
-	for (j=0; j<=49; j++){
-		temp_state=STATES[j];
-		document.getElementById(temp_state).style.fill="gray";
+	if(mode == "results")
+	{
+		for (j=0; j<=49; j++){
+			temp_state=STATES[j];
+			document.getElementById(temp_state).style.fill="gray";
+		}
 	} 
 
 	xmlhttp=new XMLHttpRequest();
@@ -105,10 +120,17 @@ function getResults()
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
 			var result = xmlhttp.responseText.split('!');
 			var i = 1;
-			for (i=1; i<= result.length; i++){
-				var temp = result[i].split('#');
-				document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
-
+			if (mode == "results")
+			{
+				for (i=1; i< result.length; i++){
+					var temp = result[i].split('#');
+					document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
+				}
+			}else{
+				for(i=1; i< result.length; i++){
+					var temp = result[i].split('#');
+					finished_states[temp[0]]=true;
+				}
 			}
 		}
 	}
@@ -116,6 +138,5 @@ function getResults()
 	xmlhttp.open("GET","ajax_php_files/get_results.php",true);
 	xmlhttp.send();
 }
-
 
 
