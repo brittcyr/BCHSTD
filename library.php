@@ -159,6 +159,8 @@ $result = mysql_query($query) or die('bad query');
 query = "SELECT state, FIRST(candidate) FROM #temptable3 GROUP BY state";
 $result = mysql_query($query) or die('bad query');
 
+mysql_query("DROP TABLE #temptable, #temptable2, #temptable3";
+
 $return = '';
 while($row = mysql_fetch_array($result))
 {
