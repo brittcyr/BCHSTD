@@ -2,7 +2,7 @@
 require_once 'db.php';
 require_once 'library.php';
 ?>
-
+<?php session_start();?>
 <html>
 	<head>
 		<title>Leaderboard</title>

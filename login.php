@@ -22,7 +22,7 @@ if (isset($_POST['user_email'])) {
         $result = mysql_fetch_array($result);
         $result = $result[0];
 
-        if($result==$password){echo 'Success   '; 
+        if($result==$password){
 		       $_SESSION['user']  = $email;
 		       header('Location:home.php');}
 

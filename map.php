@@ -21,10 +21,7 @@ header('Location:index.php');}
 				<img src="icon_images/icon-usmap.png" />
 			</div>
 			<div id="navbar">
-				<a href="candidates.php"> Candidates </a>
-				<a href="home.php"> Home </a>
-				<a href="map.php"> Map </a>
-				<a href="logout.php"> Logout </a>
+			  <?php require_once 'navbar.php'; ?>
 			</div>		
 		</div>
 
