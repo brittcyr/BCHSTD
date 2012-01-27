@@ -1,25 +1,18 @@
-#main
-{
-	width: 1400px;
-	margin: auto;
+#my_results
+{       
+    margin-left: 435px;
+    margin-top: -490px;
+    width: 950px;
 }
 
-#top
-{
-	width: 1400px;
-	margin: auto;
-}
-
-
-
-
-#main table
+#my_results table
 {
     width: 100%;
     font-size: 20px;
+    margin-top: -220px;
 }
 
-#main td, #main th
+#my_results td, #my_results th
 {
     padding: 5px;
     border: solid;
@@ -28,17 +21,12 @@
 }
 
 
-#main tr
+#my_results tr
 {
     background-color: gray;
 }
 
-#main tr.alt
+#my_results tr.alt
 {
     background-color: white;
 }
-
-
-
-
-
