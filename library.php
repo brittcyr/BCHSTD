@@ -115,6 +115,22 @@ mysql_close($db);
 function testconnect($a){return $a;}
 
 
+function pull_results()
+{
+require_once 'db.php';
+session_start();
+$query = "SELECT A.state, A.candidate FROM results AS A WHERE candidate IS NOT NULL AND candidate <>''";
+$result = mysql_query($query) or die('bad query');
+$return = '';
+while($row = mysql_fetch_array($result))
+{
+$return = "$return" . '!' . $row['state'] . '#' . $row['candidate'];
+}
+return $return;
+mysql_close($db);
+}
+
+
 function pull_user_selections()
 {
 require_once 'db.php';
@@ -131,5 +147,25 @@ return $return;
 mysql_close($db);
 }
 
+function pull_popular_picks()
+{
+require_once 'db.php';
+$query = "SELECT INTO #temptable count(*) AS COUNT, state, candidate FROM user_selections GROUP BY state, candidate";
+$result = mysql_query($query) or die('bad query');
+query = "SELECT INTO #temptable2 MAX(COUNT) AS COUNT, state FROM #temptable GROUP BY state";
+$result = mysql_query($query) or die('bad query');
+query = "SELECT INTO #temptable3 A.state, A.candidate FROM #temptable2 AS A JOIN #temptable AS B  WHERE A.COUNT = B.COUNT";
+$result = mysql_query($query) or die('bad query');
+query = "SELECT state, FIRST(candidate) FROM #temptable3 GROUP BY state";
+$result = mysql_query($query) or die('bad query');
+
+$return = '';
+while($row = mysql_fetch_array($result))
+{
+$return = "$return" . '!' . $row['state'] . '#' . $row['candidate'];
+}
+return $return;
+mysql_close($db);
+}
 
 ?>
