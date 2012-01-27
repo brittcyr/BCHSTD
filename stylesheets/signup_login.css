@@ -7,6 +7,9 @@
 	top: 10%;
 	left: 10%;
 	display: none;
+	border-style: solid;
+	border-size: 10px;
+	border-radius: 30px;
 }
 
 .forms 
@@ -15,12 +18,17 @@
 	margin: 5%;
 	background-color: gray;
 	height: 60%;
+	border-style: solid;
+	border-size: 10px;
+	border-radius: 30px;
+
 }
 
 .forms a
 {
 	float: right;
 	color: black;
+	padding: 20px;
 }
 
 

@@ -38,27 +38,6 @@
 	width: 100px;
 	text-align: center;
 	margin-top: 10px;
-}
-
-#page_title
-{
-    font-family: sans-serif;
-    font-size: 100%;
-    
-}
-
-#bottom
-{
-   display: block;
-}
-
-div.bottom_third
-{
-    width: 33%;
-    float: left;
-}
-
-div.bottom_third img
-{
-    width: 100%;
+	padding-right: 5px;
+	padding-left: 5px;
 }
