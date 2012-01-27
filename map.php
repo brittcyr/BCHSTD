@@ -1,4 +1,3 @@
-
 <html>
 	<head>
 		<title>Map</title>
@@ -21,6 +20,11 @@
 			<div id="left">
 			<div id="score">
 				score:
+<?php
+session_start();
+require_once 'library.php';
+echo getscore($_SESSION['user']);
+?>
 			</div>
 			<div id= "picks_or_results"></div>
 			<div id="candidates">
