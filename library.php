@@ -96,7 +96,7 @@ return $count;
 function gettotalplayers()
 {
 require_once 'db.php';
-$query = "SELECT COUNT(*) FROM users";
+$query = "SELECT COUNT(*) FROM user_selections GROUP BY email";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $result = $result[0];
