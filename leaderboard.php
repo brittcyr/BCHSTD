@@ -16,10 +16,21 @@ require_once 'library.php';
 				<img src="icon_images/icon-usmap.png" />
 			</div>
 			<div id="navbar">
+<?php
+session_start();
+if (!isset($_SESSION['user']))
+{
+?>
 				<a href="candidates.php"> Candidates </a>
 				<a href="home.php"> Home </a>
 				<a href="map.php"> Map </a>
 				<a href="logout.php"> Logout </a>
+<?php
+}
+else{
+echo '<a href="index.php"> Back </a>';}
+?>
+
 			</div>		
 		</div>
 
@@ -29,7 +40,8 @@ $query  = "SELECT email,
 	          current_score
 	   FROM users
 	   ORDER BY current_score
-	   DESC";
+	   DESC
+	   LIMIT 10";
 
 $result = mysql_query($query) or die ('bad query');
 
