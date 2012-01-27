@@ -34,7 +34,9 @@ function isemailtaken($email)
 {
 require_once 'db.php';
 $email = htmlspecialchars($email);
-$query = "SELECT COUNT(*) FROM users WHERE email='$email'";
+$query = "SELECT COUNT(*) 
+	  FROM users 
+	  WHERE email='$email'";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $result = $result[0];
@@ -59,7 +61,8 @@ function getscore($email)
 require_once 'db.php';
 $email = htmlspecialchars($email);
 $query = "SELECT SUM(B.DELEGATES) 
-	  FROM user_selections AS A JOIN results AS B ON A.state = B.state 
+	  FROM user_selections AS A JOIN results AS B 
+	    ON A.state = B.state 
 	  WHERE A.email='$email' AND A.candidate = B.candidate";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
@@ -76,7 +79,8 @@ require_once 'db.php';
 $email = htmlspecialchars($email);
 $score = getscore("$email");
 $query = "SELECT SUM(B.DELEGATES) AS SCORE, A.EMAIL AS EMAIL 
-	  FROM user_selections AS A JOIN results AS B ON A.state = B.state 
+	  FROM user_selections AS A JOIN results AS B 
+	    ON A.state = B.state 
 	  WHERE A.candidate = B.candidate 
 	  GROUP BY A.EMAIL 
 	  ORDER BY SCORE DESC, A.EMAIL ASC";
