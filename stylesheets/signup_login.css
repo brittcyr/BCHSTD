@@ -1,38 +1,43 @@
 #signup, #login
 {
-	background-color: black;
-	width: 80%;
-	height: 80%;
-	position: fixed;
-	top: 10%;
-	left: 10%;
+	width: 1000px;
+	height: 800px;
+	position: relative;
+	bottom: 800px;
 	display: none;
-	border-style: solid;
-	border-size: 10px;
-	border-radius: 30px;
+	margin: auto;
 }
 
 .forms 
-{
+{	
 	text-align: center;
-	margin: 5%;
-	background-color: gray;
-	height: 60%;
+	margin: auto;
+	background-color: blue;
+	height: 200px;
 	border-style: solid;
 	border-size: 10px;
 	border-radius: 30px;
-
+	border-color: black;
+	color: white;
+	font-weight: bold;
+	padding: 100px;
 }
 
 .forms a
 {
-	float: right;
-	color: black;
-	padding: 20px;
+	float: left;
 }
 
 
 #check
 {
 	display: none;
+}
+
+.close_button
+{
+	width: 40px;
+	position: relative;
+	right: 10px;
+	top: 25px;
 }

@@ -31,15 +31,19 @@ function changeMode(new_mode){
 	{
 		getResults();
 	}
+	if (mode == "projections")
+	{
+		getProjections();
+	}
 }
 
 function changeColor(state_id){
 
-	if (state_id in finished_states){
-		alert("This state has already held its primary. You can no longer make or change this pick");
-		return;
-	}
 	if (mode == "choices"){	
+		if (state_id in finished_states){
+			alert("This state has already held its primary. You can no longer make or change this pick.");
+			return;
+		}
 		var current_color = document.getElementById(state_id).style.fill;
 		if (current_color != color){
 			document.getElementById(state_id).style.fill=color;
@@ -76,6 +80,11 @@ function saveUpdate(state_id, candidate_id){
 
 // this function is called when the page loads to get the users selections
 function getUpdate(){
+
+	for (j=0; j<=49; j++){
+			temp_state=STATES[j];
+			document.getElementById(temp_state).style.fill="gray";
+		}
 	
 	xmlhttp=new XMLHttpRequest();
 
@@ -140,3 +149,40 @@ function getResults()
 }
 
 
+function getProjections()
+{
+	
+	var j;
+	var temp_state;
+	for (j=0; j<=49; j++){
+		temp_state=STATES[j];
+		document.getElementById(temp_state).style.fill="gray";
+	}
+
+	/*xmlhttp=new XMLHttpRequest();
+
+
+	xmlhttp.onreadystatechange=function(){
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+			var result = xmlhttp.responseText.split('!');
+			var i = 1;
+			if (mode == "results")
+			{
+				for (i=1; i< result.length; i++){
+					var temp = result[i].split('#');
+					document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
+				}
+			}else{
+				for(i=1; i< result.length; i++){
+					var temp = result[i].split('#');
+					finished_states[temp[0]]=true;
+				}
+			}
+		}
+	}
+
+	xmlhttp.open("GET","ajax_php_files/get_results.php",true);
+	xmlhttp.send();
+
+	*/
+}

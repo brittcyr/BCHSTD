@@ -4,7 +4,7 @@
 	margin: auto;
 	border-style: solid;
 	border-radius: 15px;
-	height: 500px;
+	height: 700px;
 	margin-top: 10px;
 }
 
@@ -23,6 +23,23 @@
 h1
 {
 	text-align: center
+}
+
+#pics
+{
+	margin: auto;
+	width: 700px;
+}
+
+
+#main img
+{
+	width: 300px;
+	position: relative;
+	float: center;
+	margin: 20px;
+	border-style: solid;
+	border-radius: 15px;
 }
 
 
