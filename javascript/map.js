@@ -67,7 +67,7 @@ function saveUpdate(state_id, candidate_id){
 
 // this function is called when the page loads to get the users selections
 function getUpdate(){
-
+	
 	xmlhttp=new XMLHttpRequest();
 
 
