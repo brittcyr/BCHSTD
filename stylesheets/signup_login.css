@@ -1,27 +1,26 @@
 #signup, #login
 {
-	width: 80%;
-	height: 80%;
-	position: fixed;
-	top: 10%;
-	left: 10%;
+	width: 1000px;
+	height: 800px;
+	position: relative;
+	bottom: 800px;
 	display: none;
+	margin: auto;
 }
 
 .forms 
 {	
 	text-align: center;
-	margin: 5%;
+	margin: auto;
 	background-color: blue;
-	height: 60%;
+	height: 200px;
 	border-style: solid;
 	border-size: 10px;
 	border-radius: 30px;
 	border-color: black;
 	color: white;
 	font-weight: bold;
-	padding-top: 5%;
-
+	padding: 100px;
 }
 
 .forms a
@@ -37,8 +36,8 @@
 
 .close_button
 {
-	width: 4%;
+	width: 40px;
 	position: relative;
-	top: 14%;
-	left: 4%;
+	right: 10px;
+	top: 25px;
 }
