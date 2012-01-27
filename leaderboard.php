@@ -40,7 +40,8 @@ $query  = "SELECT email,
 	          current_score
 	   FROM users
 	   ORDER BY current_score
-	   DESC";
+	   DESC
+	   LIMIT 10";
 
 $result = mysql_query($query) or die ('bad query');
 
