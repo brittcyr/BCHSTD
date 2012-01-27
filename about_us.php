@@ -3,6 +3,7 @@
 		<title>About Us</title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/about.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 	</head>
 
 	<body>

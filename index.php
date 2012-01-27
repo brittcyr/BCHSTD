@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/signup_login.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesheets/index_main.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesheets/index_bottom.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
     <script type="text/javascript" src="javascript/signin_login.js"></script>
   </head>
   <body>
