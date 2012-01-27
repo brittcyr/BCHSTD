@@ -27,7 +27,8 @@ $query = "SELECT SUM(B.DELEGATES) AS SCORE, A.EMAIL AS EMAIL
 	  FROM user_selections AS A JOIN results AS B ON A.state = B.state 
 	  WHERE A.candidate = B.candidate 
 	  GROUP BY A.EMAIL 
-	  ORDER BY SCORE DESC, A.EMAIL ASC";
+	  ORDER BY SCORE DESC, A.EMAIL ASC
+	  LIMIT 25";
 
 $result = mysql_query($query) or die ('bad query');
 
