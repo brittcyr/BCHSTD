@@ -58,7 +58,7 @@ function getscore($email)
 {
 require_once 'db.php';
 $email = htmlspecialchars($email);
-$query = "SELECT current_score FROM users WHERE email='$email'";
+$query = "SELECT SUM(B.DELEGATES) FROM user_selections AS A JOIN results AS B ON A.state = B.state WHERE A.email='$email' AND A.candidate = B.candidate";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $result = $result[0];
