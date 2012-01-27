@@ -4,6 +4,7 @@ if (isset($_SESSION['user']))
 {
 ?>
 
+<a href="about_us.php"> About Us </a>
 <a href="leaderboard.php"> Leaderboard </a>
 <a href="candidates.php"> Candidates </a>
 <a href="home.php"> Home </a>
