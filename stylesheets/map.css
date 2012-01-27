@@ -1,13 +1,50 @@
+body
+{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    
+}
+
 #main
 {
 	width: 1400px;
 	margin: auto;
+	border: dotted;
+	overflow: hidden;
+	display: inline-block;
 }
 
 #top
 {
 	width: 1400px;
 	margin: auto;
+	border: dashed;
+}
+
+
+#left
+{
+    width: 250px;
+    margin-top: 150px;
+    margin-left: 25px;
+}
+
+#score
+{
+    font-size: 50px;
+}
+
+#map
+{
+    width: 1100px;
+    margin-left: 300px;
+    margin-top: -300px;
+    float: left;
+}
+
+#candidates
+{
+    font-size: 20px;
+    margin-top: 50px;
 }
 
 
