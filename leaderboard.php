@@ -40,14 +40,18 @@ echo "<table>
       <th>Score</th>
       </tr> </br> \n";
 
+$count=0;
 while($row = mysql_fetch_array($result))
   {
       $email = $row['EMAIL'];
       $username = getusername($email);
-  echo "<tr>" . "\n";
+if ($count == 0)
+  {echo "<tr>" . "\n";}
+else {echo "<tr class='alt'>" . "\n";}
   echo "<td>" . "$username" . "</td>" . "\n";
   echo "<td>" . $row['SCORE'] . "</td>" . "\n";
   echo "</tr> </br>" . "\n";
+$count = ($count+1)%2;
   }
 echo "\n </table>" . "\n";
 ?>	
