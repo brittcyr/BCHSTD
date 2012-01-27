@@ -1,9 +1,9 @@
 #top
 {
-	height: 6%;
-	width: 100%;
+	height: 40px;
+	width: 1400px;
 	background-color: gray;
-	margin: 0%;
+	margin: auto;
 	border-style: solid;
 }
 
@@ -23,7 +23,6 @@
 	position: relative;
 	float: right;
 	height: 100%;
-	width: 50%;
 }
 
 #NavBar a
@@ -33,11 +32,11 @@
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 15px;
 	height: 100%;
-	width: 20%;
+	width: 100px;
 	text-align: center;
-	text-size: 50%;
+	margin-top: 10px;
 }
 
 #page_title

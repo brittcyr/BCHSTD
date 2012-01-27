@@ -1,4 +1,17 @@
+#bottom
+{
+	width: 1400px;
+	margin: auto;
+}
+
 #bottom div
 {
 	float: left;
+}
+
+#bottom div img
+{
+	width: 466px;
+	height: 300px;
+	border-style: solid;
 }
