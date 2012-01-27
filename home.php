@@ -37,17 +37,14 @@ You are ranked:
 
 
 
-			<div id="news_feed">
-			  <h1> Political News </h1>
-
-INSERT RSS FEED HERE
-
-			</div>
-
 			<div id="profile">
 			  <h1> Profile </h1>
 			  <?php require ("home/profile.php"); ?>
-                        </div>
+             </div>
+			<div id="my_results">
+				<h1> My Results </h1>
+				<?php require ("home/my_results.php"); ?>
+			</div>
 		</div>
 
 		<div id="bottom">
@@ -55,11 +52,14 @@ INSERT RSS FEED HERE
 			  <h1> Upcoming Picks </h1>
 			  <?php require ("home/upcoming_picks.php"); ?>
 			</div>
+			<div id="news_feed">
+				<h1> Political News </h1>
 
-			<div id="my_results">
-			  <h1> My Results </h1>
-			  <?php require ("home/my_results.php"); ?>
+			INSERT RSS FEED HERE
+
 			</div>
+
+		
 		</div>
 	</body>
 </html>
