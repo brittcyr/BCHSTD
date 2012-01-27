@@ -108,7 +108,7 @@ $count = 0;
 while ($row = mysql_fetch_array($result))
 {
 $count++;
-};
+}
 mysql_close($db);
 return $count;
 }

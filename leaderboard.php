@@ -25,10 +25,11 @@ require_once 'library.php';
 <h1>LEADERBOARD</h1> <br/>
 <?php
 $query = "SELECT SUM(B.DELEGATES) AS SCORE, A.EMAIL AS EMAIL 
-	  FROM user_selections AS A JOIN results AS B ON A.state = B.state 
+	  FROM user_selections AS A JOIN results AS B 
+	    ON A.state = B.state 
 	  WHERE A.candidate = B.candidate 
 	  GROUP BY A.EMAIL 
-	  ORDER BY SCORE DESC, A.EMAIL ASC
+	  ORDER BY SCORE DESC, A.EMAIL DESC
 	  LIMIT 25";
 
 $result = mysql_query($query) or die ('bad query');
@@ -52,12 +53,11 @@ else {echo "<tr class='alt'>" . "\n";}
   echo "<td>" . "$username" . "</td>" . "\n";
   echo "<td>" . $row['SCORE'] . "</td>" . "\n";
   echo "</tr> </br>" . "\n";
-$count = ($count+1)%2;
+  $count = ($count+1)%2;
   }
 echo "\n </table>" . "\n";
 ?>	
 		</div>	
-
 	</body>
 </html>
 
