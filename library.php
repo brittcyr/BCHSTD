@@ -58,7 +58,9 @@ function getscore($email)
 {
 require_once 'db.php';
 $email = htmlspecialchars($email);
-$query = "SELECT SUM(B.DELEGATES) FROM user_selections AS A JOIN results AS B ON A.state = B.state WHERE A.email='$email' AND A.candidate = B.candidate";
+$query = "SELECT SUM(B.DELEGATES) 
+	  FROM user_selections AS A JOIN results AS B ON A.state = B.state 
+	  WHERE A.email='$email' AND A.candidate = B.candidate";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $result = $result[0];
@@ -73,12 +75,21 @@ function getrank($email)
 require_once 'db.php';
 $email = htmlspecialchars($email);
 $score = getscore("$email");
-$query = "SELECT COUNT(*) FROM users WHERE current_score > '$score'";
+$query = "SELECT SUM(B.DELEGATES) AS SCORE, A.EMAIL AS EMAIL 
+	  FROM user_selections AS A JOIN results AS B ON A.state = B.state 
+	  WHERE A.candidate = B.candidate 
+	  GROUP BY A.EMAIL 
+	  ORDER BY SCORE DESC, A.EMAIL ASC";
 $result = mysql_query($query) or die('bad query');
-$result = mysql_fetch_array($result);
-$result = $result[0] + 1;
+$count = 1;
+while ($row = mysql_fetch_array($result))
+{
+if ($row['EMAIL']==$email)
+{break;}
+$count++;
+}
 mysql_close($db);
-return $result;
+return $count;
 }
 
 
@@ -104,9 +115,12 @@ $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $result = $result[0];
 
-$query = "UPDATE user_selections SET candidate='$candidate' WHERE email='$email' AND state='$state'";
+$query = "UPDATE user_selections 
+	  SET candidate='$candidate' 
+	  WHERE email='$email' AND state='$state'";
 if ($result == 0)
-{$query = "INSERT INTO user_selections (email, state, candidate) VALUES ('$email', '$state', '$candidate')";}
+{$query = "INSERT INTO user_selections (email, state, candidate) 
+	   VALUES ('$email', '$state', '$candidate')";}
 
 $result = mysql_query($query) or die('bad query');
 mysql_close($db);
@@ -119,7 +133,9 @@ function pull_results()
 {
 require_once 'db.php';
 session_start();
-$query = "SELECT A.state, A.candidate FROM results AS A WHERE candidate IS NOT NULL AND candidate <>''";
+$query = "SELECT A.state, A.candidate 
+	  FROM results AS A 
+	  WHERE candidate IS NOT NULL AND candidate <>''";
 $result = mysql_query($query) or die('bad query');
 $return = '';
 while($row = mysql_fetch_array($result))
@@ -136,7 +152,9 @@ function pull_user_selections()
 require_once 'db.php';
 session_start();
 $email = $_SESSION['user'];
-$query = "SELECT A.state, A.candidate FROM user_selections AS A WHERE email='$email'";
+$query = "SELECT A.state, A.candidate 
+	  FROM user_selections AS A 
+	  WHERE email='$email'";
 $result = mysql_query($query) or die('bad query');
 $return = '';
 while($row = mysql_fetch_array($result))
