@@ -28,7 +28,7 @@ if (isset($_POST['user_email'])) {
 
         if($result==$password){
 		       $_SESSION['user']  = $email;
-		       header('Location:home.php');}
+		       header('Location:map.php');}
 
 		       else{
 		       header('Location:index.php');

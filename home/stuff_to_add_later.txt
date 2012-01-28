@@ -2,4 +2,5 @@ Facebook connect
 Personalize Candidate Colors
 RSS Feed
 Scroll bar for leaderboard page
-
+Friend Leaderboard
+Challenge your friends

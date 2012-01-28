@@ -5,13 +5,13 @@ require_once 'library.php';
 <?php session_start();?>
 <html>
 	<head>
-		<title>Leaderboard</title>
+		<title>Fantasy Politics</title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/leaderboard.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 	</head>
 
-	<body>
+	<body background="images/flag.jpg">
 		<div id="top">
 			<div id="logo">
 				<img src="icon_images/icon-usmap.png" />
@@ -38,22 +38,24 @@ if (count($result)==0){exit();}
 
 echo "<table>
       <tr>
-      <th>User</th>
-      <th>Score</th>
+	<th>Rank</th>
+	<th>User</th>
+	<th>Score</th>
       </tr> </br> \n";
 
 $count=0;
 while($row = mysql_fetch_array($result))
   {
+      $count++;
       $email = $row['EMAIL'];
       $username = getusername($email);
-if ($count == 1)
+if ($count%2 == 0)
   {echo "<tr>" . "\n";}
 else {echo "<tr class='alt'>" . "\n";}
+  echo "<td>" . $count . "</td>" . "\n";
   echo "<td>" . "$username" . "</td>" . "\n";
   echo "<td>" . $row['SCORE'] . "</td>" . "\n";
   echo "</tr> </br>" . "\n";
-  $count = ($count+1)%2;
   }
 echo "\n </table>" . "\n";
 ?>	

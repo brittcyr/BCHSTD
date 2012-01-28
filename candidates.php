@@ -1,13 +1,13 @@
 <?php session_start();?>
 <html>
 	<head>
-		<title>Candidates</title>
+		<title>Fantasy Politics</title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/candidates.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 	</head>
 
-	<body>
+	<body background="flag.jpg">
 		<div id="top">
 			<div id="logo">
 				<img src="icon_images/icon-usmap.png" />

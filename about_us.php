@@ -1,12 +1,12 @@
 <html>
 	<head>
-		<title>About Us</title>
+		<title>Fantasy Politics</title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/about.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 	</head>
 
-	<body>
+	<body background="images/flag.jpg">
 		<div id="top">
 			<div id="logo">
 				<img src="icon_images/icon-usmap.png" />

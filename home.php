@@ -15,7 +15,7 @@ $user = $_SESSION['user'];
 		<link rel="stylesheet" type="text/css" href="stylesheets/home.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 	</head>
-	<body>
+	<body background="images/flag.jpg">
 		<div id="top">
 			<div id="Logo">
 				<img src="icon_images/icon-usmap.png"/>
@@ -56,7 +56,7 @@ You are ranked:
 			<div id="news_feed">
 				<h1> Political News </h1>
 
-			INSERT RSS FEED HERE
+			COMING SOON
 
 			</div>
 
