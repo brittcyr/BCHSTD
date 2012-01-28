@@ -49,8 +49,17 @@ return $result;
 
 function getusername($email)
 {
-$email_split = explode('@',$email);
-return $email_split[0];
+require_once 'db.php';
+$email = htmlspecialchars($email);
+$query = "SELECT username 
+	  FROM users 
+	  WHERE email='$email'";
+
+$result = mysql_query($query) or die('bad query');
+$result = mysql_fetch_array($result);
+$result = $result[0];
+mysql_close($db);
+return $result;
 }
 
 

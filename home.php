@@ -28,7 +28,7 @@ $user = $_SESSION['user'];
 
 		<div id="main">
 			<div id="welcome">
-<?php echo 'Welcome, ' . $_SESSION['user']; ?> </br>
+<?php echo 'Welcome, ' . getusername($_SESSION['user']); ?> </br>
 Current Score is:
 <?php $score = getscore("$user"); echo "$score"; ?> </br>
 You are ranked: 

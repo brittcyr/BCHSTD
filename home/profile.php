@@ -12,10 +12,13 @@ $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $home_state = $result['home_state'];
 $political_party = $result['political_party'];
+$username = $result['username'];
 ?>
         <form class="forms" action="home/update_profile.php" method="post">
 
 <?php
+echo	'Username: <input id="username" type="text" name="username" value="'
+                . $username .'"/> <br/>' . "\n";
 echo	'Email: <input id="user_email" type="text" name="user_email" value="'
                 . $_SESSION['user'] .'"/> <br/>' . "\n";
 ?>
