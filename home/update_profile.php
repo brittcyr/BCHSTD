@@ -9,6 +9,20 @@ $uri   = rtrim(dirname(dirname($_SERVER['PHP_SELF'])), '/\\');
 $extra = 'home.php';
 header("Location: http://$server$uri/$extra");
 
+//-------------------UPDATE USERNAME--------------------
+if (isset($_POST['username'])){
+$user = $_SESSION['user'];
+$newusername = $_POST['username'];
+$isvalidusername = checkusername($newusername);
+$isusernametaken = isusernametaken($newusername);
+
+if ($isvalidusername <> 0 && $isusernametaken <>0)
+{
+$query = "UPDATE users SET username='$newusername' WHERE email='$user'";
+$result = mysql_query($query) or die(mysql_error());
+}
+}
+
 //-------------------UPDATE EMAIL--------------------
 if (isset($_POST['user_email']) && $_POST['user_email'] <> $_SESSION['user']){
 $email = htmlspecialchars($_POST['user_email']);
