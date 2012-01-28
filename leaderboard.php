@@ -1,7 +1,8 @@
 <?php
 require_once 'db.php';
 require_once 'library.php';
-php session_start();?>
+session_start();
+?>
 <html>
 	<head>
 		<title>Fantasy Politics</title>
