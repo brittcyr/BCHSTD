@@ -25,7 +25,7 @@ if (isset($_POST['user_email']))
    $query = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
    $result = mysql_query($query) or die(mysql_error());
    $_SESSION['user'] = $email;
-   header('Location:home.php');
+   header('Location:map.php');
    }
 mysql_close($db);
 ?>

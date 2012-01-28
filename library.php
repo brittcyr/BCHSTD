@@ -14,7 +14,14 @@ if (count($domain_split) <>  2){return 0;}
 return 1;
 }
 
+function checkusername($username)
+{
 
+if (strlen("$username")<6)
+{return 0;}
+
+return 1;
+}
 
 function checkpassword($password, $confirm)
 {
@@ -27,7 +34,20 @@ if (strlen("$password")<6)
 return 1;
 }
 
-
+function isusernametaken($email)
+{
+require_once 'db.php';
+$email = htmlspecialchars($email);
+$query = "SELECT COUNT(*) 
+	  FROM users 
+	  WHERE username='$email'";
+$result = mysql_query($query) or die('bad query');
+$result = mysql_fetch_array($result);
+$result = $result[0];
+mysql_close($db);
+$result = 1 - min($result,1);
+return $result;
+}
 
 
 function isemailtaken($email)
@@ -62,7 +82,20 @@ mysql_close($db);
 return $result;
 }
 
+function getemail($username)
+{
+require_once 'db.php';
+$username = htmlspecialchars($username);
+$query = "SELECT email 
+	  FROM users 
+	  WHERE username='$username'";
 
+$result = mysql_query($query) or die('bad query');
+$result = mysql_fetch_array($result);
+$result = $result[0];
+mysql_close($db);
+return $result;
+}
 
 
 function getscore($email)

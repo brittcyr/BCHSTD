@@ -11,7 +11,8 @@ if (isset($_POST['user_email'])) {
 
 	$query = "SELECT COUNT(*) 
 		  FROM users 
-		  WHERE email='$email'";
+		  WHERE email='$email'
+		   OR username='$email'";
 	$result = mysql_query($query) or die('bad query');
         $result = mysql_fetch_array($result);
         $result = $result[0];
@@ -21,18 +22,34 @@ if (isset($_POST['user_email'])) {
 	} else {
 	$query = "SELECT password 
 		  FROM users 
+		  WHERE email='$email'
+		   OR username='$email'";
+	$result = mysql_query($query) or die('bad query');
+        $result = mysql_fetch_array($result);
+        $result = $result[0];
+
+        if($result<>$password){
+		       header('Location:index.php');}
+else
+{
+header('Location:map.php');
+//-----------SUCCESSFUL LOGIN NEED TO DETERMINE IF WAS USERNAME OR EMAIL-----------
+
+	$query = "SELECT COUNT(*) 
+		  FROM users 
 		  WHERE email='$email'";
 	$result = mysql_query($query) or die('bad query');
         $result = mysql_fetch_array($result);
         $result = $result[0];
 
-        if($result==$password){
-		       $_SESSION['user']  = $email;
-		       header('Location:map.php');}
+if ($result == 1)
+{$_SESSION['user']  = $email;}
+else 
+{$email = getemail($email); $_SESSION['user']  = $email;}
 
-		       else{
-		       header('Location:index.php');
-		       }
+
+}
+
 	}
 }
 else
