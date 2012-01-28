@@ -2,13 +2,11 @@
 {
 	width: 600px;
 	height: 320px;
-	margin-left: 640px;
-	margin-top: 0px;
-    margin-right: 20px;
-    
+	margin-left: 700px;
     padding-right: 30px;
     padding-left: 40px;
 	position: relative;
+	border: solid;
 	bottom: 800px;
 	float: left;
 }
@@ -17,10 +15,11 @@
 {
     width: 600px;
     height: 30px;
-    position: relative;
     margin-left: 800px;
-    margin-top: -50px;
+    margin-top: -38px;
     padding: 0px;
+    position: relative;
+
 }
 
 #user_email, #login_password
@@ -29,6 +28,7 @@
     height: 100%; 
     border: solid;
     border-width: 1px;
+    border-color: black;
     text-align: left;
     padding-left: 10px;
     padding-bottom: -5px;
@@ -62,11 +62,6 @@
     
 }
 
-#title
-{
-    font-size: 70px;
-    color: blue;
-}
 
 .forms
 {
@@ -74,6 +69,7 @@
     text-align: right;
     height: 100%;
     font-weight: bold;
+    overflow: hidden;
     
     
 }
@@ -90,16 +86,12 @@
     font-size: 14px;
 }
 
-#text5
-{
-    margin-right: 5px;
-}
-
 #x, #check
 {
     margin-left: 605px;
     margin-top: -150px;
-    margin-bottom: 100px;
+    margin-bottom: 140px;
+    position: relative;
 }
 
 #help_message

@@ -18,17 +18,18 @@
 		<a id="link2" href="#" onclick="view('login')"> Login </a> -->
       </div>
     </div>
+    <div id="login">
+	<a href="#" onclick="hide('login')"> <img class="close_button" src="icon_images/close.gif"/></a>
+      <form class="forms" action="login.php" method="post">
+	<input id="user_email" type="text" name="user_email" placeholder="username or email"/>
+	<input id="login_password" type="password" name="user_password" placeholder="password"/>
+	<input id="button2" type="submit" value="Login" />
+      </form>
+
+    </div>
 
     <div id="main">
-	    <div id="login">
-		<a href="#" onclick="hide('login')"> <img class="close_button" src="icon_images/close.gif"/></a>
-	      <form class="forms" action="login.php" method="post">
-		<input id="user_email" type="text" name="user_email" placeholder="username or email"/>
-		<input id="login_password" type="password" name="user_password" placeholder="password"/>
-		<input id="button2" type="submit" value="Login" />
-	      </form>
 
-	    </div>
       <div id="main_image">
 	<img src="icon_images/main_logo.png"/>
       </div>

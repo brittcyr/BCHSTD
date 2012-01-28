@@ -11,15 +11,17 @@
 	border-style: solid;
 	border-radius: 15px;
 	margin-bottom: 10px;
+	overflow: hidden;
 }
 
 #main_image
 {
-	position: relative;
+	position: static;
 	float: left;
 	width: 650px;
 	margin: 10px;
 	padding: 0px;
+	border: solid;
 }
 
 #main_image img
@@ -36,14 +38,16 @@
 	float: left;
 	width: 680;
 	margin: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
 	text-align: center;
-	height: 400px;
+	height: 100px;
+	border: solid;
+	font-size: 30px;
+    color: blue;
+    display: inline;
 }
 
-#h1
-{
-    font-size: 30px;
-}
 
 #signup_button, #login_button
 {
