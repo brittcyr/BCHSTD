@@ -4,6 +4,7 @@
 	margin: auto;
 	margin-top: 10px;
 	background-color: gray;
+	opacity: 0.8;
 	padding: 0px;
 	height: 500px;
 	width: 1400px;
@@ -39,13 +40,19 @@
 	height: 400px;
 }
 
+#h1
+{
+    font-size: 30px;
+}
+
 #signup_button, #login_button
 {
  	color: #444;
   	font: normal 24px arial, sans-serif;
    	height: 48px;
 	width: 150px;
-    	text-decoration: none;
+    text-decoration: none;
+    display: none;	
 }
 
 

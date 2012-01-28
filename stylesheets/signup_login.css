@@ -1,26 +1,131 @@
-#signup, #login
+#signup
 {
-	width: 1000px;
-	height: 800px;
+	width: 600px;
+	height: 320px;
+	margin-left: 640px;
+	margin-top: 0px;
+    margin-right: 20px;
+    
+    padding-right: 30px;
+    padding-left: 40px;
 	position: relative;
 	bottom: 800px;
-	display: none;
-	margin: auto;
+	float: left;
 }
 
-.forms 
-{	
-	text-align: center;
-	margin: auto;
-	background-color: blue;
-	height: 200px;
-	border-style: solid;
-	border-size: 10px;
-	border-radius: 30px;
-	border-color: black;
-	color: white;
-	font-weight: bold;
-	padding: 100px;
+#login
+{
+    width: 600px;
+    height: 30px;
+    position: relative;
+    margin-left: 800px;
+    margin-top: -50px;
+    padding: 0px;
+}
+
+#user_email, #login_password
+{
+    width: 200px;
+    height: 100%; 
+    border: solid;
+    border-width: 1px;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: -5px;
+    font-size: 12px;
+}
+
+#user_email
+{
+    float: left;
+}
+
+#login_password
+{
+    float: left;
+    margin-left: 30px;
+}
+
+#button2
+{
+    width: 100px;
+    height: 30px;
+    padding: 0px;
+    font-size: 18px;
+    text-align: middle;
+    margin-right: 30px;
+    margin-top: 0px;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: light-grey;
+    
+}
+
+#title
+{
+    font-size: 70px;
+    color: blue;
+}
+
+.forms
+{
+    width: 100%;
+    text-align: right;
+    height: 100%;
+    font-weight: bold;
+    
+    
+}
+
+#text3, #text1, #text2, #text5
+{
+    width: 300px;
+    height: 40px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: -15px;
+    border: solid;
+    border-width: 1px;
+    font-size: 14px;
+}
+
+#text5
+{
+    margin-right: 5px;
+}
+
+#x, #check
+{
+    margin-left: 605px;
+    margin-top: -150px;
+    margin-bottom: 100px;
+}
+
+#help_message
+{
+    margin-top: 25px;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+#button1
+{
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: middle;
+    margin-right: 5px;
+    margin-top: 10px;
+    border: solid;
+    border-width: 1px;
+    
+}
+
+img.close_button
+{
+    display: none;
 }
 
 .forms a
