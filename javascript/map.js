@@ -1,5 +1,3 @@
-var init = true;
-
 var color="red";
 
 var mode="choices";
@@ -30,12 +28,12 @@ function changeMode(new_mode){
 	}
 	if (mode == "results")
 	{
-		//document.getElementById('f1').style.display = "none";
+		document.getElementById('f1').style.display = "none";
 		getResults();
 	}
 	if (mode == "projections")
 	{
-		//document.getElementById('f1').style.display = "none";
+		document.getElementById('f1').style.display = "none";
 		getProjections();
 	}
 }
@@ -86,9 +84,12 @@ function getUpdate(){
 
 	for (j=0; j<=49; j++){
 			temp_state=STATES[j];
+		if (temp_state in finished_states){
+			document.getElementById(temp_state).style.fill="black";
+		}else{
 			document.getElementById(temp_state).style.fill="gray";
 		}
-	
+	}
 	xmlhttp=new XMLHttpRequest();
 
 	xmlhttp.onreadystatechange=function(){
@@ -99,10 +100,6 @@ function getUpdate(){
 				var temp = result[i].split('#');
 				document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
 
-			}
-			if (init){
-				init = false;
-				getResults();
 			}
 		}
 	}
@@ -142,7 +139,7 @@ function getResults()
 				for(i=1; i< result.length; i++){
 					var temp = result[i].split('#');
 					finished_states[temp[0]]=true;
-				}
+				}getUpdate();
 			}
 		}
 	}
