@@ -56,7 +56,7 @@ You are ranked:
 			<div id="news_feed">
 				<h1> Political News </h1>
 
-			INSERT RSS FEED HERE
+			COMING SOON
 
 			</div>
 

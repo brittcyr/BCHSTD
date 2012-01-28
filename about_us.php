@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>About Us</title>
+		<title>Fantasy Politics</title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/about.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>

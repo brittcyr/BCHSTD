@@ -5,7 +5,7 @@ require_once 'library.php';
 <?php session_start();?>
 <html>
 	<head>
-		<title>Leaderboard</title>
+		<title>Fantasy Politics</title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/leaderboard.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
