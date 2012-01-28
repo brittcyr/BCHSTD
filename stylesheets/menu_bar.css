@@ -2,7 +2,7 @@
 {
 	height: 40px;
 	width: 1400px;
-	background-color: gray;
+	background-color: #ACB3B4;
 	margin: auto;
 	border-style: solid;
 	border-radius: 10px;
@@ -42,7 +42,7 @@
 	padding-right: 2px;
 	border-style: solid;
 	border-width:1px;
-	border-color: grey;
+	border-color: gray;
 	border-radius: 10px;
 	background-color: black;
 }

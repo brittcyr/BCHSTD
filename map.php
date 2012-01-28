@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="javascript/map.js"> </script>
 	</head>
 
-	<body background="images/flag.jpg" onload="getUpdate()">
+	<body background="images/flag.jpg" onload="getResults()">
 		<div id="top">
 			<div id="logo">
 				<img src="icon_images/icon-usmap.png" />
@@ -30,18 +30,19 @@ echo getscore($_SESSION['user']);
 			<div id="candidates">
 				<!--<ul id="candidates">-->
 				<form id='f2'>
+					<h3> Map Type </h3>
 					<input type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> Choices </br>
 					<input type='radio' name='r2' value="RESULTS" onClick="changeMode('results')"> Results </br>
 					<input type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Projections </br>
 				</form>
 				<form id='f1'>
+					<h3> Make Your Picks </h3>
 					<input type='radio' name='r1' value="ROMNEY" onClick="changeCandidate('ROMNEY')" checked/> <span id="ROMNEY"> Romney </span> </br>
 					<input type='radio' name='r1' value="PAUL" onClick="changeCandidate('PAUL')"/> <span id="PAUL">Paul</span> </br>
 					<input type='radio' name='r1' value="SANTORUM" onClick="changeCandidate('SANTORUM')"/> <span id="SANTORUM"> Santorum</span></br>
 					<input type='radio' name='r1' value="GINGRICH" onClick="changeCandidate('GINGRICH')"/> <span id="GINGRICH"> Gingrich </span></br>
 				</form>
-
-			</div>
+							</div>
 			</div>
 
 			<div id="map">
