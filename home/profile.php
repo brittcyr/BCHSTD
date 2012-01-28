@@ -311,7 +311,7 @@ else
 
 ?>
 </select>
-
+<br/>
 	<input id="button1" type="submit" value="Change Profile" />
       </form>
 

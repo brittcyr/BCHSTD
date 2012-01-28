@@ -217,7 +217,7 @@ return $return;
 mysql_close($db);
 }
 
-/*
+
 function pull_popular_picks()
 {
 require_once 'db.php';
@@ -225,13 +225,15 @@ $query = "SELECT INTO #temptable count(*) AS COUNT, state, candidate
 	  FROM user_selections 
 	  GROUP BY state, candidate";
 $result = mysql_query($query) or die('bad query');
-query = "SELECT INTO #temptable2 MAX(COUNT) AS COUNT, state FROM #temptable GROUP BY state";
+$query = "SELECT INTO #temptable2 MAX(COUNT) AS COUNT, state 
+	 FROM #temptable 
+	 GROUP BY state";
 $result = mysql_query($query) or die('bad query');
-query = "SELECT INTO #temptable3 A.state, A.candidate 
+$query = "SELECT INTO #temptable3 A.state, A.candidate 
 	 FROM #temptable2 AS A JOIN #temptable AS B
 	 ON A.COUNT = B.COUNT";
 $result = mysql_query($query) or die('bad query');
-query = "SELECT state, FIRST(candidate) 
+$query = "SELECT state, FIRST(candidate) 
 	 FROM #temptable3 
 	 GROUP BY state";
 $result = mysql_query($query) or die('bad query');
@@ -240,12 +242,11 @@ mysql_query("DROP TABLE #temptable, #temptable2, #temptable3");
 
 $return = '';
 while($row = mysql_fetch_array($result))
-{
-$return = "$return" . '!' . $row['state'] . '#' . $row['candidate'];
-}
+{$return = "$return" . '!' . $row['state'] . '#' . $row['candidate'];}
 return $return;
 mysql_close($db);
+
 }
 
-*/
+
 ?>
