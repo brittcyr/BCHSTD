@@ -1,9 +1,11 @@
 var menu_open = false;
 var long_enough = false;
 var pass_confirm = false;
-var email_used=false;
+var email_used=true;
+var email_valid=false;
 
 //Opens menu for login or signup if no menu is open already
+/*
 function view(id)
 {
 	if (!(menu_open))
@@ -29,6 +31,7 @@ function hide(id)
 	document.getElementById(id).style.display="none";
 	menu_open = false;
 }
+*/
 
 //confirm passwords are equivalent by displaying either "x.png" or "check.png"
 function passwordCheck()
@@ -49,9 +52,12 @@ function passwordCheck()
 
 	if (pass1 == pass2){
 		pass_confirm = true;
-
+		document.getElementById("x").style.display="none";
+		document.getElementById("check").style.display="inline";
 	}else{
 		pass_confirm = false;
+		document.getElementById("x").style.display="inline";
+		document.getElementById("check").style.display="none";
 	}
 
 	checkSubmit();	
@@ -62,6 +68,7 @@ function emailCheck()
 
 	var email = document.getElementById("text3").value;
 	if (email==""){
+		email_valid = false;
 		return;
 	}
 
@@ -70,13 +77,21 @@ function emailCheck()
 	xmlhttp.onreadystatechange = function(){
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
 			var response =xmlhttp.responseText;
-			if (response == 0){
+			if (response[0]== 0){
 				email_used = true;
+				checkSubmit();
 				alert("This email address is already being used.");
 			} else {
 				 email_used = false; 
 				checkSubmit();
+			}if (response[1]== 0){
+				email_valid = false;
+				checkSubmit();
+			} else {
+				 email_valid = true; 
+				checkSubmit();
 			}
+
 		}
 	}
 	var url = "ajax_php_files/check_email.php?email="+email;
@@ -90,14 +105,9 @@ function emailCheck()
 function checkSubmit(){
 
 	//alert("Is it long enough? "+long_enough+" Do the passwords match? "+pass_confirm+" Is the email used? "+email_used);
-	if (long_enough && pass_confirm && !email_used){
+	if (long_enough && pass_confirm && !email_used && email_valid){
 		document.getElementById("button1").disabled=false;
-		document.getElementById("x").style.display="none";
-		document.getElementById("check").style.display="inline";
-
 	}else{
 		document.getElementById("button1").disabled=true;
-		document.getElementById("x").style.display="inline";
-		document.getElementById("check").style.display="none";
 	}
 }
