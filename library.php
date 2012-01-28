@@ -109,6 +109,7 @@ $query = "SELECT SUM(B.DELEGATES)
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $result = $result[0];
+$result = 0 + $result;
 mysql_close($db);
 return $result;
 }
