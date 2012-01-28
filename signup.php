@@ -7,6 +7,7 @@ if (isset($_POST['user_email']))
    $email = htmlspecialchars($_POST['user_email']);
    $password = htmlspecialchars($_POST['user_password']);
    $confirm = htmlspecialchars($_POST['confirm_password']);
+   $username = htmlspecialchars($_POST['username']);
 
    $isvalidemail = checkemail($email);
    $isvalidpsswd = checkpassword($password, $confirm);
@@ -22,8 +23,8 @@ if (isset($_POST['user_email']))
    if ($isemailtaken == 0) {
    header('Location:index.php'); mysql_close($db); exit();}
    
-   $query = "INSERT INTO users (email, password) 
-	     VALUES ('$email', '$password')";
+   $query = "INSERT INTO users (email, password, username) 
+	     VALUES ('$email', '$password', '$username')";
    $result = mysql_query($query) or die(mysql_error());
    $query = "INSERT INTO user_selections (state, email, candidate) 
 	     VALUES ('DC', '$email', 'DONEGAN')";
