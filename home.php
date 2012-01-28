@@ -25,7 +25,7 @@ $user = $_SESSION['user'];
 		</div>
 		
 	<div id="main">
-		   	<div id="main_a">
+		   	<div id="profile">
 				<?php echo 'Welcome, ' . getusername($_SESSION['user']); ?> </br>
 				Current Score is:
 				<?php $score = getscore("$user"); echo "$score"; ?> </br>
