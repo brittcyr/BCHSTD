@@ -46,7 +46,7 @@ echo "<table>
 $count=0;
 while($row = mysql_fetch_array($result))
   {
-  echo "<td>" . $count . "</td>" . "\n";
+  echo "<td>" . $count+1 . "</td>" . "\n";
       $email = $row['EMAIL'];
       $username = getusername($email);
 if ($count%2 == 1)
