@@ -35,7 +35,7 @@
 			Confirm Password: <br/>
 		</div>
 		<div id="form_b">
-			<input id="text5" type="text" name="user_email"/><br/> 
+			<input id="text5" type="text" name="username"/><br/> 
 			<input id="text3" type="text" name="user_email" onkeyup="emailCheck()" /> <br/>
 			<input id="text1" type="password" name="user_password" onchange="passwordCheck()" onkeyup="passwordCheck()"/> <br/>
 			<input id="text2" type="password" name="confirm_password" onchange="passwordCheck()" onkeyup="passwordCheck()"/> <img id="x" src="images/x.png"/> <img id="check" src="images/check.png" style="display:none;"/> <br/>
