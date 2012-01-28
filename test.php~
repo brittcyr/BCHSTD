@@ -1,0 +1,13 @@
+<?php
+
+require 'library.php';
+
+$results =  pull_popular_picks();
+echo $results;
+
+echo 'test2';
+
+$results = pull_results();
+echo $results;
+
+?>

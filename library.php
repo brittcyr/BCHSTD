@@ -221,28 +221,30 @@ mysql_close($db);
 function pull_popular_picks()
 {
 require_once 'db.php';
-$query = "SELECT INTO #temptable count(*) AS COUNT, state, candidate 
+
+$query = "SELECT count(*) AS COUNT, state, candidate 
 	  FROM user_selections 
 	  GROUP BY state, candidate";
 $result = mysql_query($query) or die('bad query');
-$query = "SELECT INTO #temptable2 MAX(COUNT) AS COUNT, state 
-	 FROM #temptable 
-	 GROUP BY state";
-$result = mysql_query($query) or die('bad query');
-$query = "SELECT INTO #temptable3 A.state, A.candidate 
-	 FROM #temptable2 AS A JOIN #temptable AS B
-	 ON A.COUNT = B.COUNT";
-$result = mysql_query($query) or die('bad query');
-$query = "SELECT state, FIRST(candidate) 
-	 FROM #temptable3 
-	 GROUP BY state";
-$result = mysql_query($query) or die('bad query');
 
-mysql_query("DROP TABLE #temptable, #temptable2, #temptable3");
+while($row = mysql_fetch_array($result))
+{
+$votes = $row['COUNT'];
+$state = $row['state'];
+$candidate = $row['candidate'];
+$votecount[$state][$candidate] = $votes;
+}
+
+foreach ($votecount as $state => $candidate)
+{
+arsort($candidate); //Sort the candidates in a state by num of votes
+$a = $candidate[0];
+$best[$state] = key($candidate); //Take the one with most and call it best for state
+}
 
 $return = '';
-while($row = mysql_fetch_array($result))
-{$return = "$return" . '!' . $row['state'] . '#' . $row['candidate'];}
+foreach ($best as $state => $candidate)
+{$return = "$return" . '!' . $state . '#' . $candidate;}
 return $return;
 mysql_close($db);
 
