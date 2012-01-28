@@ -1,22 +1,19 @@
 #main
 {
-	display: block;
 	margin: auto;
 	margin-top: 10px;
 	background-color: gray;
 	opacity: 0.8;
-	padding: 0px;
 	height: 500px;
 	width: 1400px;
 	border-style: solid;
 	border-radius: 15px;
 	margin-bottom: 10px;
-	overflow: hidden;
 }
 
 #main_image
 {
-	position: static;
+	position: relative;
 	float: left;
 	width: 650px;
 	margin: 10px;
@@ -26,7 +23,6 @@
 
 #main_image img
 {
-	display: block;
 	height: 400px;
 	margin: auto;
 	padding: 20px;
@@ -41,22 +37,11 @@
 	padding-bottom: 10px;
 	padding-top: 10px;
 	text-align: center;
-	height: 100px;
+	height: 450px;
 	border: solid;
 	font-size: 30px;
-    color: blue;
-    display: inline;
+	color: blue;
 }
 
-
-#signup_button, #login_button
-{
- 	color: #444;
-  	font: normal 24px arial, sans-serif;
-   	height: 48px;
-	width: 150px;
-    text-decoration: none;
-    display: none;	
-}
 
 

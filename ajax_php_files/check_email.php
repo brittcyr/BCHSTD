@@ -5,7 +5,8 @@ require_once "$source" . "/library.php";
 
 $email = $_GET['email'];
 $result = isemailtaken($email);
+$result2 = checkemail($email);
 
-echo $result;
+echo "$result"."$result2";
 
 ?>
