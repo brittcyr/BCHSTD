@@ -3,6 +3,7 @@ var long_enough = false;
 var pass_confirm = false;
 var email_used=true;
 var email_valid=false;
+var username_valid=false;
 
 //Opens menu for login or signup if no menu is open already
 /*
@@ -61,7 +62,6 @@ function passwordCheck()
 		document.getElementById("check").style.display="none";
 	}
 
-	checkSubmit();	
 }
 
 function emailCheck()
@@ -70,6 +70,7 @@ function emailCheck()
 	var email = document.getElementById("text3").value;
 	if (email==""){
 		email_valid = false;
+		email_used = false;
 		return;
 	}
 
@@ -80,17 +81,13 @@ function emailCheck()
 			var response =xmlhttp.responseText;
 			if (response[0]== 0){
 				email_used = true;
-				checkSubmit();
 				alert("This email address is already being used.");
 			} else {
 				 email_used = false; 
-				checkSubmit();
 			}if (response[1]== 0){
 				email_valid = false;
-				checkSubmit();
 			} else {
 				 email_valid = true; 
-				checkSubmit();
 			}
 
 		}
@@ -105,8 +102,17 @@ function emailCheck()
 
 function checkSubmit(){
 
-	//alert("Is it long enough? "+long_enough+" Do the passwords match? "+pass_confirm+" Is the email used? "+email_used);
-	if (long_enough && pass_confirm && !email_used && email_valid){
+	emailCheck();
+	passwordCheck();
+	
+	var username = document.getElementById("text5").value;
+	if (username == ""){
+		username_valid = false;
+	} else {
+		username_valid = true;
+	}
+	
+	if (long_enough && pass_confirm && !email_used && email_valid && username_valid){
 		document.getElementById("button1").disabled=false;
 	}else{
 		document.getElementById("button1").disabled=true;

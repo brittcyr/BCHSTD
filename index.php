@@ -35,10 +35,10 @@
 			Confirm Password: <br/>
 		</div>
 		<div id="form_b">
-			<input id="text5" type="text" name="username"/><br/> 
-			<input id="text3" type="text" name="user_email" onkeyup="emailCheck()" /> <br/>
-			<input id="text1" type="password" name="user_password" onchange="passwordCheck()" onkeyup="passwordCheck()"/> <br/>
-			<input id="text2" type="password" name="confirm_password" onchange="passwordCheck()" onkeyup="passwordCheck()"/> <img id="x" src="images/x.png"/> <img id="check" src="images/check.png" style="display:none;"/> <br/>
+			<input id="text5" type="text" name="username" onkeyup="checkSubmit()"/><br/> 
+			<input id="text3" type="text" name="user_email" onkeyup="checkSubmit()" /> <br/>
+			<input id="text1" type="password" name="user_password" onchange="checkSubmit()" onkeyup="checkSubmit()"/> <br/>
+			<input id="text2" type="password" name="confirm_password" onchange="checkSubmit()" onkeyup="checkSubmit()"/> <img id="x" src="images/x.png"/> <img id="check" src="images/check.png" style="display:none;"/> <br/>
 		</div>
 	<div id="help_message">Reminder: The password must be at least six characters or numbers </div>
 	<input id="button1" type="submit" value="Sign Up!!" />
