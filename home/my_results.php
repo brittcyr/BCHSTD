@@ -17,6 +17,7 @@ $query  = "SELECT A.CANDIDATE AS PICK,
 	   FROM user_selections AS A JOIN results AS B
 	     ON A.state = B.state
 	   WHERE A.email = '$user'
+	     AND A.state <> 'DC'
 	   ORDER BY B.date
 	   LIMIT 10";
 
@@ -32,7 +33,7 @@ echo "<table>
       <th>Winner</th>
       <th>Delegates</th>
       <th>Points</th>
-      </tr> </br> \n";
+      </tr> \n";
 
 $parity = 0;
 while($row = mysql_fetch_array($result))
