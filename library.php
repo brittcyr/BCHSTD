@@ -238,7 +238,7 @@ $votecount[$state][$candidate] = $votes;
 foreach ($votecount as $state => $candidate)
 {
 arsort($candidate); //Sort the candidates in a state by num of votes
-$a = $candidate[0];
+$a = $candidate[0]; //Set pointer to beginning
 $best[$state] = key($candidate); //Take the one with most and call it best for state
 }
 
