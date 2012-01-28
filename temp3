@@ -1,0 +1,23 @@
+#upcoming_picks table
+{
+    width: 100%;
+    font-size: 20px;
+    margin-top: -210px;
+    text-align: left;
+}
+
+#upcoming_picks table tr
+{
+    background-color: grey;
+}
+
+#upcoming_picks table td, th
+{
+    border: solid;
+    border-width: 2px;
+}
+
+#upcoming_picks table tr.alt
+{
+    background-color: white;
+}

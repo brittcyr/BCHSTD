@@ -7,12 +7,11 @@ if (!isset($_SESSION['user']))
 $user = $_SESSION['user'];
 ?>
 
-
 <html>
 	<head>
 		<title> Fantasy Politics </title>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
-		<link rel="stylesheet" type="text/css" href="stylesheets/home.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/home2.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 	</head>
 	<body background="images/flag.jpg">
@@ -24,24 +23,21 @@ $user = $_SESSION['user'];
 			  <?php require_once 'navbar.php'; ?>
 			</div>
 		</div>
-</br>
+		
+	<div id="main">
+		   	<div id="main_a">
+				<?php echo 'Welcome, ' . getusername($_SESSION['user']); ?> </br>
+				Current Score is:
+				<?php $score = getscore("$user"); echo "$score"; ?> </br>
+				You are ranked: 
+				<?php $score = getrank("$user"); echo "$score"; ?>
+				 out of 
+				<?php $score = gettotalplayers(); echo "$score"; ?> </br>
 
-		<div id="main">
-			<div id="welcome">
-<?php echo 'Welcome, ' . getusername($_SESSION['user']); ?> </br>
-Current Score is:
-<?php $score = getscore("$user"); echo "$score"; ?> </br>
-You are ranked: 
-<?php $score = getrank("$user"); echo "$score"; ?>
- out of 
-<?php $score = gettotalplayers(); echo "$score"; ?> </br>
 
-			</div>
-
-			<div id="profile">
 			  <h1> Profile </h1>
 			  <?php require ("home/profile.php"); ?>
-             </div>
+			</div>
 			<div id="my_results">
 				<h1> My Results </h1>
 				<?php require ("home/my_results.php"); ?>
