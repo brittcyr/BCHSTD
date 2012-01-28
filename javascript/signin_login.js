@@ -42,18 +42,19 @@ function passwordCheck()
 
 
 	if (pass1.length > 5){
-		document.getElementById("help_message").style.display="none";
+		document.getElementById("help_message").style.opacity=0;
 		long_enough = true;
 	}else{
-		document.getElementById("help_message").style.display="block";
+		document.getElementById("help_message").style.opacity=1;
 		long_enough = false;
 	}
 
-
 	if (pass1 == pass2){
 		pass_confirm = true;
+		if (long_enough){
 		document.getElementById("x").style.display="none";
 		document.getElementById("check").style.display="inline";
+		}
 	}else{
 		pass_confirm = false;
 		document.getElementById("x").style.display="inline";

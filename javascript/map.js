@@ -23,17 +23,17 @@ function changeMode(new_mode){
     mode=new_mode
 	if (mode == "choices")
 	{
-		document.getElementById('f1').style.display= "inline";
+		//document.getElementById('f1').disabled= "false";
 		getUpdate();
 	}
 	if (mode == "results")
 	{
-		document.getElementById('f1').style.display = "none";
+		//document.getElementById('f1').disabled = "true";
 		getResults();
 	}
 	if (mode == "projections")
 	{
-		document.getElementById('f1').style.display = "none";
+		//document.getElementById('f1').disabled = "true";
 		getProjections();
 	}
 }
@@ -159,30 +159,27 @@ function getProjections()
 		document.getElementById(temp_state).style.fill="gray";
 	}
 
-	/*xmlhttp=new XMLHttpRequest();
+
+	
+
+	xmlhttp=new XMLHttpRequest();
 
 
 	xmlhttp.onreadystatechange=function(){
+		
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
 			var result = xmlhttp.responseText.split('!');
 			var i = 1;
-			if (mode == "results")
-			{
-				for (i=1; i< result.length; i++){
-					var temp = result[i].split('#');
-					document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
-				}
-			}else{
-				for(i=1; i< result.length; i++){
-					var temp = result[i].split('#');
-					finished_states[temp[0]]=true;
-				}
+			for (i=1; i< result.length; i++){
+				var temp = result[i].split('#');
+				document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
 			}
 		}
+					
+		
 	}
 
-	xmlhttp.open("GET","ajax_php_files/get_results.php",true);
+	xmlhttp.open("GET","ajax_php_files/get_poll.php",true);
 	xmlhttp.send();
 
-	*/
 }

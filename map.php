@@ -33,7 +33,7 @@ echo getscore($_SESSION['user']);
 					<h3> Map Type </h3>
 					<input type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> Choices </br>
 					<input type='radio' name='r2' value="RESULTS" onClick="changeMode('results')"> Results </br>
-					<!--input type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Projections </br--!>
+					<input type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Projections </br>
 				</form>
 				<form id='f1'>
 					<h3> Make Your Picks </h3>
