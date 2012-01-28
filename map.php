@@ -1,3 +1,12 @@
+<?php
+require_once 'db.php';
+require_once 'library.php';
+session_start();
+if (!isset($_SESSION['user']))
+   {require 'logout.php';  exit();}
+$user = $_SESSION['user'];
+?>
+
 <html>
 	<head>
 		<title>Fantasy Politics</title>
@@ -21,8 +30,6 @@
 			<div id="score">
 				score:
 <?php
-session_start();
-require_once 'library.php';
 echo getscore($_SESSION['user']);
 ?>
 			</div>
