@@ -46,16 +46,16 @@ echo "<table>
 $count=0;
 while($row = mysql_fetch_array($result))
   {
-  echo "<td>" . $count+1 . "</td>" . "\n";
+      $count++;
       $email = $row['EMAIL'];
       $username = getusername($email);
-if ($count%2 == 1)
+if ($count%2 == 0)
   {echo "<tr>" . "\n";}
 else {echo "<tr class='alt'>" . "\n";}
+  echo "<td>" . $count . "</td>" . "\n";
   echo "<td>" . "$username" . "</td>" . "\n";
   echo "<td>" . $row['SCORE'] . "</td>" . "\n";
   echo "</tr> </br>" . "\n";
-  $count++;
   }
 echo "\n </table>" . "\n";
 ?>	
