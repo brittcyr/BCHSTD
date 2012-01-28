@@ -38,22 +38,24 @@ if (count($result)==0){exit();}
 
 echo "<table>
       <tr>
-      <th>User</th>
-      <th>Score</th>
+	<th>Rank</th>
+	<th>User</th>
+	<th>Score</th>
       </tr> </br> \n";
 
 $count=0;
 while($row = mysql_fetch_array($result))
   {
+  echo "<td>" . $count . "</td>" . "\n";
       $email = $row['EMAIL'];
       $username = getusername($email);
-if ($count == 1)
+if ($count%2 == 1)
   {echo "<tr>" . "\n";}
 else {echo "<tr class='alt'>" . "\n";}
   echo "<td>" . "$username" . "</td>" . "\n";
   echo "<td>" . $row['SCORE'] . "</td>" . "\n";
   echo "</tr> </br>" . "\n";
-  $count = ($count+1)%2;
+  $count++;
   }
 echo "\n </table>" . "\n";
 ?>	
