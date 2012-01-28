@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once 'db.php';
+require_once 'library.php';
 if (isset($_POST['user_email'])) {
 	$email = htmlspecialchars($_POST['user_email']);
 	$password = htmlspecialchars($_POST['user_password']);
@@ -45,7 +46,11 @@ header('Location:map.php');
 if ($result == 1)
 {$_SESSION['user']  = $email;}
 else 
-{$email = getemail($email); $_SESSION['user']  = $email;}
+{
+$username = $email;
+$email = getemail($username);
+$_SESSION['user']  = $email;
+}
 
 
 }

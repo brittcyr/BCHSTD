@@ -87,7 +87,7 @@ function getemail($username)
 require_once 'db.php';
 $username = htmlspecialchars($username);
 $query = "SELECT email 
-	  FROM users 
+	  FROM users
 	  WHERE username='$username'";
 
 $result = mysql_query($query) or die('bad query');
