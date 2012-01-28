@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
     <script type="text/javascript" src="javascript/signin_login.js"></script>
   </head>
-  <body>
+  <body background="images/flag.jpg">
     <div id="top">
       <div id="Logo">
 	<img src="icon_images/icon-usmap.png"/>
