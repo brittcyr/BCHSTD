@@ -52,7 +52,7 @@ $score = 0;
 if ($row['PICK']==$row['WINNER']){$score = $row['DELEGATES'];}
 echo "<td>" . $score . "</td>" . "\n";
 
-  echo "</tr> </br>" . "\n";
+  echo "</tr>" . "\n";
   }
 
 echo "\n </table>" . "\n";

@@ -39,7 +39,7 @@ else {echo "<tr class='alt'>" . "\n";}
   echo "<td>" . $row['DATE'] . "</td>" . "\n";
   echo "<td>" . $row['CANDIDATE'] . "</td>" . "\n";
   echo "<td>" . $row['STATE'] . "</td>" . "\n";
-  echo "</tr> </br>" . "\n";
+  echo "</tr>" . "\n";
 $count=($count+1)%2;
   }
 

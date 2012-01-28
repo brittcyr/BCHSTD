@@ -41,7 +41,7 @@ echo "<table>
 	<th>Rank</th>
 	<th>User</th>
 	<th>Score</th>
-      </tr> </br> \n";
+      </tr> \n";
 
 $count=0;
 while($row = mysql_fetch_array($result))
@@ -55,7 +55,7 @@ else {echo "<tr class='alt'>" . "\n";}
   echo "<td>" . $count . "</td>" . "\n";
   echo "<td>" . "$username" . "</td>" . "\n";
   echo "<td>" . $row['SCORE'] . "</td>" . "\n";
-  echo "</tr> </br>" . "\n";
+  echo "</tr>" . "\n";
   }
 echo "\n </table>" . "\n";
 ?>	
