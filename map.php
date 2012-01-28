@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="javascript/map.js"> </script>
 	</head>
 
-	<body onload="getUpdate()">
+	<body background="images/flag.jpg" onload="getUpdate()">
 		<div id="top">
 			<div id="logo">
 				<img src="icon_images/icon-usmap.png" />

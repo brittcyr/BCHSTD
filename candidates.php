@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 	</head>
 
-	<body>
+	<body background="flag.jpg">
 		<div id="top">
 			<div id="logo">
 				<img src="icon_images/icon-usmap.png" />
