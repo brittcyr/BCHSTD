@@ -19,28 +19,28 @@
 
 		<div id="main">
 			<div id="Candidate1">
-				<a href="http://www.mittromney.com">
+				<a href="http://www.mittromney.com" target="_blank">
 					<h1>Romney</h1>
-				</a>
 				<img src="candidates/romney.jpg" />
+				</a>
 			</div>
 			<div id="Candidate2">
-				<a href="http://www.ronpaul2012.com">
+				<a href="http://www.ronpaul2012.com" target="_blank">
 					<h1>Paul</h1>
-				</a>
 				<img src="candidates/paul.jpg" />
+				</a>
 			</div>
 			<div id="Candidate3">
-				<a href="http://www.ricksantorum.com">
+				<a href="http://www.ricksantorum.com" target="_blank">
 					<h1>Santorum</h1>
-				</a>
 				<img src="candidates/santorum.jpg" />
+				</a>
 			</div>
 			<div id="Candidate4">
-				<a href="http://www.newt.org">
+				<a href="http://www.newt.org" target="_blank">
 					<h1>Gingrich</h1>
-				</a>
 				<img src="candidates/gingrich.jpg" />
+				</a>
 			</div>
 		</div>	
 
