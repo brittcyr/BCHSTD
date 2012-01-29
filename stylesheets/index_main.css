@@ -27,53 +27,23 @@
 	padding: 20px;
 }
 
+#title
+{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    padding-bottom: 20px;
+}
+
 #page_title
 {
 	position: relative;
 	float: left;
 	width: 680;
-	margin: 10px;
 	padding-bottom: 10px;
-	padding-top: 10px;
 	text-align: center;
 	height: 450px;
 	font-size: 30px;
 	color: blue;
-}
-
-#form_a, #form_b
-{
-	width: 300px;
-	display: inline-block;
-	height: 140px;
-}
-
-#form_a
-{
-	text-align: right;
-}
-
-#form_b input
-{
-	position: relative;
-	float: left;
-	width: 260px;
-}
-
-#help_message
-{
-	font-size: 15px;
-}
-
-#x, #check
-{
-	width: 20px;
-	height: 20px;
-	position: relative;
-	top: 5px;
-}
-
-#button1
-{
-	margin: 5px;
+	overflow: hidden;
 }
