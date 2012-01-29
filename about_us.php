@@ -22,7 +22,7 @@
 			Fantasy Politics was created for the MIT class 6.470. It was developed in January, 2012. The goal of Fantasy Politics is to encourage an interest in politics. Most people are not very politically informed. We hope that when we throw a little competition into the mix, more people will be inspired to read up on candidates in order to make an educated selection. To win.
 			</div>	
 			<div id="pics">
-				<img src="images/tim.jpg"/>
+				<img src="images/tim_bamf.jpg"/>
 				<img src="images/bsmoney.jpg"/>
 			</div>
 		</div>	
