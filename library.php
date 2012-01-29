@@ -131,7 +131,7 @@ $result = mysql_query($query) or die('bad query');
 $count = 1;
 while ($row = mysql_fetch_array($result))
 {
-if ($row['EMAIL']==$email)
+if ($row['EMAIL']==$email || $row['SCORE']==$score)
 {break;}
 $count++;
 }
@@ -162,6 +162,7 @@ function insert_user_selection($state, $candidate)
 require_once 'db.php';
 session_start();
 $email = $_SESSION['user'];
+if ($email == ''){return;}
 $query = "SELECT count(*) FROM user_selections WHERE email='$email' AND state='$state'";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);

@@ -1,4 +1,4 @@
-Facebook connect
+Facebook login
 Personalize Candidate Colors
 RSS Feed
 Scroll bar for leaderboard page

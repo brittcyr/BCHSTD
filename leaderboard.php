@@ -44,15 +44,21 @@ echo "<table>
       </tr> \n";
 
 $count=0;
+$currentscore=-1;
+$currentrank=0;
 while($row = mysql_fetch_array($result))
   {
       $count++;
       $email = $row['EMAIL'];
+if($currentscore<>$row['SCORE'])
+{$currentrank = $count;}
+$currentscore=$row['SCORE'];
+
       $username = getusername($email);
 if ($count%2 == 0)
   {echo "<tr>" . "\n";}
 else {echo "<tr class='alt'>" . "\n";}
-  echo "<td>" . $count . "</td>" . "\n";
+  echo "<td>" . $currentrank . "</td>" . "\n";
   echo "<td>" . "$username" . "</td>" . "\n";
   echo "<td>" . $row['SCORE'] . "</td>" . "\n";
   echo "</tr>" . "\n";
