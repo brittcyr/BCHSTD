@@ -223,7 +223,7 @@ function pull_popular_picks()
 {
 require_once 'db.php';
 
-$query = "SELECT count(*) AS COUNT, state, candidate 
+$query = "SELECT COUNT(*) AS COUNT, state, candidate 
 	  FROM user_selections 
 	  GROUP BY state, candidate";
 $result = mysql_query($query) or die('bad query');
