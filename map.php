@@ -26,6 +26,10 @@ $user = $_SESSION['user'];
 		</div>
 
 		<div id="main">
+			<div id="title"/>
+				<h1 id="page_title"> My Selections </h1>
+				<p id="hint"> Click on the states to make your picks </p>
+			</div>
 			<div id="left">
 			<div id="score">
 				score:

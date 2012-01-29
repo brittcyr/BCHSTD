@@ -23,19 +23,27 @@ function changeMode(new_mode){
     mode=new_mode
 	if (mode == "choices")
 	{
-		//document.getElementById('f1').disabled= "false";
+		document.getElementById("page_title").innerHTML="My Selections";
+		document.getElementById("hint").innerHTML="Click on the states to make your picks";
 		getUpdate();
 	}
 	if (mode == "results")
 	{
-		//document.getElementById('f1').disabled = "true";
 		getResults();
+		document.getElementById("page_title").innerHTML="Primary Results";
+		document.getElementById("hint").innerHTML="These primaries have already been completed";
 	}
 	if (mode == "projections")
 	{
-		//document.getElementById('f1').disabled = "true";
 		getProjections();
+		document.getElementById("page_title").innerHTML="Poll Results";
+		document.getElementById("hint").innerHTML="These are the popular choices";
 	}
+}
+
+
+function onHover(state_id){
+	document.getElementById(state_id).style.opacity = ".5";
 }
 
 function changeColor(state_id){

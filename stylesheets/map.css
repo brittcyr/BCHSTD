@@ -18,6 +18,12 @@ body
 	margin: auto;
 }
 
+#title
+{
+	width: 1400px;
+	height: 100px;
+	text-align: center;
+}
 
 #left
 {
@@ -75,6 +81,5 @@ svg.state-map
 
 .state:hover
 {
-	border-style: center;
-	border: solid;
+	opacity: .5;
 }
