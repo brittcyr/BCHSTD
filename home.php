@@ -10,6 +10,7 @@ $user = $_SESSION['user'];
 <html>
 	<head>
 		<title> Fantasy Politics </title>
+    		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/home2.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>

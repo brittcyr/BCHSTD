@@ -1,7 +1,7 @@
 <html>
  <head>
     <title> Fantasy Politics </title>
-    <link rel="SHORTCUT ICON" href="icon_images/main_logo.png"/>
+    <link rel="SHORTCUT ICON" href="images/icon.jpg"/>
     <link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesheets/index_main.css"/>
 	<link rel="stylesheet" type="text/css" href="stylesheets/index_bottom.css"/>
