@@ -21,3 +21,13 @@
 	width: 430px;
 	height: 300px;
 }
+
+#bottom a
+{
+    color: blue;
+}
+
+#bottom a:visited
+{
+    color: blue;
+}
