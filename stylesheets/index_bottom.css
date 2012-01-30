@@ -29,3 +29,13 @@
 	width: 250px;
 	height: 160px;
 }
+
+#bottom a
+{
+    color: blue;
+}
+
+#bottom a:visited
+{
+    color: blue;
+}

@@ -53,6 +53,7 @@ while($row = mysql_fetch_array($result))
   {
       $count++;
       $email = $row['EMAIL'];
+      $score = $row['SCORE'];
 if($currentscore<>$row['SCORE'])
 {$currentrank = $count;}
 $currentscore=$row['SCORE'];
@@ -62,8 +63,8 @@ if ($count%2 == 0)
   {echo "<tr>" . "\n";}
 else {echo "<tr class='alt'>" . "\n";}
   echo "<td>" . $currentrank . "</td>" . "\n";
-  echo "<td>" . "$username" . "</td>" . "\n";
-  echo "<td>" . $row['SCORE'] . "</td>" . "\n";
+  echo "<td>" . $username . "</td>" . "\n";
+  echo "<td>" . $score . "</td>" . "\n";
   echo "</tr>" . "\n";
   }
 echo "\n </table>" . "\n";

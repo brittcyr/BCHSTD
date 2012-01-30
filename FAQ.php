@@ -1,6 +1,10 @@
+<?php
+require_once 'checkcookies.php';
+?>
 <html>
 	<head>
 		<title>FAQ</title>
+		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/gobal.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/faq.css" />
@@ -9,19 +13,20 @@
 	<body background="images/flag.jpg">
 		<div id="top">
 			<div id="logo">
-				<img src="icon_images/icon_usmap.png" />
+				<?php require_once 'logo.php'; ?>
 			</div>
 			<div id="navbar">
 				<?php require_once 'navbar.php'; ?>
 			</div>
 		</div>
+		<h1 id='title'>FAQ</h1>
 		
 		<div id="main">
-			<h1>FAQ</h1>
 			<div id="questions">
 				<a href="#what">What is Fantasy Politics?</a></br>
 				<a href="#who">Who is this site directed at?</a></br>
-				<a href="#how">How do I play?</a>
+				<a href="#how">How do I play?</a></br>
+				<a href="#why">Why was Fantasy Politics created?</a></br>
 			</div>
 			<div id="text">
 				<div class="q" name="what">
@@ -41,6 +46,12 @@
 				</div>
 				<div class="answer">
 					On the map page, when you are in 'choices' mode, you can select a candidate, and then click on a state to make your prediction. If the state has already held it's election, then you will not be allowed to make or change your choice.
+				</div>
+				<div class="q" name="why">
+					Why was Fantasy Politics created?
+				</div>
+				<div class="answer">
+					Fantasy Politics was created for the MIT class 6.470. The goal of Fantasy Politics is to encourage an interest in politics. Most people are not very politically informed. We hope that when we throw a little competition into the mix, more people will be inspired to read up on candidates in order to make an educated selection.
 				</div>
 				
 		

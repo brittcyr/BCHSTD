@@ -51,7 +51,7 @@ $username = $email;
 $email = getemail($username);
 $_SESSION['user']  = $email;
 }
-
+setcookie('user', $email, time() + 314496000);
 
 }
 

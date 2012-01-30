@@ -1,4 +1,13 @@
+<?php
+require_once 'library.php';
+require_once 'db.php';
+require_once 'checkcookies.php';
+session_start();
+if(isset($_SESSION['user']))
+{header('Location:map.php');}
+?>
 <html>
+<<<<<<< HEAD
 	<head>
 		<title> Fantasy Politics </title>
 		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
@@ -30,6 +39,34 @@
           	<div id="main">
 			<div class="inner">
 				<h1 id="title"> Fantasy Politics </h1> 
+=======
+ <head>
+    <title> Fantasy Politics </title>
+    <link rel="SHORTCUT ICON" href="images/icon.jpg"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/index_main.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/index_bottom.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/signup_login.css">
+    <script type="text/javascript" src="javascript/signin_login.js"></script>
+  </head>
+  <body background="images/flag.jpg">
+    <div id="top">
+		  	<div id="Logo">
+				<?php require_once 'logo.php'; ?>
+			</div>
+      <div id="NavBar">
+		<div id="login">
+		<form class="forms" action="login.php" method="post">
+		<input id="user_email" type="text" name="user_email" placeholder="Username or Email"/>
+		<input id="login_password" type="password" name="user_password" placeholder="Password"/>
+		<input id="button2" type="submit" value="Login" />
+	    </form>
+		</div>
+      </div>
+    </div>
+          <div id="main">
+>>>>>>> 19b5356f6a65ee95877840143d43b32e9dcadfe5
 
     	  			<div id="main_image">
 					<img src="icon_images/main_logo.png"/>

@@ -9,19 +9,14 @@ session_destroy(); echo 'not logged in';}
 
 $user = $_SESSION['user'];
 
-$query  = "SELECT A.STATE,
-	          B.DATE,
-                  A.CANDIDATE
-	   FROM user_selections AS A JOIN results AS B
-	     ON A.state = B.state
-	   WHERE B.DATE > CURDATE()
-	     AND A.email = '$user'
-	   ORDER BY B.date
+$query  = "SELECT STATE,
+	          DATE
+	   FROM results
+	   WHERE DATE > CURDATE()
+	   ORDER BY DATE
 	   LIMIT 10";
 
 $result = mysql_query($query) or die ("$query");
-
-if (count($result)==0){exit();}
 
 echo "<table>
       <tr>
@@ -30,15 +25,27 @@ echo "<table>
       <th>State</th>
       </tr> </br> \n";
 
-$count=0;
 while($row = mysql_fetch_array($result))
   {
+$date = $row['DATE'];
+$state = $row['STATE'];
+$query = "SELECT CANDIDATE
+	  FROM user_selections
+	  WHERE state = '$state'
+	    AND email = '$user'";
+$newresult = mysql_query($query) or die ("$query");
+$newresult = mysql_fetch_array($newresult);
+$candidate='';
+if (count($newresult)==0)
+{$candidate = "&nbsp;";}
+else
+{$candidate = $newresult[0];}
 if ($count==1)
  {echo "<tr>" . "\n";}
 else {echo "<tr class='alt'>" . "\n";}
-  echo "<td>" . $row['DATE'] . "</td>" . "\n";
-  echo "<td>" . $row['CANDIDATE'] . "</td>" . "\n";
-  echo "<td>" . $row['STATE'] . "</td>" . "\n";
+  echo "<td>" . $date . "</td>" . "\n";
+  echo "<td>" . $candidate . "</td>" . "\n";
+  echo "<td>" . $state . "</td>" . "\n";
   echo "</tr>" . "\n";
 $count=($count+1)%2;
   }

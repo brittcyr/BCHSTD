@@ -42,14 +42,23 @@ if ($parity==0)
  { echo "<tr class='alt'>" . "\n";}
 else
  { echo "<tr>" . "\n";}
-  echo "<td>" . $row['DATE'] . "</td>" . "\n";
-  echo "<td>" . $row['PICK'] . "</td>" . "\n";
-  echo "<td>" . $row['STATE'] . "</td>" . "\n";
-  echo "<td>" . $row['WINNER'] . "</td>" . "\n";
-  echo "<td>" . $row['DELEGATES'] . "</td>" . "\n";
+$date = $row['DATE'];
+$pick = $row['PICK'];
+if ($pick == '')
+{$pick = "&nbsp;";}
+$state = $row['STATE'];
+$winner = $row['WINNER'];
+if ($winner == '')
+{$winner = "&nbsp;";}
+$delegates = $row['DELEGATES'];
+  echo "<td>" . $date . "</td>" . "\n";
+  echo "<td>" . $pick . "</td>" . "\n";
+  echo "<td>" . $state . "</td>" . "\n";
+  echo "<td>" . $winner . "</td>" . "\n";
+  echo "<td>" . $delegates . "</td>" . "\n";
 $parity = ($parity +1)%2;
 $score = 0;
-if ($row['PICK']==$row['WINNER']){$score = $row['DELEGATES'];}
+if ($pick==$winner){$score = $delegates;}
 echo "<td>" . $score . "</td>" . "\n";
 
   echo "</tr>" . "\n";

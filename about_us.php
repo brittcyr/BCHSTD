@@ -1,3 +1,6 @@
+<?php
+require_once 'checkcookies.php';
+?>
 <html>
 	<head>
 		<title>Fantasy Politics</title>
@@ -9,9 +12,14 @@
 
 	<body background="images/flag.jpg">
 		<div id="top">
+<<<<<<< HEAD
 		<div class="inner">
 			<div id="logo">
 				<h3> chooseyourchief.com </h3>
+=======
+			<div id="Logo">
+				<?php require_once 'logo.php'; ?>
+>>>>>>> 19b5356f6a65ee95877840143d43b32e9dcadfe5
 			</div>
 			<div id="navbar">
 			  <?php require_once 'navbar.php'; ?>
@@ -22,13 +30,12 @@
 		<div id="main">
 			<h1>About Us</h1>
 			<div id="text">
-			Fantasy Politics was created for the MIT class 6.470. It was developed in January, 2012. The goal of Fantasy Politics is to encourage an interest in politics. Most people are not very politically informed. We hope that when we throw a little competition into the mix, more people will be inspired to read up on candidates in order to make an educated selection.
+				We are sophomores taking 6.470, an MIT Web Design competition / class. We enjoy basketball, counting, and chilling in our free time. 
 			</div>	
 			<div id="pics">
 				<img src="images/tim_bamf.jpg"/>
 				<img src="images/bsmoney.jpg"/>
 			</div>
 		</div>	
-
 	</body>
 </html>
