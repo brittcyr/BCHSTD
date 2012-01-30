@@ -37,7 +37,7 @@ $newresult = mysql_query($query) or die ("$query");
 $newresult = mysql_fetch_array($newresult);
 $candidate='';
 if (count($newresult)==0)
-{$candidate = '';}
+{$candidate = "&nbsp;";}
 else
 {$candidate = $newresult[0];}
 if ($count==1)
