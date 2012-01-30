@@ -4,7 +4,7 @@ require_once 'db.php';
 require_once 'checkcookies.php';
 session_start();
 if(isset($_SESSION['user']))
-{header('Location:map.php');}
+{header('Location:home.php');}
 ?>
 <html>
 
