@@ -1,6 +1,10 @@
+<?php
+require_once 'checkcookies.php';
+?>
 <html>
 	<head>
 		<title>FAQ</title>
+		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/gobal.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/faq.css" />
@@ -9,7 +13,7 @@
 	<body background="images/flag.jpg">
 		<div id="top">
 			<div id="logo">
-				<img src="icon_images/icon_usmap.png" />
+				<?php require_once 'logo.php'; ?>
 			</div>
 			<div id="navbar">
 				<?php require_once 'navbar.php'; ?>
