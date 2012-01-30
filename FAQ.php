@@ -12,12 +12,14 @@ require_once 'checkcookies.php';
 	</head>
 	<body background="images/flag.jpg">
 		<div id="top">
+		<div class="inner">
 			<div id="logo">
-				<?php require_once 'logo.php'; ?>
+				<h3> chooseyourchief.com </h3>
 			</div>
 			<div id="navbar">
 				<?php require_once 'navbar.php'; ?>
 			</div>
+		</div>
 		</div>
 		<h1 id='title'>FAQ</h1>
 		

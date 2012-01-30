@@ -5,7 +5,7 @@ if (isset($_SESSION['user']))
 ?>
 
 <a href="logout.php"> Logout </a>
-<a href="FAQ.html">FAQ</a>
+<a href="FAQ.php">FAQ</a>
 <a href="about_us.php"> About Us </a>
 <a href="leaderboard.php"> Leaderboard </a>
 <a href="candidates.php"> Candidates </a>

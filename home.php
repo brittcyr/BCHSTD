@@ -20,11 +20,7 @@ $user = $_SESSION['user'];
 		<div id="top">
 		<div class="inner">
 			<div id="Logo">
-<<<<<<< HEAD
 				<h3> chooseyourchief.com<h3>
-=======
-				<?php require_once 'logo.php'; ?>
->>>>>>> 19b5356f6a65ee95877840143d43b32e9dcadfe5
 			</div>
 			<div id="NavBar">
 			  <?php require_once 'navbar.php'; ?>

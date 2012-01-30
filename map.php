@@ -20,7 +20,6 @@ $user = $_SESSION['user'];
 
 	<body background="images/flag.jpg" onload="getResults()">
 		<div id="top">
-<<<<<<< HEAD
 			<div class="inner">
 				<div id="logo">
 					<h3> chooseyourchief.com </h3>
@@ -28,12 +27,7 @@ $user = $_SESSION['user'];
 				<div id="navbar">
 			  	<?php require_once 'navbar.php'; ?>
 				</div>		
-=======
-			<div id="Logo">
-				<?php require_once 'logo.php'; ?>
->>>>>>> 19b5356f6a65ee95877840143d43b32e9dcadfe5
 			</div>
-		</div>
 
 		<div id="main">
 			<div id="title"/>
