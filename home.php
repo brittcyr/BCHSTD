@@ -18,7 +18,7 @@ $user = $_SESSION['user'];
 	<body background="images/flag.jpg">
 		<div id="top">
 			<div id="Logo">
-				<img src="icon_images/icon-usmap.png"/>
+				<?php require_once 'logo.php'; ?>
 			</div>
 			<div id="NavBar">
 			  <?php require_once 'navbar.php'; ?>
