@@ -1,3 +1,11 @@
+<?php
+require_once 'library.php';
+require_once 'db.php';
+require_once 'checkcookies.php';
+session_start();
+if(isset($_SESSION['user']))
+{header('Location:map.php');}
+?>
 <html>
  <head>
     <title> Fantasy Politics </title>
