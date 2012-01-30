@@ -20,3 +20,13 @@
 	width: 280px;
 	height: 400px;
 }
+
+#main a
+{
+    color: blue;
+}
+
+#main a:visited
+{
+    color: blue;
+}
