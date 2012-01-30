@@ -40,13 +40,16 @@ $user = $_SESSION['user'];
 		<div id="super">
 			<div class="inner">
 		   	<div id="welcome">
-				<?php echo 'Welcome, ' . getusername($_SESSION['user']); ?> </br>
+				<span>	<?php echo 'Welcome, ' . getusername($_SESSION['user']); ?> </span>
+				<br/>
+				<span>
 				Current Score is:
-				<?php $score = getscore("$user"); echo "$score"; ?> </br>
+				<?php $score = getscore("$user"); echo "$score"; ?>
+				<br/>
 				You are ranked: 
 				<?php $score = getrank("$user"); echo "$score"; ?>
 				 out of 
-				<?php $score = gettotalplayers(); echo "$score"; ?> </br>
+				<?php $score = gettotalplayers(); echo "$score"; ?> </span>
 			</div>
 			<div id="rss">
 				<h1> Political News </h1>
@@ -72,6 +75,12 @@ $user = $_SESSION['user'];
 		</div>
 		</div>
 	</body>
+	
+	<div id="change_profile">
+				<h1> Profile </h1>
+			  <?php require ("home/profile.php"); ?>
+	</div>
+
 </html>
 
 
