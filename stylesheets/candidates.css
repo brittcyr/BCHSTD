@@ -1,22 +1,38 @@
 #main
 {
-	width: 1400px;
+	width: 1000px;
+	height: 600px;
 	margin: auto;
+	margin-top: 20px;
+	border-style: solid;
+	border-radius: 15px;
+	background-color: #acb3b4;
+	opacity: .8
 }
 
 #main div
 {
 	position: relative;
 	float: left;
-	padding: 10px;
-	border-style: solid;
-	border-radius: 15px;
-	margin: 20px;
 	text-align: center;
+	padding: 10px;
+	margin: 10px;
+	margin-left: 0px;
 }
+
+#main #Candidate1, #main #Candidate2, #main #Candidate3
+{
+	border-right: solid;
+	padding-right: 15px;
+}
+
+#main #Candidate1
+{
+	margin-left: 20px;
+}
+
 
 #main div img
 {
-	width: 280px;
-	height: 400px;
+	width: 202px;
 }

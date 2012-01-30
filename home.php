@@ -17,12 +17,14 @@ $user = $_SESSION['user'];
 	</head>
 	<body background="images/flag.jpg">
 		<div id="top">
+		<div class="inner">
 			<div id="Logo">
-				<img src="icon_images/icon-usmap.png"/>
+				<h3> chooseyourchief.com<h3>
 			</div>
 			<div id="NavBar">
 			  <?php require_once 'navbar.php'; ?>
 			</div>
+		</div>
 		</div>
 		
 	<div id="main">

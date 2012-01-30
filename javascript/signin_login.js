@@ -6,7 +6,7 @@ var email_valid=false;
 var username_valid=false;
 
 //Opens menu for login or signup if no menu is open already
-/*
+
 function view(id)
 {
 	if (!(menu_open))
@@ -32,7 +32,7 @@ function hide(id)
 	document.getElementById(id).style.display="none";
 	menu_open = false;
 }
-*/
+
 
 //confirm passwords are equivalent by displaying either "x.png" or "check.png"
 function passwordCheck()
