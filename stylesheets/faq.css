@@ -1,4 +1,39 @@
+#title
+{
+    text-align: center;
+}
+
 .q
 {
     font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.answer
+{
+    padding-bottom: 40px;
+}
+#main
+{
+    border: dashed;
+    background-color: white;
+    width: 600px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#questions
+{
+    padding-top: 20px;
+}
+
+#questions a
+{
+    line-height: 25px;
+}
+
+#text
+{
+    padding-top: 80px;
 }
