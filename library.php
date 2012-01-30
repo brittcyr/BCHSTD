@@ -298,5 +298,17 @@ mail($to, $subject, $message, $headers);
 mysql_close($db);
 }
 
+function numstateswon($candidate)
+{
+require_once 'db.php';
+$query = "SELECT COUNT(*)
+	  FROM results
+	  WHERE candidate = '$candidate'";
+$result = mysql_query($query) or die("$query");
+$result = mysql_fetch_array($result);
+$result = $result[0];
+return $result;
+}
+
 
 ?>
