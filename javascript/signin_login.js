@@ -18,7 +18,9 @@ function view(id)
 			document.getElementById("text1").value="";
 			document.getElementById("text2").value="";
 			document.getElementById("text3").value="";
-			document.getElementById("text3").focus();
+			document.getElementById("text5").value="";
+			document.getElementById("text5").focus();
+
 		} else {
 			document.getElementById("text4").focus();
 		}
