@@ -11,9 +11,9 @@
   </head>
   <body background="images/flag.jpg">
     <div id="top">
-		  <div id="Logo">
-		<img src="icon_images/icon-usmap.png"/>
-	      </div>
+		  	<div id="Logo">
+				<?php require_once 'logo.php'; ?>
+			</div>
       <div id="NavBar">
 		<div id="login">
 		<form class="forms" action="login.php" method="post">
