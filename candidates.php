@@ -11,7 +11,7 @@ require_once 'checkcookies.php';
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 	</head>
 
-	<body background="flag.jpg">
+	<body background="images/flag.jpg">
 		<div id="top">
 			<div id="Logo">
 				<?php require_once 'logo.php'; ?>
