@@ -33,7 +33,7 @@ if (isset($_POST['user_email'])) {
 		       header('Location:index.php');}
 else
 {
-header('Location:map.php');
+header('Location:home.php');
 //-----------SUCCESSFUL LOGIN NEED TO DETERMINE IF WAS USERNAME OR EMAIL-----------
 
 	$query = "SELECT COUNT(*) 
