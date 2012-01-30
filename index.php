@@ -53,7 +53,7 @@ if(isset($_SESSION['user']))
 						
 						<li> Use our interactive map! </li>
 					</ul>
-					<a href="#" onclick="view('signup')"> Create a Profile!  </a>
+					<a href="#" onclick="view('outer')"> Create a Profile!  </a>
         			</div>
 			</div>
 		</div>
@@ -81,32 +81,33 @@ if(isset($_SESSION['user']))
 		</div>
 		</div>
 		<div id="outer">
-			<div id="signup">
-				<a id="close" href="#" onclick="hide('signup')"> <img src="icon_images/close.gif"/></a>
-				<form class="forms" id="signup_form" action="signup.php" method="post">
-					<h1> Create Your Profile <h1>
-					<div id="form_a"/>
-						Username <br/>
-						Email <br/>
-						Password <br/>
-						Confirm Password <br/>
-					</div>
-					<div id="form_b">
-						<input id="text5" type="text" name="username" onkeyup="checkSubmit()"/><br/> 
-						<input id="text3" type="text" name="user_email" onkeyup="checkSubmit()" /> <br/>
-						<input id="text1" type="password" name="user_password" onchange="checkSubmit()" onkeyup="checkSubmit()"/> <br/>
-						<input id="text2" type="password" name="confirm_password" onchange="checkSubmit()" onkeyup="checkSubmit()"/><br/>
-					</div>
-					<div id='x_check'>
-						<img id="x" src="images/x.png"/> <img id="check" src="images/check.png" style="display:none;"/>
-					</div>
-					<div id="help_message"> Reminder: The password must be at least six characters or numbers
-					 </div>
-					<div id="button1div">
-						<input id="button1" type="submit" value="Sign Up!!" />
-					</div>
-      				</form>
-			</div>
 		</div>
+		<div id="signup">
+			<a id="close" href="#" onclick="hide('outer')"> <img src="icon_images/close.gif"/></a>
+			<form class="forms" id="signup_form" action="signup.php" method="post">
+				<h1> Create Your Profile <h1>
+				<div id="form_a"/>
+					Username <br/>
+					Email <br/>
+					Password <br/>
+					Confirm Password <br/>
+				</div>
+				<div id="form_b">
+					<input id="text5" type="text" name="username" onkeyup="checkSubmit()"/><br/> 
+					<input id="text3" type="text" name="user_email" onkeyup="checkSubmit()" /> <br/>
+					<input id="text1" type="password" name="user_password" onchange="checkSubmit()" onkeyup="checkSubmit()"/> <br/>
+					<input id="text2" type="password" name="confirm_password" onchange="checkSubmit()" onkeyup="checkSubmit()"/><br/>
+				</div>
+				<div id='x_check'>
+					<img id="x" src="images/x.png"/> <img id="check" src="images/check.png" style="display:none;"/>
+				</div>
+				<div id="help_message"> Reminder: The password must be at least six characters or numbers
+				 </div>
+				<div id="button1div">
+					<input id="button1" type="submit" value="Sign Up!!" />
+				</div>
+      			</form>
+		</div>
+
 	</body>
 </html>

@@ -12,6 +12,7 @@ function view(id)
 	if (!(menu_open))
 	{
 		document.getElementById(id).style.display="block";
+		document.getElementById("signup").style.display="block";
 		document.getElementById("button1").disabled=true;
 		if (id == "signup")
 		{
@@ -32,6 +33,7 @@ function view(id)
 function hide(id)
 {
 	document.getElementById(id).style.display="none";
+	document.getElementById("signup").style.display="none";
 	menu_open = false;
 }
 
