@@ -163,7 +163,9 @@ require_once 'db.php';
 session_start();
 $email = $_SESSION['user'];
 if ($email == ''){return;}
-$query = "SELECT count(*) FROM user_selections WHERE email='$email' AND state='$state'";
+$query = "SELECT count(*) 
+	  FROM user_selections 
+	  WHERE email='$email' AND state='$state'";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $result = $result[0];
@@ -249,6 +251,31 @@ foreach ($best as $state => $candidate)
 return $return;
 mysql_close($db);
 
+}
+
+
+function resetpassword($email)
+{
+require_once 'db.php';
+$email = htmlspecialchars($email);
+
+$chars = "abcdefghijklmnopqrstuvwxyz";
+$nums = "0123456789";
+
+$newpassword = $chars[rand(0,25)] . $chars[rand(0,25)] . $nums[rand(0,9)] . $nums[rand(0,9)] . $chars[rand(0,25)] . $chars[rand(0,25)];
+
+$hashpass = sha1($newpassword);
+
+$query = "UPDATE users
+	  SET password = '$hashpass'
+	  WHERE email = '$email'";
+$result = mysql_query($query) or die('bad query');
+
+$to = $email;
+$subject = "Reset Password";
+$message = "Your password has been reset to:   " . "$newpassword";
+mail($to, $subject, $message);
+mysql_close($db);
 }
 
 
