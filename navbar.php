@@ -10,7 +10,7 @@ if (isset($_SESSION['user']))
 <li>
         <a href="#">Statistics</a>
         <ul>
-        <li><a href="home.php">My Stats</a></li>
+        <li><a href="home.php"> My Profile </a></li>
         <li><a href="leaderboard.php">Leaderboard</a></li>
         </ul>
 </li>
@@ -19,7 +19,7 @@ if (isset($_SESSION['user']))
         <ul>
         <li><a href="http://www.mittromney.com">Mitt Romney</a></li>
         <li><a href="http://www.ronpaul2012.com">Ron Paul</a></li>
-        <li><a href="http://www.ricksantorum.com">Rick Santorum></a></li>
+        <li><a href="http://www.ricksantorum.com">Rick Santorum</a></li>
         <li><a href="http://www.newt.org">Newt Gingrich</a></li>
         <li><a href="candidates.php">All</a></li>
         </ul>

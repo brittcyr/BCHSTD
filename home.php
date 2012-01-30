@@ -59,6 +59,9 @@ $user = $_SESSION['user'];
 				<h1> Profile </h1>
 			  <?php require ("home/profile.php"); ?>
 			</div>
+			<div id="link">
+				<a href="map.php"> Make Predictions! </a>
+			</div>
 			<div class="fb-like-box" data-href="https://www.facebook.com/pages/ChooseYourChiefcom/244029609004737" data-width="300" data-height="600" data-show-faces="true" data-stream="true" data-header="true">
 			</div>
 

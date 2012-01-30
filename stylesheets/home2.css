@@ -41,11 +41,47 @@ body
 	padding-top: 20px;
 	position: relative;
 	float: left;
-	width: 358px;
+	width: 410px;
 	text-align: center;
 	font-size: 16px;
 	border-style: solid;
 	height: 700px;
+}
+
+#link
+{
+	width: 250px;
+	height: 50px;
+	position: relative;
+	float: left;
+	padding: 10px;
+	padding-left: 30px;
+	padding-top: 30px;
+	border-bottom: solid;
+	border-top: solid;
+}
+
+#link a
+{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
+	margin: 10px;
+	border-style: solid;
+	border-radius: 15px;
+	border-color: green;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	background-color: green;
+}
+
+#link a:hover
+{
+	background-color: #00FF00;
+	border-color: #00FF00;
 }
 
 #bottom
