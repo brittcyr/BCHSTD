@@ -266,15 +266,35 @@ $newpassword = $chars[rand(0,25)] . $chars[rand(0,25)] . $nums[rand(0,9)] . $num
 
 $hashpass = sha1($newpassword);
 
+$query = "SELECT COUNT(*)
+	  FROM users
+	  WHERE email = '$email'";
+$result = mysql_query($query) or die('bad query');
+$result = mysql_fetch_array($result);
+$result = $result[0];
+if ($result == 0)
+{return ; }
+
 $query = "UPDATE users
 	  SET password = '$hashpass'
 	  WHERE email = '$email'";
 $result = mysql_query($query) or die('bad query');
 
 $to = $email;
+$fromemail = "do_not_reply@chooseyourchief.com";
+$fromname = "Fantasy Politics";
 $subject = "Reset Password";
-$message = "Your password has been reset to:   " . "$newpassword";
-mail($to, $subject, $message);
+$message = "Your password has been reset to:   " . $newpassword;
+$replytoname = "Fantasy Politics";
+$replytoemail = "do_not_reply@chooseyourchief.com";
+$returnname = "Fantasy Politics";
+$returnpath = "do_not_reply@chooseyourchief.com";
+
+$headers = "From:" . "$fromname <$fromemail>";
+$headers .= "\n"."Reply-To: $replytoname  <$replytoemail>";
+$headers .= "\n"."Return-Path: $returnname <$returnpath>";
+
+mail($to, $subject, $message, $headers);
 mysql_close($db);
 }
 
