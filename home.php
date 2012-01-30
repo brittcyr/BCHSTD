@@ -17,6 +17,14 @@ $user = $_SESSION['user'];
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 	</head>
 	<body background="images/flag.jpg">
+	      <div id="fb-root"></div>
+	      <script>(function(d, s, id) {
+  	      	var js, fjs = d.getElementsByTagName(s)[0];
+  		if (d.getElementById(id)) return;
+  		js = d.createElement(s); js.id = id;
+  		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=202773199813124";
+  		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 		<div id="top">
 		<div class="inner">
 			<div id="Logo">
@@ -54,6 +62,7 @@ $user = $_SESSION['user'];
 			  <?php require ("home/upcoming_picks.php"); ?>
 			</div>
 			<div id="news_feed">
+<div class="fb-like-box" data-href="https://www.facebook.com/pages/ChooseYourChiefcom/244029609004737" data-width="400" data-height="500" data-show-faces="true" data-stream="true" data-header="true"></div>
 				<h1> Political News </h1>
 
 			COMING SOON
