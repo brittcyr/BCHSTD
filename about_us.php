@@ -9,8 +9,8 @@
 
 	<body background="images/flag.jpg">
 		<div id="top">
-			<div id="logo">
-				<a href="./map.php"><img src="icon_images/icon-usmap.png" /></a>
+			<div id="Logo">
+				<?php require_once 'logo.php'; ?>
 			</div>
 			<div id="navbar">
 			  <?php require_once 'navbar.php'; ?>

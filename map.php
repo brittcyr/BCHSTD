@@ -18,8 +18,8 @@ $user = $_SESSION['user'];
 
 	<body background="images/flag.jpg" onload="getResults()">
 		<div id="top">
-			<div id="logo">
-				<img src="icon_images/icon-usmap.png" />
+			<div id="Logo">
+				<?php require_once 'logo.php'; ?>
 			</div>
 			<div id="navbar">
 			  <?php require_once 'navbar.php'; ?>
