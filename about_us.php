@@ -22,7 +22,7 @@
 		<div id="main">
 			<h1>About Us</h1>
 			<div id="text">
-				We are sophomores taking 6.470, an MIT Web Design competition / class. We enjoy basketball, counting, and chilling in our free time. 
+				We are sophomores taking 6.470, an MIT Web Design competition / class. We enjoy counting, winning, and chilling in our free time. 
 			</div>
 			<div id="pics">
 				<img src="images/tim_bamf.jpg"/>

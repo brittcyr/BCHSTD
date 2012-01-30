@@ -27,6 +27,7 @@ require_once 'checkcookies.php';
 			<div id="questions">
 				<a href="#what">What is Fantasy Politics?</a></br>
 				<a href="#who">Who is this site directed at?</a></br>
+				<a href="#win">How do I increase my chances of winning?</a></br>
 				<a href="#how">How do I play?</a></br>
 				<a href="#why">Why was Fantasy Politics created?</a></br>
 			</div>
@@ -43,6 +44,13 @@ require_once 'checkcookies.php';
 				<div class="answer">
 					This site is directed at anyone with any political interest. This site is also directed at people that like to win.
 				</div>
+				<div class="q" name="win">
+					How do I increase my chances of winning?
+				</div>
+				<div class="answer">
+					The most ideal solution would be to look into the future and find out who wins each primary. But since we are only human, the next best solution would be to follow the debates going on in each state, learn about state demographics and voting patterns, and learn about each candidate's platform.
+				</div> 
+					
 				<div class="q" name="how">
 					How do I play?
 				</div>
