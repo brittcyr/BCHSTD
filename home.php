@@ -36,8 +36,10 @@ $user = $_SESSION['user'];
 		</div>
 		</div>
 		
-	<div id="main">
-		   	<div id="profile">
+		<div id="main">
+		<div id="super">
+			<div class="inner">
+		   	<div id="welcome">
 				<?php echo 'Welcome, ' . getusername($_SESSION['user']); ?> </br>
 				Current Score is:
 				<?php $score = getscore("$user"); echo "$score"; ?> </br>
@@ -45,31 +47,29 @@ $user = $_SESSION['user'];
 				<?php $score = getrank("$user"); echo "$score"; ?>
 				 out of 
 				<?php $score = gettotalplayers(); echo "$score"; ?> </br>
-
-
-			  <h1> Profile </h1>
+			</div>
+			<div id="rss">
+				<!-- rss feed --!>
+				<h1> Political News </h1>
+			</div>
+			<div id="profile">
+				<h1> Profile </h1>
 			  <?php require ("home/profile.php"); ?>
+			</div>
+			<div class="fb-like-box" data-href="https://www.facebook.com/pages/ChooseYourChiefcom/244029609004737" data-width="300" data-height="600" data-show-faces="true" data-stream="true" data-header="true">
+			</div>
+
+		<div class="inner">
+			<div id="upcoming_picks">
+			  <h1> Upcoming Picks </h1>
+			  <?php require ("home/upcoming_picks.php"); ?>
 			</div>
 			<div id="my_results">
 				<h1> My Results </h1>
 				<?php require ("home/my_results.php"); ?>
 			</div>
 		</div>
-
-		<div id="bottom">
-			<div id="upcoming_picks">
-			  <h1> Upcoming Picks </h1>
-			  <?php require ("home/upcoming_picks.php"); ?>
-			</div>
-			<div id="news_feed">
-<div class="fb-like-box" data-href="https://www.facebook.com/pages/ChooseYourChiefcom/244029609004737" data-width="400" data-height="500" data-show-faces="true" data-stream="true" data-header="true"></div>
-				<h1> Political News </h1>
-
-			COMING SOON
-
-			</div>
-
-		
+		</div>
 		</div>
 	</body>
 </html>
