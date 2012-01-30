@@ -6,7 +6,7 @@ require_once 'checkcookies.php';
 		<title>FAQ</title>
 		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css" />
-		<link rel="stylesheet" type="text/css" href="stylesheets/gobal.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/global.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/faq.css" />
 		
 	</head>
