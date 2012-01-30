@@ -1,7 +1,15 @@
+html
+{
+	margin: 0px;
+	padding: 0px;
+}
+
 body
 {
     	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
    	border-radius: 10px;
     	border-width: 1px;
     	border-color: red;
+	margin: 0px;
+	padding: 0px;
 }

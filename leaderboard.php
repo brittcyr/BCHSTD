@@ -14,12 +14,14 @@ session_start();
 
 	<body background="images/flag.jpg">
 		<div id="top">
+		<div class="inner">
 			<div id="logo">
-				<img src="icon_images/icon-usmap.png" />
+				<h3> chooseyourchief.com </h3>
 			</div>
 			<div id="navbar">
 			  <?php require_once 'navbar.php'; ?>
 			</div>		
+		</div>
 		</div>
 
 		<div id="main">

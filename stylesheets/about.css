@@ -1,17 +1,13 @@
 #main
 {
-	width: 1400px;
+	width: 1000px;
 	margin: auto;
 	border-style: solid;
 	border-radius: 15px;
 	height: 700px;
 	margin-top: 10px;
-}
-
-#top
-{
-	width: 1400px;
-	margin: auto;
+	background-color: #acb3b4;
+	opacity: .8;
 }
 
 #text

@@ -12,6 +12,7 @@ $user = $_SESSION['user'];
 	<head>
 		<title>Fantasy Politics</title>
     		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/map.css"/>
 		<script type="text/javascript" src="javascript/map.js"> </script>
@@ -19,13 +20,14 @@ $user = $_SESSION['user'];
 
 	<body background="images/flag.jpg" onload="getResults()">
 		<div id="top">
-			<div id="Logo">
-				<?php require_once 'logo.php'; ?>
+			<div class="inner">
+				<div id="logo">
+					<h3> chooseyourchief.com </h3>
+				</div>
+				<div id="navbar">
+			  	<?php require_once 'navbar.php'; ?>
+				</div>		
 			</div>
-			<div id="navbar">
-			  <?php require_once 'navbar.php'; ?>
-			</div>		
-		</div>
 
 		<div id="main">
 			<div id="title"/>
@@ -33,29 +35,29 @@ $user = $_SESSION['user'];
 				<p id="hint"> Click on the states to make your picks </p>
 			</div>
 			<div id="left">
-			<div id="score">
-				score:
-<?php
-echo getscore($_SESSION['user']);
-?>
-			</div>
-			<div id= "picks_or_results"></div>
-			<div id="candidates">
+				<div id="score">
+					score:
+	<?php
+	echo getscore($_SESSION['user']);
+	?>
+				</div>
+				<div id= "picks_or_results"></div>
+				<div id="candidates">
 				<!--<ul id="candidates">-->
-				<form id='f2'>
-					<h3> Map Type </h3>
-					<input type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> Choices </br>
-					<input type='radio' name='r2' value="RESULTS" onClick="changeMode('results')"> Results </br>
-					<input type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Poll Results </br>
-				</form>
-				<form id='f1'>
-					<h3> Make Your Picks </h3>
-					<input type='radio' name='r1' value="ROMNEY" onClick="changeCandidate('ROMNEY')" checked/> <span id="ROMNEY"> Romney </span> </br>
-					<input type='radio' name='r1' value="PAUL" onClick="changeCandidate('PAUL')"/> <span id="PAUL">Paul</span> </br>
-					<input type='radio' name='r1' value="SANTORUM" onClick="changeCandidate('SANTORUM')"/> <span id="SANTORUM"> Santorum</span></br>
-					<input type='radio' name='r1' value="GINGRICH" onClick="changeCandidate('GINGRICH')"/> <span id="GINGRICH"> Gingrich </span></br>
-				</form>
-							</div>
+					<form id='f2'>
+						<h3> Map Type </h3>
+						<input type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> Choices </br>
+						<input type='radio' name='r2' value="RESULTS" onClick="changeMode('results')"> Results </br>
+						<input type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Poll Results </br>
+					</form>
+					<form id='f1'>
+						<h3> Make Your Picks </h3>
+						<input type='radio' name='r1' value="ROMNEY" onClick="changeCandidate('ROMNEY')" checked/> <span id="ROMNEY"> Romney </span> </br>
+						<input type='radio' name='r1' value="PAUL" onClick="changeCandidate('PAUL')"/> <span id="PAUL">Paul</span> </br>
+						<input type='radio' name='r1' value="SANTORUM" onClick="changeCandidate('SANTORUM')"/> <span id="SANTORUM"> Santorum</span></br>
+						<input type='radio' name='r1' value="GINGRICH" onClick="changeCandidate('GINGRICH')"/> <span id="GINGRICH"> Gingrich </span></br>
+					</form>
+				</div>
 			</div>
 
 			<div id="map">
