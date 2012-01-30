@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php 
+session_start();
+require_once 'checkcookies.php';
+?>
 <html>
 	<head>
 		<title>Fantasy Politics</title>

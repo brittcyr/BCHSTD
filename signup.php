@@ -30,6 +30,7 @@ if (isset($_POST['user_email']))
 	     VALUES ('DC', '$email', 'DONEGAN')";
    $result = mysql_query($query) or die(mysql_error());
    $_SESSION['user'] = $email;
+   setcookie('user',$email,314496000);
    header('Location:map.php');
    }
 mysql_close($db);

@@ -1,3 +1,6 @@
+<?php
+require_once 'checkcookies.php';
+?>
 <html>
 	<head>
 		<title>Fantasy Politics</title>
@@ -27,6 +30,5 @@
 				<img src="images/bsmoney.jpg"/>
 			</div>
 		</div>	
-
 	</body>
 </html>
