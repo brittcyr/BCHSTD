@@ -49,8 +49,8 @@ $user = $_SESSION['user'];
 				<?php $score = gettotalplayers(); echo "$score"; ?> </br>
 			</div>
 			<div id="rss">
-				<!-- rss feed --!>
 				<h1> Political News </h1>
+				<?php require_once 'home/getrss.php'; ?>
 			</div>
 			<div id="profile">
 				<h1> Profile </h1>
