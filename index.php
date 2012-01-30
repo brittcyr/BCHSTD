@@ -108,36 +108,5 @@ if(isset($_SESSION['user']))
       				</form>
 			</div>
 		</div>
-<<<<<<< HEAD
-	<span id="help_message">Reminder: The password must be at least six characters or numbers </span>
-	<div id="button1div">
-	<input id="button1" type="submit" value="Sign Up!!" />
-	</div>
-      </form>
-    </div>
-    </div>
-    <div id="bottom">
-      <div class="bottom_third">
-	<a href="candidates.php">
-	  <h1> Meet the Candidates <h1>	
-	  <img src="images/candidates.jpg"/>
-	</a>
-      </div>
-      <div class="bottom_third">
-	<a href="leaderboard.php">
-	  <h1> Leaderboard <h1>
-	  <img src="images/leaderboard.jpg"/>
-	</a>
-      </div>
-      <div class="bottom_third">
-	<a href="about_us.php">
-	  <h1> About Us </h1>
-	  <img src="images/about_us2.jpg"/>
-	</a>
-      </div>
-    </div>
-      </body>
-=======
 	</body>
->>>>>>> c90ff0e77973b726f684dd81198f4636d0c12f17
 </html>
