@@ -10,7 +10,7 @@
 	<body background="images/flag.jpg">
 		<div id="top">
 			<div id="logo">
-				<img src="icon_images/icon-usmap.png" />
+				<a href="./map.php"><img src="icon_images/icon-usmap.png" /></a>
 			</div>
 			<div id="navbar">
 			  <?php require_once 'navbar.php'; ?>
