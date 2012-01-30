@@ -7,6 +7,6 @@ if (isset($_SESSION['user']))
 	<?php	
 }
 else{
-	echo '<img src="icon_images/icon-usmap.png>';
+	echo '<img src="icon_images/icon-usmap.png" />';
 }
 ?>
