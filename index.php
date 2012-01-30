@@ -74,7 +74,7 @@ if(isset($_SESSION['user']))
       				<div class="bottom_third">
 					<a href="about_us.php">
 	  					<h1> About Us </h1>
-	  					<img src="images/about_us.jpg"/>
+	  					<img src="images/about_us2.jpg"/>
 					</a>
       				</div>
 			</div>
