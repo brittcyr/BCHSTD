@@ -36,7 +36,7 @@ $user = $_SESSION['user'];
 		<div id="main">
 			<div id="title"/>
 				<h1 id="page_title"> My Selections </h1>
-				<p id="hint"> Click on the states to make your picks </p>
+				<p id="hint"> Select a candidate and click on the states to make your picks </p>
 			</div>
 			<div id="left">
 				<div id="score">
@@ -50,13 +50,13 @@ $user = $_SESSION['user'];
 				<!--<ul id="candidates">-->
 					<form id='f2'>
 						<h3> Map Type </h3>
-						<input id="choices" type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> Choices </br>
-						<input id="results" type='radio' name='r2' value="RESULTS" onClick="changeMode('results')"> Results </br>
+						<input id="choices" type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> My Predictions </br>
+						<input id="results" type='radio' name='r2' value="RESULTS" onClick="changeMode('results')"> Primary Results </br>
 						<input id="projections" type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Poll Results </br>
-						<input id="friend" type='radio' name='r2' value="FRIEND" onClick="view()"> Friend </br>
+						<input id="friend" type='radio' name='r2' value="FRIEND" onClick="view()"> Friend's Predictions </br>
 					</form>
 					<form id='f1'>
-						<h3> Make Your Picks </h3>
+						<h3> Select A Candidate </h3>
 						<input type='radio' name='r1' value="ROMNEY" onClick="changeCandidate('ROMNEY')" checked/> <span id="ROMNEY"> Romney </span> </br>
 						<input type='radio' name='r1' value="PAUL" onClick="changeCandidate('PAUL')"/> <span id="PAUL">Paul</span> </br>
 						<input type='radio' name='r1' value="SANTORUM" onClick="changeCandidate('SANTORUM')"/> <span id="SANTORUM"> Santorum</span></br>

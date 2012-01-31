@@ -26,7 +26,7 @@ function changeMode(new_mode){
 	if (mode == "choices")
 	{
 		document.getElementById("page_title").innerHTML="My Predictions";
-		document.getElementById("hint").innerHTML="Click on the states to predict the winner";
+		document.getElementById("hint").innerHTML="Select a candidate and click on the state to predict the winner";
 		getUpdate();
 	}
 	if (mode == "results")
@@ -39,7 +39,7 @@ function changeMode(new_mode){
 	{
 		getProjections();
 		document.getElementById("page_title").innerHTML="Poll Results";
-		document.getElementById("hint").innerHTML="These are the popular choices";
+		document.getElementById("hint").innerHTML="These are the popular picks";
 	}
 	if (mode == "friend")
 	{
@@ -225,12 +225,20 @@ function getFriend(friend)
 	xmlhttp.onreadystatechange=function(){
 		
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+			if (xmlhttp.responseText == ""){
+				close2();
+				changeMode(mode);
+				return;
+			}
 			var result = xmlhttp.responseText.split('!');
 			var i = 1;
 			for (i=1; i< result.length; i++){
 				var temp = result[i].split('#');
 				document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
 			}
+			
+		document.getElementById("page_title").innerHTML=friend+"'s Predictions";
+		document.getElementById("hint").innerHTML="These are "+friend+ "'s predictions";
 		}
 					
 		
