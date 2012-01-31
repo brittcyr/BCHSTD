@@ -11,14 +11,18 @@ require_once 'checkcookies.php';
 		
 	</head>
 	<body background="images/flag.jpg">
+		<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
 		<div id="top">
 		<div class="inner">
 			<div id="logo">
 				<h3> chooseyourchief.com </h3>
 			</div>
-			<div id="navbar">
+			<nav id="navbar">
 				<?php require_once 'navbar.php'; ?>
-			</div>
+			</nav>
 		</div>
 		</div>
 		<h1 id='title'>FAQ</h1>
@@ -64,7 +68,27 @@ require_once 'checkcookies.php';
 					Fantasy Politics was created for the MIT class 6.470. The goal of Fantasy Politics is to encourage an interest in politics. Most people are not very politically informed. We hope that when we throw a little competition into the mix, more people will be inspired to read up on candidates in order to make an educated selection.
 				</div>
 				
-		
+				<script src="javascript/jquery.js"></script>
+				<script src="javascript/modernizr.js"></script>
+				<script>
+					(function($){
+						var nav = $("#navbar");
+
+						nav.find("li").each(function() {
+							if ($(this).find("ul").length > 0) {
+								$("<span>").text("^").appendTo($(this).children(":first"));
+
+								$(this).mouseenter(function(){
+									$(this).find("ul").stop(true, true).slideDown(70);
+								});
+
+								$(this).mouseleave(function(){
+									$(this).find("ul").stop(true, true).slideUp(200);
+								});
+							}
+						});
+					})(jQuery);
+				</script>	
 	</body>
 
 </html>
