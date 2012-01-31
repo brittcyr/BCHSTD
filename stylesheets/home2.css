@@ -244,6 +244,9 @@ border: solid;
 {
     width: 150px;
     height: 20px;
+	padding: 1px;
+	font-size: 10px;
+	vertical-align: middle;
 /*
     padding: 20px;
     height: 45px;
