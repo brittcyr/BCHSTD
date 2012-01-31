@@ -51,7 +51,7 @@ function changeColor(state_id){
 
 	if (mode == "choices"){	
 		if (state_id in finished_states){
-			alert("This state has already held its primary. You can no longer make or change this pick.");
+			alert("This state has already held its primary or is currently holding its primary. You can no longer make or change this pick.");
 			return;
 		}
 		var current_color = document.getElementById(state_id).style.fill;
