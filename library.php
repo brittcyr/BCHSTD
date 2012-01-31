@@ -219,9 +219,9 @@ return $return;
 mysql_close($db);
 }
 
-function pull_friend_selections($username)
+function pull_friend_selections($username2)
 {
-$email = getemail($username);
+$email = getemail($username2);
 require_once 'db.php';
 $query = "SELECT state, candidate 
 	  FROM user_selections
