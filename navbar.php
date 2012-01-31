@@ -8,7 +8,7 @@ if (isset($_SESSION['user']))
         <a href="map.php">Map</a>
 </li>
 <li>
-        <a href="#">Statistics</a>
+        <a href="#">Home</a>
         <ul>
         <li><a href="home.php"> My Profile </a></li>
         <li><a href="leaderboard.php">Leaderboard</a></li>
