@@ -68,6 +68,13 @@ function passwordCheck()
 		document.getElementById("check").style.display="none";
 	}
 
+	if (long_enough && pass_confirm){
+		document.getElementById("button1").disabled= false;
+	}else{
+			
+		document.getElementById("button1").disabled= true;
+	}
+
 }
 
 function emailCheck()
@@ -101,7 +108,7 @@ function emailCheck()
 	var url = "ajax_php_files/check_email.php?email="+email;
 	
 
-	xmlhttp.open("GET",url, true);
+	xmlhttp.open("GET",url, false);
 	xmlhttp.send();
 
 }
@@ -137,21 +144,20 @@ function usernameCheck()
 	var url = "ajax_php_files/check_username.php?username="+username;
 	
 
-	xmlhttp.open("GET",url, true);
+	xmlhttp.open("GET",url, false);
 	xmlhttp.send();
 
 }
 
 function checkSubmit(){
 
-	//emailCheck();
+	emailCheck();
 	passwordCheck();
-        //usernameCheck();
+        usernameCheck();
 //	alert("long enough? "+long_enough+" pass_confirm? "+pass_confirm+" email_used? "+email_used+" email valid? "+email_valid+" username used? "+username_used+ " username valid? "+username_valid);
 	
-	if (long_enough && pass_confirm){// && !email_used && email_valid && !username_used && username_valid){
-		document.getElementById("button1").disabled=false;
-	}else{
-		document.getElementById("button1").disabled=true;
+	if (long_enough && pass_confirm && !email_used && email_valid && !username_used && username_valid){
+		document.getElementById("signup_form").submit();
 	}
+	
 }
