@@ -125,7 +125,8 @@ if(isset($_SESSION['user']))
 <?php
 if (!isset($_SESSION['failed']))
 {echo "style='display:none;'";
-unset($_SESSION['failed']);}
+else
+{unset($_SESSION['failed']);}
 ?>
 >
 			<a id="close" href="#" onclick="hide2('outer')"> <img src="icon_images/close.gif"/></a>
