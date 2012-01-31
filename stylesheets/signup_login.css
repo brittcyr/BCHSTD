@@ -28,6 +28,20 @@
 	top: 100px;
 }
 
+#failedlogin
+{
+	position: fixed;
+	background-color: white;
+	width: 600px;
+	height: 450px;
+	z-index: 10;
+	top: 100px;
+	left: 50%;
+	margin-left: -300px;
+	text-align: center;
+
+}
+
 #login
 {
     width: 412px;
