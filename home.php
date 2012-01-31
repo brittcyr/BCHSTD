@@ -39,14 +39,10 @@ $user = $_SESSION['user'];
 		<div id="main">
 		<div id="super">
 			<div class="inner">
-		   	<div id="welcome">
-				<span>	<?php echo 'Welcome, ' . getusername($_SESSION['user']); ?> </span>
-				<br/>
-				<span>
-				Current Score is:
-				<?php $score = getscore("$user"); echo "$score"; ?>
-				<br/>
-				You are ranked: 
+		   	<div id="header">
+				<span id="score"> Current Score is:
+				<?php $score = getscore("$user"); echo "$score"; ?> </span>
+				<span id="rank"> You are ranked: 
 				<?php $score = getrank("$user"); echo "$score"; ?>
 				 out of 
 				<?php $score = gettotalplayers(); echo "$score"; ?> </span>
@@ -55,12 +51,15 @@ $user = $_SESSION['user'];
 				<h1> Political News </h1>
 				<?php require_once 'home/getrss.php'; ?>
 			</div>
-			<div id="profile">
-				<h1> Profile </h1>
-			  <?php require ("home/profile.php"); ?>
-			</div>
-			<div id="link">
+			<div id="welcome">
+				<p>
+				<?php echo 'Welcome, ' . getusername($_SESSION['user']); ?>
+				To get started, go to the map page and predict the winner of each state's primary!
+				</p>
 				<a href="map.php"> Make Predictions! </a>
+			</div>
+			<div id="profile">
+			  	<?php require ("home/profile.php"); ?>
 			</div>
 			<div class="fb-like-box" data-href="https://www.facebook.com/pages/ChooseYourChiefcom/244029609004737" data-width="300" data-height="600" data-show-faces="true" data-stream="true" data-header="true">
 			</div>
