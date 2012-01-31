@@ -63,7 +63,8 @@ body
 	float: left;
 	width: 360px;
 	text-align: center;
-	font-size: 16px;
+	font-size: 20px;
+	font-weight: bold;
 	border-style: solid;
 	height: 500px;
 }
@@ -91,6 +92,30 @@ body
 }
 
 #welcome a:hover
+{
+	background-color: #00FF00;
+	border-color: #00FF00;
+}
+
+
+#profile a
+{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: center;
+	margin: 10px;
+	border-style: solid;
+	border-radius: 15px;
+	border-color: green;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	background-color: green;
+}
+
+#profile a:hover
 {
 	background-color: #00FF00;
 	border-color: #00FF00;

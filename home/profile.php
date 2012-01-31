@@ -17,9 +17,9 @@ $username = $result['username'];
 
 <?php
 echo	'Username: '
-                . $username .' <br/>' . "\n";
+                . $username .' <br/><br/>' . "\n";
 echo	'Email: '
-                . $_SESSION['user'] .'<br/>' . "\n";
+                . $_SESSION['user'] .'<br/><br/>' . "\n";
 ?>
 
 Home State:
@@ -177,7 +177,7 @@ if ($home_state == "WY")
 {echo 'WYOMING';}
 ?>
 
-<br/>
+<br/><br/>
 
 
 Political Party:
@@ -196,7 +196,7 @@ if ($political_party == "OTHER")
 {echo 'OTHER';}
 
 ?>
-<br/>
-	<a href="#" onclick="changeProfile()"> Edit Profile </a>
+<br/><br/>
+	<a id="edit" href="#" onclick="changeProfile()"> Edit Profile </a>
 
 
