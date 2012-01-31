@@ -8,14 +8,18 @@
 	</head>
 
 	<body background="images/flag.jpg">
+		<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
 		<div id="top">
 		<div class="inner">
 			<div id="logo">
 				<h3> chooseyourchief.com </h3>
 			</div>
-			<div id="navbar">
+			<nav id="navbar">
 			  <?php require_once 'navbar.php'; ?>
-			</div>		
+			</nav>		
 		</div>
 		</div>
 
@@ -29,7 +33,27 @@
 				<img src="images/bsmoney.jpg"/>
 			</div>
 		</div>	
+		<script src="javascript/jquery.js"></script>
+		<script src="javascript/modernizr.js"></script>
+		<script>
+			(function($){
+				var nav = $("#navbar");
 
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						$(this).mouseenter(function(){
+							$(this).find("ul").stop(true, true).slideDown(70);
+						});
+
+						$(this).mouseleave(function(){
+							$(this).find("ul").stop(true, true).slideUp(200);
+						});
+					}
+				});
+			})(jQuery);
+		</script>
 	</body>
 </html>
 
