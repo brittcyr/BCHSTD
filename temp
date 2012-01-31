@@ -1,2 +1,7 @@
-			<a id="close" href="#" onclick="hide('outer')"> <img src="icon_images/close.gif"/></a>
-			<form class="forms" id="signup_form" action="signup.php" method="post">
+#close
+{
+	position: relative;
+	float: left;
+	right: 10px;
+	bottom: 10px;
+}

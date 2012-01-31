@@ -85,6 +85,9 @@ $user = $_SESSION['user'];
 	</div>
 	
 	<div id="change_profile">
+			
+			<a id="close" href="#" onclick="saveChanges();"> <img src="icon_images/close.gif"/></a>
+			<form class="forms" id="signup_form" action="signup.php" method="post">
 		
 				<h1> Profile </h1>
 			  <?php require ("home/profile_change.php"); ?>
