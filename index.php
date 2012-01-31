@@ -19,6 +19,7 @@ if(isset($_SESSION['user']))
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/signup_login.css">
 	<script type="text/javascript" src="javascript/signin_login.js"></script>
+	<script type="text/javascript" src="javascript/failed_login.js"></script>
 	</head>
 	<body background="images/flag.jpg">
     		<div id="top">
@@ -110,6 +111,55 @@ if(isset($_SESSION['user']))
 				</div>
       			</form>
 		</div>
+
+
+
+
+
+
+
+
+
+
+<div id="failedlogin" 
+<?php
+if (!isset($_SESSION['failed']))
+echo "style='display:none;'";
+?>
+>
+			<a id="close" href="#" onclick="hide2('outer')"> <img src="icon_images/close.gif"/></a>
+				<h1> Login Failed </h1>
+				<h1> Try Again or Send Recovery Email </h1>
+			<form class="forms" id="failedloginform" action="login.php" method="post">
+				<div id="form_c"/>
+					Username or email <br/>
+					Password <br/>
+				</div>
+				<div id="form_d">
+					<input id="text6" type="text" name="user_email"/><br/> 
+					<input id="text7" type="text" name="user_password"/> <br/>
+				</div>
+				<div id="button1div">
+					<input id="button3" type="submit" value="Login" />
+				</div>
+      			</form>
+
+
+
+			<form class="forms" id="passwordrecovery" action="recoverpassword.php" method="post">
+				<div id="form_e"/>
+					email <br/>
+				</div>
+				<div id="form_f">
+					<input id="text8" type="text" name="user_email"/><br/> 
+				</div>
+				<div id="button1div">
+					<input id="button4" type="submit" value="Recover Password" />
+				</div>
+      			</form>
+		</div>
+
+
 
 	</body>
 </html>

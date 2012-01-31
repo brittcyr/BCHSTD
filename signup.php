@@ -31,7 +31,7 @@ if (isset($_POST['user_email']))
    $result = mysql_query($query) or die(mysql_error());
    $_SESSION['user'] = $email;
    setcookie('user',$email,314496000);
-   header('Location:map.php');
+   header('Location:home.php');
    }
 mysql_close($db);
 ?>

@@ -1,0 +1,27 @@
+function view2(id)
+{
+	if (!(menu_open))
+	{
+		document.getElementById(id).style.display="block";
+		document.getElementById("failedlogin").style.display="block";
+
+		if (id == "outer")
+		{
+			document.getElementById("text6").value="";
+			document.getElementById("text7").value="";
+			document.getElementById("text6").focus();
+
+		} else {
+			document.getElementById("text6").focus();
+		}
+		menu_open = true;
+	}
+}
+
+//Closes failed login menu
+function hide2(id)
+{
+	document.getElementById(id).style.display="none";
+	document.getElementById("failedlogin").style.display="none";
+	menu_open = false;
+}
