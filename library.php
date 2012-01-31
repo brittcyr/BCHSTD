@@ -223,8 +223,8 @@ function pull_friend_selections($username)
 {
 $email = getemail($username);
 require_once 'db.php';
-$query = "SELECT A.state, A.candidate 
-	  FROM user_selections AS A 
+$query = "SELECT state, candidate 
+	  FROM user_selection 
 	  WHERE email='$email'";
 $result = mysql_query($query) or die("$query");
 $return = '';
