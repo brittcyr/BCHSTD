@@ -13,7 +13,7 @@ body
 	width: 1000px;
 	margin: auto;
 	background-color: #acb3b4;
-	border-style: solid;
+border: solid;
 	border-radius: 10px;
 	opacity: .8;
 }
@@ -289,10 +289,10 @@ body
 
 #upcoming_picks, #my_results
 {
-    width: 470px;
+    width: 480px;
     height: 500px;
     position: relative;
-    border: solid;
+    border-top: solid;
     float: left;
     padding: 10px;
 }
