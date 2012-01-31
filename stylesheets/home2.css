@@ -4,7 +4,7 @@ body
 }
 #main
 {
-	height: 1600px;
+	height: auto;
 }
 
 #super
@@ -163,17 +163,51 @@ body
 	border-width: 1px;
 }
 
-
-
-#profile form select
+#change_profile h1
 {
-    margin-top: 10px;
-    height: 35px;
+    text-align: center;
+    padding-right: 10px;
+}
+
+
+#form_a, #form_b
+{
+    width: 290px;
+    float: left;
+    position: relative;
+    line-height: 30px;
+}
+
+#form_a
+{
+    text-align: right;
+}
+
+#form_b
+{
+   width:  160px;
+   height: 200px;
+   padding-left: 0;
+}
+
+#form_b input, select
+{
+    width: 150px;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#political_party, #home_state
+{
+    width: 150px;
+    height: 50px;
+/*
+    padding: 20px;
+    height: 45px;
     border-radius: 10px;
-    padding: 8px;
-    width: 200px;
     border: solid;
-    border-width: 1px;
+    border-width: 1px;*/
 }
 
 
@@ -184,6 +218,7 @@ body
     border-width: 1px;
     margin-top: 20px;
     margin-right: 40px;
+    margin-left: 50px;
     border-radius: 10px;
     font-size: 16px;
 }
@@ -257,7 +292,7 @@ body
 	text-align: center;
 	display: none;
 	width: 600px;
-	height: 650px;
+	height: 450px;
 	border-style: solid;
 	border-radius: 15px;
 	background-color: white;
@@ -268,7 +303,7 @@ body
 	margin-left: -300px;
 	top: 100px;
 }
-
+    
 
 
 #close
