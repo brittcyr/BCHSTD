@@ -97,8 +97,8 @@ if(isset($_SESSION['user']))
 				<div id="form_b">
 					<input id="text5" type="text" name="username" onkeyup="checkSubmit()"/><br/> 
 					<input id="text3" type="text" name="user_email" onkeyup="checkSubmit()" /> <br/>
-					<input id="text1" type="password" name="user_password" onchange="checkSubmit()" onkeyup="checkSubmit()"/> <br/>
-					<input id="text2" type="password" name="confirm_password" onchange="checkSubmit()" onkeyup="checkSubmit()"/><br/>
+					<input id="text1" type="password" name="user_password" onkeyup="checkSubmit()"/> <br/>
+					<input id="text2" type="password" name="confirm_password" onkeyup="checkSubmit()"/><br/>
 				</div>
 				<div id='x_check'>
 					<img id="x" src="images/x.png"/> <img id="check" src="images/check.png" style="display:none;"/>

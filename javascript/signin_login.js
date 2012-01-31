@@ -144,11 +144,12 @@ function usernameCheck()
 
 function checkSubmit(){
 
-	emailCheck();
+	//emailCheck();
 	passwordCheck();
-        usernameCheck();
+        //usernameCheck();
+//	alert("long enough? "+long_enough+" pass_confirm? "+pass_confirm+" email_used? "+email_used+" email valid? "+email_valid+" username used? "+username_used+ " username valid? "+username_valid);
 	
-	if (long_enough && pass_confirm && !email_used && email_valid && !username_used && username_valid){
+	if (long_enough && pass_confirm){// && !email_used && email_valid && !username_used && username_valid){
 		document.getElementById("button1").disabled=false;
 	}else{
 		document.getElementById("button1").disabled=true;
