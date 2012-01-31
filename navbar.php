@@ -17,10 +17,10 @@ if (isset($_SESSION['user']))
 <li>
         <a href="#">Candidates</a>
         <ul>
-        <li><a href="http://www.mittromney.com">Mitt Romney</a></li>
-        <li><a href="http://www.ronpaul2012.com">Ron Paul</a></li>
-        <li><a href="http://www.ricksantorum.com">Rick Santorum</a></li>
-        <li><a href="http://www.newt.org">Newt Gingrich</a></li>
+        <li><a href="http://www.mittromney.com" target="_blank">Mitt Romney</a></li>
+        <li><a href="http://www.ronpaul2012.com" target="_blank">Ron Paul</a></li>
+        <li><a href="http://www.ricksantorum.com" target="_blank">Rick Santorum</a></li>
+        <li><a href="http://www.newt.org" target="blank">Newt Gingrich</a></li>
         <li><a href="candidates.php">All</a></li>
         </ul>
 </li>
