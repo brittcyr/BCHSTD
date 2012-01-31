@@ -226,7 +226,7 @@ require_once 'db.php';
 $query = "SELECT A.state, A.candidate 
 	  FROM user_selections AS A 
 	  WHERE email='$email'";
-$result = mysql_query($query) or die('bad query');
+$result = mysql_query($query) or die("$query");
 $return = '';
 while($row = mysql_fetch_array($result))
 {
