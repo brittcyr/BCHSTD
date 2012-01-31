@@ -1,6 +1,7 @@
 var color="red";
 
 var mode="choices";
+var oldMode = "choices";
 
 var finished_states = new Object();
 
@@ -44,7 +45,7 @@ function changeMode(new_mode){
 	{
 		document.getElementById("page_title").innerHTML="Friend's Predictions";
 		document.getElementById("hint").innerHTML="These are your friend's predictions";
-		var friend = document.getElementById("friend").value;
+		var friend = document.getElementById("friend_text").value;
 		getFriend(friend);
 	}
 }
@@ -236,8 +237,33 @@ function getFriend(friend)
 	}
 
 	var url = "ajax_php_files/get_friend.php?friend="+friend
-
+	
 	xmlhttp.open("GET", url,true);
 	xmlhttp.send();
 
+}
+
+
+
+function view()
+{
+	oldMode = mode;
+	mode = 'friend';
+	document.getElementById("overlay").style.display="block";
+	document.getElementById("friend_select").style.display="block";
+}
+
+//Closes login/signup menu
+function hide()
+{
+	document.getElementById("overlay").style.display="none";
+	document.getElementById("friend_select").style.display="none";
+}
+
+function close2()
+{
+	mode = oldMode;
+	document.getElementById(mode).checked = true;
+	document.getElementById("overlay").style.display="none";
+	document.getElementById("friend_select").style.display="none";
 }

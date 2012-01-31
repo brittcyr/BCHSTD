@@ -84,3 +84,50 @@ svg.state-map
 {
 	opacity: .3;
 }
+
+
+
+#overlay
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: #666666;
+	opacity: .8;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 5;
+}
+
+#friend_select
+{
+	text-align: center;
+	display: none;
+	width: 600px;
+	height: 50px;
+	border-style: solid;
+	border-radius: 15px;
+	background-color: white;
+	text-align: center;
+	position: fixed;
+	z-index: 10;
+	left: 50%;
+	margin-left: -300px;
+	top: 100px;
+}
+
+
+#close
+{
+	position: relative;
+	float: left;
+	right: 10px;
+	bottom: 10px;
+}
+
+#close img
+{
+	width: 40px;
+}
+

@@ -5,3 +5,9 @@
 	right: 10px;
 	bottom: 10px;
 }
+
+#close img
+{
+	width: 40px;
+}
+

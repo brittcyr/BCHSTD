@@ -50,10 +50,10 @@ $user = $_SESSION['user'];
 				<!--<ul id="candidates">-->
 					<form id='f2'>
 						<h3> Map Type </h3>
-						<input type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> Choices </br>
-						<input type='radio' name='r2' value="RESULTS" onClick="changeMode('results')"> Results </br>
-						<input type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Poll Results </br>
-						<input type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('friend')"> Friend: <input type="text" id="friend" /> </br>
+						<input id="choices" type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> Choices </br>
+						<input id="results" type='radio' name='r2' value="RESULTS" onClick="changeMode('results')"> Results </br>
+						<input id="projections" type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Poll Results </br>
+						<input id="friend" type='radio' name='r2' value="FRIEND" onClick="view()"> Friend </br>
 					</form>
 					<form id='f1'>
 						<h3> Make Your Picks </h3>
@@ -125,6 +125,15 @@ $user = $_SESSION['user'];
 			</svg>
 			</div>
 		</div>	
+		
+		<div id="overlay">
+		</div>
+		<div id="friend_select">
+			<a id="close" href="#" onclick="close2()"> <img src="icon_images/close.gif"/></a>
+			Select a friend: <input type="text" id="friend_text" /> 
+			<a id="go" href="#" onclick="changeMode('friend'); hide();"> Go! </a>
+		</div>
+
 		
 				<script src="javascript/jquery.js"></script>
 				<script src="javascript/modernizr.js"></script>
