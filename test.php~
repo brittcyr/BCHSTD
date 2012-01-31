@@ -1,7 +1,0 @@
-<?php
-
-require_once 'library.php';
-
-echo getusername('cyrbritt@mit.edu');
-
-?>
