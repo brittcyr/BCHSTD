@@ -10,7 +10,7 @@ CANDIDATE_COLORS["ROMNEY"]="red";
 CANDIDATE_COLORS["PAUL"]="blue";
 CANDIDATE_COLORS["SANTORUM"]="green";
 CANDIDATE_COLORS["GINGRICH"]="yellow"; 
-CANDIDATE_COLORS["&nbsp;"]="gray";
+CANDIDATE_COLORS["None"]="gray";
 
 var COLORS_CANDIDATES = new Object();
 COLORS_CANDIDATES["red"]="ROMNEY";
@@ -70,7 +70,7 @@ function changeColor(state_id){
 		}else{
 
 			document.getElementById(state_id).style.fill = "gray";
-			saveUpdate(state_id, "&nbsp;");
+			saveUpdate(state_id, "None");
 		}
 	}
 }
