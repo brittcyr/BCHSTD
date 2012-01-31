@@ -310,5 +310,17 @@ $result = $result[0];
 return $result;
 }
 
+function formatdate($date)
+{
+$parts = explode('-',$date);
+list($year, $month, $day) = $parts;
+$listofmonths = array("zero", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Sep", "Oct", "Nov", "Dec");
+if ($day[0]=="0")
+{$day = "$day[1]";}
+$month = $month+0;
+$month = $listofmonths["$month"];
+return "$month" . " " . "$day";
+}
+
 
 ?>
