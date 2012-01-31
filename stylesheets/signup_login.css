@@ -39,6 +39,8 @@
 	left: 50%;
 	margin-left: -300px;
 	text-align: center;
+	border-style: solid;
+	border-radius: 15px;
 
 }
 
@@ -109,7 +111,7 @@
 }
 
 
-#form_a, #form_b
+#form_a, #form_b, #form_c, #form_d, #form_e, #form_f
 {
 	height: 200px;
    	float: left;
@@ -121,7 +123,7 @@
 
 
 
-#form_b input
+#form_b input, #form_d input
 {
     text-align: left;
     width: 200px;
@@ -137,7 +139,7 @@
 
 
 
-#form_a
+#form_a, #form_c
 {
 	width: 250px;
 	line-height: 50px;
@@ -145,6 +147,12 @@
 	color: black;
 	text-align: right;
 }
+
+#form_d{width: 270px; height: 100px;}
+#form_c{ width: 270px; height: 100px;}
+#form_e{width: 270px; height: 40px; text-align: right;}
+#form_f{ width: 270px; height: 40px;}
+
 
 
 

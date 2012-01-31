@@ -134,14 +134,14 @@ else
 				<h1> Try Again or Send Recovery Email </h1>
 			<form class="forms" id="failedloginform" action="login.php" method="post">
 				<div id="form_c"/>
-					Username or email <br/>
-					Password <br/>
+					Username or Email: <br/>
+					Password: <br/>
 				</div>
 				<div id="form_d">
 					<input id="text6" type="text" name="user_email"/><br/> 
 					<input id="text7" type="text" name="user_password"/> <br/>
 				</div>
-				<div id="button1div">
+				<div id="button3div">
 					<input id="button3" type="submit" value="Login" />
 				</div>
       			</form>
@@ -150,7 +150,7 @@ else
 
 			<form class="forms" id="passwordrecovery" action="recoverpassword.php" method="post">
 				<div id="form_e"/>
-					email <br/>
+					Email: <br/>
 				</div>
 				<div id="form_f">
 					<input id="text8" type="text" name="user_email"/><br/> 
