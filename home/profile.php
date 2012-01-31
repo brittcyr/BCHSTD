@@ -187,7 +187,7 @@ if ($political_party == "DEMOCRAT")
 {echo 'DEMOCRAT';}
 
 if ($political_party == "REPUBLICAN")
-{echo '<REPUBLICAN';}
+{echo 'REPUBLICAN';}
 
 if ($political_party == "INDEPENDENT")
 {echo 'INDEPENDENT';}
