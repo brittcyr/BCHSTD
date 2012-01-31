@@ -17,7 +17,7 @@ return 1;
 function checkusername($username)
 {
 
-if (strlen("$username")<6)
+if (strlen("$username")<4)
 {return 0;}
 
 return 1;

@@ -7,6 +7,8 @@ if (isset($_POST['user_email'])) {
 	$password = htmlspecialchars($_POST['user_password']);
 	$password = sha1($password);
 
+        $_SESSION['failed'] = $email;
+
         $parts = explode("@",$email);
         $count = count($parts);
 
@@ -33,6 +35,7 @@ if (isset($_POST['user_email'])) {
 		       header('Location:index.php');}
 else
 {
+unset($_SESSION['failed']);
 header('Location:home.php');
 //-----------SUCCESSFUL LOGIN NEED TO DETERMINE IF WAS USERNAME OR EMAIL-----------
 
