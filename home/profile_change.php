@@ -15,18 +15,25 @@ $political_party = $result['political_party'];
 $username = $result['username'];
 ?>
         <form class="forms" action="home/update_profile.php" method="post">
-
+	<div id="form_a">
+	     Username: <br/>
+	     Email: <br/>
+	     Password: <br/>
+	     Confirm Password: <br/>
+	     Home State: <br/>
+	     Political Party: <br/>
+	</div>
+	<div id="form_b">
 <?php
-echo	'Username: <input id="username" type="text" name="username" value="'
+echo	'<input id="username" type="text" name="username" value="'
                 . $username .'"/> <br/>' . "\n";
-echo	'Email: <input id="user_email" type="text" name="user_email" value="'
+echo	'<input id="user_email" type="text" name="user_email" value="'
                 . $_SESSION['user'] .'"/> <br/>' . "\n";
 ?>
 
-Password: <input id="text1" type="password" name="user_password"/> <br/>
-Confirm Password: <input id="text2" type="password" name="confirm_password"/> <br/>
+<input id="text1" type="password" name="user_password"/> <br/>
+<input id="text2" type="password" name="confirm_password"/> <br/>
 
-Home State:
 
 <select id="home_state" name="home_state">
 <option></option>
@@ -286,7 +293,6 @@ else
 
 
 
-Political Party:
 <?php
 echo '
 <select id="political_party" name="political_party">
@@ -314,7 +320,7 @@ else
 ?>
 </select>
 <br/>
-
+</div>
 	<input id="button1" type="submit" value="Save Changes"/>
 
       </form>
