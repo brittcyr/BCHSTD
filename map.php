@@ -130,8 +130,9 @@ $user = $_SESSION['user'];
 		</div>
 		<div id="friend_select">
 			<a id="close" href="#" onclick="close2()"> <img src="icon_images/close.gif"/></a>
-			Select a friend: <input type="text" id="friend_text" /> 
+			<div id="div1"> Select a friend: <input type="text" id="friend_text" /> 
 			<a id="go" href="#" onclick="changeMode('friend'); hide();"> Go! </a>
+			</div>
 		</div>
 
 		

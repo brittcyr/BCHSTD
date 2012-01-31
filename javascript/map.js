@@ -251,6 +251,9 @@ function view()
 	mode = 'friend';
 	document.getElementById("overlay").style.display="block";
 	document.getElementById("friend_select").style.display="block";
+	document.getElementById("friend_text").value = "";
+	document.getElementById("friend_text").focus();
+
 }
 
 //Closes login/signup menu
