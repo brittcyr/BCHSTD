@@ -88,8 +88,8 @@
 #nav a
 {
     display: block;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding-right: 50px;
+    padding-left: 5px;
     color: #fff;
     background: #333; /*change to grey later */
     text-decoration: none;
@@ -110,14 +110,16 @@
     list-style: none;
     position: absolute;
     left: -9999px;
+    text-align: left;
 }
 
 #nav ul li
 {
     padding-top: 1px;
     float: none;
-    width: 150px;
+    width: 124px;
 }
+
 
 #nav ul a
 {
