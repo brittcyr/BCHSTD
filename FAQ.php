@@ -3,7 +3,7 @@ require_once 'checkcookies.php';
 ?>
 <html>
 	<head>
-		<title> chooseyourchief </title>
+		<title> Fantasy Politics </title>
 		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css" />
