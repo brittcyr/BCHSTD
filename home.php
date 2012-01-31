@@ -62,6 +62,7 @@ $user = $_SESSION['user'];
 				<a href="map.php"> Make Predictions! </a>
 			</div>
 			<div id="profile">
+				<h1> My Information </h1>
 			  	<?php require ("home/profile.php"); ?>
 			</div>
 			<div class="fb-like-box" data-href="https://www.facebook.com/pages/ChooseYourChiefcom/244029609004737" data-width="300" data-height="600" data-show-faces="true" data-stream="true" data-header="true">
@@ -85,8 +86,10 @@ $user = $_SESSION['user'];
 	</div>
 	
 	<div id="change_profile">
-		
+			
+			<a id="close" href="#" onclick="saveChanges();"> <img src="icon_images/close.gif"/></a>
 			<form class="forms" id="signup_form" action="signup.php" method="post">
+		
 				<h1> Profile </h1>
 			  <?php require ("home/profile_change.php"); ?>
 	</div>

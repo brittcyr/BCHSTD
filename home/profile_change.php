@@ -14,7 +14,7 @@ $home_state = $result['home_state'];
 $political_party = $result['political_party'];
 $username = $result['username'];
 ?>
-        <form class="forms" action="home/update_profile.php" method="post" onsubmit="saveChanges()";>
+        <form class="forms" action="home/update_profile.php" method="post">
 
 <?php
 echo	'Username: <input id="username" type="text" name="username" value="'
@@ -22,6 +22,7 @@ echo	'Username: <input id="username" type="text" name="username" value="'
 echo	'Email: <input id="user_email" type="text" name="user_email" value="'
                 . $_SESSION['user'] .'"/> <br/>' . "\n";
 ?>
+
 Password: <input id="text1" type="password" name="user_password"/> <br/>
 Confirm Password: <input id="text2" type="password" name="confirm_password"/> <br/>
 
@@ -284,6 +285,7 @@ else
 <br/>
 
 
+
 Political Party:
 <?php
 echo '
@@ -312,7 +314,8 @@ else
 ?>
 </select>
 <br/>
-	<input id="button1" type="submit" value="Save Changes"  />
+
+	<input id="button1" type="submit" value="Save Changes"/>
 
       </form>
 
