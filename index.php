@@ -124,7 +124,7 @@ if(isset($_SESSION['user']))
 <div id="failedlogin" 
 <?php
 if (!isset($_SESSION['failed']))
-{echo "style='display:none;'";
+{echo "style='display:none;'";}
 else
 {unset($_SESSION['failed']);}
 ?>
