@@ -14,305 +14,189 @@ $home_state = $result['home_state'];
 $political_party = $result['political_party'];
 $username = $result['username'];
 ?>
-        <form class="forms" action="home/update_profile.php" method="post">
 
 <?php
-echo	'Username: <input id="username" type="text" name="username" value="'
-                . $username .'"/> <br/>' . "\n";
-echo	'Email: <input id="user_email" type="text" name="user_email" value="'
-                . $_SESSION['user'] .'"/> <br/>' . "\n";
+echo	'Username: '
+                . $username .' <br/>' . "\n";
+echo	'Email: '
+                . $_SESSION['user'] .'<br/>' . "\n";
 ?>
-Password: <input id="text1" type="password" name="user_password"/> <br/>
-Confirm Password: <input id="text2" type="password" name="confirm_password"/> <br/>
 
 Home State:
 
-<select id="home_state" name="home_state">
-<option></option>
 <?php
 if ($home_state == "AL")
-{echo '<option value="AL" selected="selected">ALABAMA</option>';}
-else
-{echo '<option value="AL">ALABAMA</option>';}
+{echo 'Alabama';}
 
 if ($home_state == "AK")
-{echo '<option value="AK" selected="selected">ALASKA</option>';}
-else
-{echo '<option value="AK">ALASKA</option>';}
+{echo 'Alaska';}
+
 
 if ($home_state == "AZ")
-{echo '<option value="AZ" selected="selected">ARIZONA</option>';}
-else
-{echo '<option value="AZ">ARIZONA</option>';}
+{echo 'ARIZONA';}
 
 if ($home_state == "AR")
-{echo '<option value="AR" selected="selected">ARKANSAS</option>';}
-else
-{echo '<option value="AR">ARKANSAS</option>';}
+{echo 'ARKANSAS';}
 
 if ($home_state == "CA")
-{echo '<option value="CA" selected="selected">CALIFORNIA</option>';}
-else
-{echo '<option value="CA">CALIFORNIA</option>';}
+{echo 'CALIFORNIA';}
 
 if ($home_state == "CO")
-{echo '<option value="CO" selected="selected">COLORADO</option>';}
-else
-{echo '<option value="CO">COLORADO</option>';}
+{echo 'COLORADO';}
 
 if ($home_state == "CT")
-{echo '<option value="CT" selected="selected">CONNECTICUT</option>';}
-else
-{echo '<option value="CT">CONNECTICUT</option>';}
+{echo 'CONNECTICUT';}
 
 if ($home_state == "DE")
-{echo '<option value="DE" selected="selected">DELAWARE</option>';}
-else
-{echo '<option value="DE">DELAWARE</option>';}
+{echo 'DELAWARE';}
 
 if ($home_state == "FL")
-{echo '<option value="FL" selected="selected">FLORIDA</option>';}
-else
-{echo '<option value="FL">FLORIDA</option>';}
+{echo 'FLORIDA';}
 
 if ($home_state == "GA")
-{echo '<option value="GA" selected="selected">GEORGIA</option>';}
-else
-{echo '<option value="GA">GEORGIA</option>';}
+{echo 'GEORGIA';}
 
 if ($home_state == "HI")
-{echo '<option value="HI" selected="selected">HAWAII</option>';}
-else
-{echo '<option value="HI">HAWAII</option>';}
+{echo 'HAWAII';}
 
 if ($home_state == "ID")
-{echo '<option value="ID" selected="selected">IDAHO</option>';}
-else
-{echo '<option value="ID">IDAHO</option>';}
+{echo 'IDAHO';}
 
 if ($home_state == "IL")
-{echo '<option value="IL" selected="selected">ILLINOIS</option>';}
-else
-{echo '<option value="IL">ILLINOIS</option>';}
+{echo 'ILLINOIS';}
 
 if ($home_state == "IN")
-{echo '<option value="IN" selected="selected">INDIANA</option>';}
-else
-{echo '<option value="IN">INDIANA</option>';}
+{echo 'INDIANA';}
 
 if ($home_state == "IA")
-{echo '<option value="IA" selected="selected">IOWA</option>';}
-else
-{echo '<option value="IA">IOWA</option>';}
+{echo 'IOWA';}
 
 if ($home_state == "KA")
-{echo '<option value="KA" selected="selected">KANASAS</option>';}
-else
-{echo '<option value="KA">KANASAS</option>';}
+{echo 'KANASAS';}
 
 if ($home_state == "KY")
-{echo '<option value="KY" selected="selected">KENTUCKY</option>';}
-else
-{echo '<option value="KY">KENTUCKY</option>';}
+{echo 'KENTUCKY';}
 
 if ($home_state == "LA")
-{echo '<option value="LA" selected="selected">LOUISIANA</option>';}
-else
-{echo '<option value="LA">LOUISIANA</option>';}
+{echo 'LOUISIANA';}
 
 if ($home_state == "ME")
-{echo '<option value="ME" selected="selected">MAINE</option>';}
-else
-{echo '<option value="ME">MAINE</option>';}
+{echo 'MAINE';}
 
 if ($home_state == "MA")
-{echo '<option value="MA" selected="selected">MASSACHUSETTS</option>';}
-else
-{echo '<option value="MA">MASSACHUSETTS</option>';}
+{echo 'MASSACHUSETTS';}
 
 if ($home_state == "MD")
-{echo '<option value="MD" selected="selected">MARYLAND</option>';}
-else
-{echo '<option value="MD">MARYLAND</option>';}
+{echo 'MARYLAND';}
 
 if ($home_state == "MI")
-{echo '<option value="MI" selected="selected">MICHIGAN</option>';}
-else
-{echo '<option value="MI">MICHIGAN</option>';}
+{echo 'MICHIGAN';}
 
 if ($home_state == "MN")
-{echo '<option value="MN" selected="selected">MINNESOTA</option>';}
-else
-{echo '<option value="MN">MINNESOTA</option>';}
+{echo 'MINNESOTA';}
 
 if ($home_state == "MI")
-{echo '<option value="MI" selected="selected">MISSISSIPPI</option>';}
-else
-{echo '<option value="MI">MISSISSIPPI</option>';}
+{echo 'MISSISSIPPI';}
 
 if ($home_state == "MO")
-{echo '<option value="MO" selected="selected">MISSOURI</option>';}
-else
-{echo '<option value="MO">MISSOURI</option>';}
+{echo 'MISSOURI';}
 
 if ($home_state == "MT")
-{echo '<option value="MT" selected="selected">MONTANA</option>';}
-else
-{echo '<option value="MT">MONTANA</option>';}
+{echo 'MONTANA';}
 
 if ($home_state == "NE")
-{echo '<option value="NE" selected="selected">NEBRASKA</option>';}
-else
-{echo '<option value="NE">NEBRASKA</option>';}
+{echo 'NEBRASKA';}
 
 if ($home_state == "NV")
-{echo '<option value="NV" selected="selected">NEVADA</option>';}
-else
-{echo '<option value="NV">NEVADA</option>';}
+{echo 'NEVADA';}
 
 if ($home_state == "NH")
-{echo '<option value="NH" selected="selected">NEW HAMPSHIRE</option>';}
-else
-{echo '<option value="NH">NEW HAMPSHIRE</option>';}
+{echo 'NEW HAMPSHIRE';}
 
 if ($home_state == "NJ")
-{echo '<option value="NJ" selected="selected">NEW JERSEY</option>';}
-else
-{echo '<option value="NJ">NEW JERSEY</option>';}
+{echo 'NEW JERSEY';}
 
 if ($home_state == "NM")
-{echo '<option value="NM" selected="selected">NEW MEXICO</option>';}
-else
-{echo '<option value="NM">NEW MEXICO</option>';}
+{echo 'NEW MEXICO';}
 
 if ($home_state == "NY")
-{echo '<option value="NY" selected="selected">NEW YORK</option>';}
-else
-{echo '<option value="NY">NEW YORK</option>';}
+{echo 'NEW YORK';}
 
 if ($home_state == "NC")
-{echo '<option value="NC" selected="selected">NORTH CAROLINA</option>';}
-else
-{echo '<option value="NC">NORTH CAROLINA</option>';}
+{echo 'NORTH CAROLINA';}
 
 if ($home_state == "ND")
-{echo '<option value="ND" selected="selected">NORTH DAKOTA</option>';}
-else
-{echo '<option value="ND">NORTH DAKOTA</option>';}
+{echo 'NORTH DAKOTA';}
 
 if ($home_state == "OH")
-{echo '<option value="OH" selected="selected">OHIO</option>';}
-else
-{echo '<option value="OH">OHIO</option>';}
+{echo 'OHIO';}
 
 if ($home_state == "OK")
-{echo '<option value="OK" selected="selected">OKLAHOMA</option>';}
-else
-{echo '<option value="OK">OKLAHOMA</option>';}
+{echo 'OKLAHOMA';}
 
 if ($home_state == "OR")
-{echo '<option value="OR" selected="selected">OREGON</option>';}
-else
-{echo '<option value="OR">OREGON</option>';}
+{echo 'OREGON';}
 
 if ($home_state == "PA")
-{echo '<option value="PA" selected="selected">PENNSYLVANIA</option>';}
-else
-{echo '<option value="PA">PENNSYLVANIA</option>';}
+{echo 'PENNSYLVANIA';}
 
 if ($home_state == "RI")
-{echo '<option value="RI" selected="selected">RHODE ISLAND</option>';}
-else
-{echo '<option value="RI">RHODE ISLAND</option>';}
+{echo 'RHODE ISLAND';}
 
 if ($home_state == "SC")
-{echo '<option value="SC" selected="selected">SOUTH CAROLINA</option>';}
-else
-{echo '<option value="SC">SOUTH CAROLINA</option>';}
+{echo 'SOUTH CAROLINA';}
 
 if ($home_state == "SD")
-{echo '<option value="SD" selected="selected">SOUTH DAKOTA</option>';}
-else
-{echo '<option value="SD">SOUTH DAKOTA</option>';}
+{echo 'SOUTH DAKOTA';}
 
 if ($home_state == "TN")
-{echo '<option value="TN" selected="selected">TENNESSEE</option>';}
-else
-{echo '<option value="TN">TENNESSEE</option>';}
+{echo 'TENNESSEE';}
 
 if ($home_state == "TX")
-{echo '<option value="TX" selected="selected">TEXAS</option>';}
-else
-{echo '<option value="TX">TEXAS</option>';}
+{echo 'TEXAS';}
 
 if ($home_state == "UT")
-{echo '<option value="UT" selected="selected">UTAH</option>';}
-else
-{echo '<option value="UT">UTAH</option>';}
+{echo 'UTAH';}
 
 if ($home_state == "VT")
-{echo '<option value="VT" selected="selected">VERMONT</option>';}
-else
-{echo '<option value="VT">VERMONT</option>';}
+{echo 'VERMONT';}
 
 if ($home_state == "VA")
-{echo '<option value="VA" selected="selected">VIRGINIA</option>';}
-else
-{echo '<option value="VA">VIRGINIA</option>';}
+{echo 'VIRGINIA';}
 
 if ($home_state == "WA")
-{echo '<option value="WA" selected="selected">WASHINGTON</option>';}
-else
-{echo '<option value="WA">WASHINGTON</option>';}
+{echo 'WASHINGTON';}
 
 if ($home_state == "WV")
-{echo '<option value="WV" selected="selected">WEST VIRGINIA</option>';}
-else
-{echo '<option value="WV">WEST VIRGINIA</option>';}
+{echo 'WEST VIRGINIA';}
 
 if ($home_state == "WI")
-{echo '<option value="WI" selected="selected">WISCONSIN</option>';}
-else
-{echo '<option value="WI">WISCONSIN</option>';}
+{echo 'WISCONSIN';}
 
 if ($home_state == "WY")
-{echo '<option value="WY" selected="selected">WYOMING</option>';}
-else
-{echo '<option value="WY">WYOMING</option>';}
+{echo 'WYOMING';}
 ?>
-</select>
+
 <br/>
 
 
 Political Party:
 <?php
-echo '
-<select id="political_party" name="political_party">
-<option></option>';
+
 if ($political_party == "DEMOCRAT")
-{echo '<option value="DEMOCRAT" selected="selected">DEMOCRAT</option>';}
-else
-{echo '<option value="DEMOCRAT">DEMOCRAT</option>';}
+{echo 'DEMOCRAT';}
 
 if ($political_party == "REPUBLICAN")
-{echo '<option value="REPUBLICAN" selected="selected">REPUBLICAN</option>';}
-else
-{echo '<option value="REPUBLICAN">REPUBLICAN</option>';}
+{echo '<REPUBLICAN';}
 
 if ($political_party == "INDEPENDENT")
-{echo '<option value="INDEPENDENT" selected="selected">INDEPENDENT</option>';}
-else
-{echo '<option value="INDEPENDENT">INDEPENDENT</option>';}
+{echo 'INDEPENDENT';}
 
 if ($political_party == "OTHER")
-{echo '<option value="OTHER" selected="selected">OTHER</option>';}
-else
-{echo '<option value="OTHER">OTHER</option>';}
+{echo 'OTHER';}
 
 ?>
-</select>
 <br/>
-	<input id="button1" type="submit" value="Change Profile" />
-      </form>
+	<a href="#" onclick="changeProfile()"> Edit Profile </a>
 
 
