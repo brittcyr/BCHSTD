@@ -4,15 +4,16 @@ body
 }
 #main
 {
-	height: auto;
+	height: 1200px;
 }
 
 #super
 {
+    height: 1150px;
 	width: 1000px;
 	margin: auto;
 	background-color: #acb3b4;
-	border-style: solid;
+border: solid;
 	border-radius: 10px;
 	opacity: .8;
 }
@@ -23,17 +24,21 @@ body
 	font-size: 20px;
 	text-align: center;
 	padding: 10px;
-	border-style: solid;
+	border-bottom: solid;
 }
 
 #score, #rank
 {
-	border-style: solid;
 	font-size: 40px;
 	padding: 10px;
     line-height: 80px;
 }
 
+#score
+{
+    border-right: solid;
+    border-width: 1px;
+}
 
 #rss
 {
@@ -49,6 +54,7 @@ body
     margin: 0px;
     margin-left: 25px;
     text-align: center;
+    border: none;
     border-bottom: solid 1px;
     width: 250px;
 }
@@ -59,6 +65,7 @@ body
     height: 510px;
     padding: 5px;
 }
+
 #welcome
 {
 	position: relative;
@@ -87,6 +94,14 @@ body
 	border-left: solid;
 	/*border-style: solid;*/
 	height: 360px;
+}
+
+#welcome h3
+{
+    border-bottom: solid;
+    border-width: 1px;
+    padding-bottom: 5px;
+    margin-top: 5px;
 }
 
 #welcome p
@@ -122,6 +137,16 @@ body
     margin-bottom: 0px;
 }
 
+#profile h1
+{
+    border: none;
+    border-bottom:solid;
+    border-width: 1px;
+    width: 290px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
 #profile a
 {
 	text-decoration: none;
@@ -151,16 +176,6 @@ body
 	height: 800px;
 }
 
-#my_results
-{
-	position: relative;
-	float: left;
-	width: 500px;
-	height: 560px;
-	padding: 20px;
-	border-style: solid;
-}
-
 .fb-like-box
 {
     background-color: white;
@@ -172,16 +187,6 @@ body
     border-right-bottom-radius: 10px;
     border-color: black;
     border-width: 2px;
-}
-
-
-#upcoming_picks
-{
-	position: relative;
-	float: left;
-	width: 400px;
-	padding: 20px;
-	border-style: solid;
 }
 
 #profile form
@@ -260,55 +265,64 @@ body
     font-size: 16px;
 }
 
-#my_results table
+.inner div h1
 {
-    width: 400px;
-    font-size: 16px;
-}
-
-#my_results td, #my_results th
-{
-    padding: 5px;
-    border: solid;
-    border-width: 2px;
     text-align: center;
+    border: none;
 }
-
-#my_results tr
-{
-    background-color: gray;
-}
-
-#my_results tr.alt
-{
-    background-color: white;
-}
-
-#upcoming_picks table
+.inner table
 {
     width: 100%;
-    font-size: 20px;
-    text-align: left;
+    font-size: 16px;
+    border: solid;
+}
+
+.inner td, .inner th
+{
+    padding: 0px;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    width:auto;
+    height: 30px;
+}
+
+#upcoming_picks, #my_results
+{
+    width: 480px;
+    height: 500px;
+    position: relative;
+    border-top: solid;
+    float: left;
+    padding: 10px;
 }
 
 
-#upcoming_picks table tr
+.inner tr
+{
+    background-color: gray;
+    width: 800px;
+}
+
+.inner h1
+{
+    border: solid;
+}
+
+
+.inner h1
+{
+    border: solid;
+}
+.inner tr.alt
+{
+    background-color: white;
+}
+
+.inner table tr
 {
     background-color: gray;
 }
-
-
-#upcoming_picks table td, th
-{
-    border: solid;
-    border-width: 2px;
-}
-
-#upcoming_picks table tr.alt
-{
-    background-color: white;
-}	
-
 
 
 #overlay
