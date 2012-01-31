@@ -18,6 +18,10 @@ $user = $_SESSION['user'];
 		<script type="text/javascript" src="javascript/home.js"> </script>
 	</head>
 	<body background="images/flag.jpg">
+		<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
 	      <div id="fb-root"></div>
 	      <script>(function(d, s, id) {
   	      	var js, fjs = d.getElementsByTagName(s)[0];
@@ -31,9 +35,9 @@ $user = $_SESSION['user'];
 			<div id="Logo">
 				<h3> chooseyourchief.com<h3>
 			</div>
-			<div id="NavBar">
+			<nav id="NavBar">
 			  <?php require_once 'navbar.php'; ?>
-			</div>
+			</nav>
 		</div>
 		</div>
 		
@@ -80,6 +84,27 @@ $user = $_SESSION['user'];
 		</div>
 		</div>
 		</div>
+		<script src="javascript/jquery.js"></script>
+		<script src="javascript/modernizr.js"></script>
+		<script>
+			(function($){
+				var nav = $("#navbar");
+
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						$(this).mouseenter(function(){
+							$(this).find("ul").stop(true, true).slideDown(70);
+						});
+
+						$(this).mouseleave(function(){
+							$(this).find("ul").stop(true, true).slideUp(200);
+						});
+					}
+				});
+			})(jQuery);
+		</script>
 	</body>
 	<div id="overlay">
 
