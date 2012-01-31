@@ -82,14 +82,13 @@ mysql_close($db);
 return $result;
 }
 
-function getemail($username)
+function getemail($username2)
 {
 require_once 'db.php';
-$username = htmlspecialchars($username);
-$query = "SELECT email 
+$username2 = htmlspecialchars($username2);
+$query = "SELECT email
 	  FROM users
-	  WHERE username='$username'";
-
+	  WHERE username='$username2'";
 $result = mysql_query($query) or die('bad query');
 $result = mysql_fetch_array($result);
 $result = $result[0];
@@ -223,7 +222,6 @@ mysql_close($db);
 function pull_friend_selections($username)
 {
 $email = getemail($username);
-return $email;
 require_once 'db.php';
 $query = "SELECT A.state, A.candidate 
 	  FROM user_selections AS A 
