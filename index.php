@@ -11,7 +11,7 @@ if(isset($_SESSION['user']))
 <html>
 
 	<head>
-		<title> Fantasy Politics </title>
+		<title> chooseyourchief </title>
 		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/index_menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/index_main.css"/>
