@@ -9,7 +9,7 @@ $name = $email_split[0];
 $domain = $email_split[1];
 
 $domain_split = explode('.',$domain);
-if (count($domain_split) <>  2){return 0;}
+if (count($domain_split) <  2){return 0;}
 
 return 1;
 }
