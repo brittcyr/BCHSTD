@@ -220,6 +220,22 @@ return $return;
 mysql_close($db);
 }
 
+function pull_friend_selections($email)
+{
+require_once 'db.php';
+$query = "SELECT A.state, A.candidate 
+	  FROM user_selections AS A 
+	  WHERE email='$email'";
+$result = mysql_query($query) or die('bad query');
+$return = '';
+while($row = mysql_fetch_array($result))
+{
+$return = "$return" . '!' . $row['state'] . '#' . $row['candidate'];
+}
+return $return;
+mysql_close($db);
+}
+
 
 function pull_popular_picks()
 {

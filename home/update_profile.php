@@ -36,6 +36,8 @@ if ($isvalidemail <> 0 && $isemailtaken <>0)
 $query = "UPDATE users SET email='$email' WHERE email='$oldemail'";
 $result = mysql_query($query) or die(mysql_error());
 $_SESSION['user'] = $email;}
+$query = "UPDATE user_selections SET email='$email' WHERE email='$oldemail'";
+$result = mysql_query($query) or die(mysql_error());
 }
 
 
