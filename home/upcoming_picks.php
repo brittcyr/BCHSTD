@@ -23,7 +23,7 @@ echo "<table>
       <th>Date</th>
       <th>Candidate</th>
       <th>State</th>
-      </tr> </br> \n";
+      </tr> \n";
 
 while($row = mysql_fetch_array($result))
   {
