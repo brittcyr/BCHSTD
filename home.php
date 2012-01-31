@@ -53,8 +53,10 @@ $user = $_SESSION['user'];
 				<?php $score = gettotalplayers(); echo "$score"; ?> </span>
 			</div>
 			<div id="rss">
-				<h1> Political News </h1>
+				<span id="rss_title"><h1>Political News</h1></span>
+				<div id='rss_box'>
 				<?php require_once 'home/getrss.php'; ?>
+				</div>
 			</div>
 			<div id="welcome">
 				<h3>
@@ -69,7 +71,7 @@ $user = $_SESSION['user'];
 				<h1> My Information </h1>
 			  	<?php require ("home/profile.php"); ?>
 			</div>
-			<div class="fb-like-box" data-href="https://www.facebook.com/pages/ChooseYourChiefcom/244029609004737" data-width="300" data-height="600" data-show-faces="true" data-stream="true" data-header="true">
+			<div class="fb-like-box" data-href="https://www.facebook.com/pages/ChooseYourChiefcom/244029609004737" data-width="322" data-height="570" data-colorscheme="light" data-show-faces="true" data-stream="true" data-header="true">
 			</div>
 
 		<div class="inner">
