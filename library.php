@@ -222,11 +222,11 @@ mysql_close($db);
 function pull_friend_selections($username2)
 {
 $email = getemail($username2);
-require_once 'db.php';
-$query = "SELECT state, candidate 
+require 'db.php';
+$query = "SELECT state, candidate
 	  FROM user_selections
 	  WHERE email='$email'";
-$result = mysql_query($query) or die("$query");
+$result = mysql_query($query) or die("$query" . "BAD QUERY");
 $return = '';
 while($row = mysql_fetch_array($result))
 {
