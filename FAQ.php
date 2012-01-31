@@ -3,7 +3,7 @@ require_once 'checkcookies.php';
 ?>
 <html>
 	<head>
-		<title>FAQ</title>
+		<title> chooseyourchief </title>
 		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/menu_bar.css" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/global.css" />
