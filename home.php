@@ -35,7 +35,7 @@ $user = $_SESSION['user'];
 			<div id="Logo">
 				<h3> chooseyourchief.com<h3>
 			</div>
-			<nav id="NavBar">
+			<nav id="navbar">
 			  <?php require_once 'navbar.php'; ?>
 			</nav>
 		</div>

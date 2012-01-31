@@ -68,27 +68,27 @@ require_once 'checkcookies.php';
 					Fantasy Politics was created for the MIT class 6.470. The goal of Fantasy Politics is to encourage an interest in politics. Most people are not very politically informed. We hope that when we throw a little competition into the mix, more people will be inspired to read up on candidates in order to make an educated selection.
 				</div>
 				
-				<script src="javascript/jquery.js"></script>
-				<script src="javascript/modernizr.js"></script>
-				<script>
-					(function($){
-						var nav = $("#navbar");
+			<script src="javascript/jquery.js"></script>
+			<script src="javascript/modernizr.js"></script>
+			<script>
+				(function($){
+					var nav = $("#navbar");
 
-						nav.find("li").each(function() {
-							if ($(this).find("ul").length > 0) {
-								$("<span>").text("^").appendTo($(this).children(":first"));
+					nav.find("li").each(function() {
+						if ($(this).find("ul").length > 0) {
+							$("<span>").text("^").appendTo($(this).children(":first"));
 
-								$(this).mouseenter(function(){
-									$(this).find("ul").stop(true, true).slideDown(70);
-								});
+							$(this).mouseenter(function(){
+								$(this).find("ul").stop(true, true).slideDown(70);
+							});
 
-								$(this).mouseleave(function(){
-									$(this).find("ul").stop(true, true).slideUp(200);
-								});
-							}
-						});
-					})(jQuery);
-				</script>	
+							$(this).mouseleave(function(){
+								$(this).find("ul").stop(true, true).slideUp(200);
+							});
+						}
+					});
+				})(jQuery);
+			</script>	
 	</body>
 
 </html>
