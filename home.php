@@ -86,7 +86,6 @@ $user = $_SESSION['user'];
 	
 	<div id="change_profile">
 		
-			<form class="forms" id="signup_form" action="signup.php" method="post">
 				<h1> Profile </h1>
 			  <?php require ("home/profile_change.php"); ?>
 	</div>
