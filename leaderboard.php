@@ -22,9 +22,9 @@ session_start();
 			<div id="logo">
 				<h3> chooseyourchief.com </h3>
 			</div>
-			<div id="navbar">
+			<nav id="navbar">
 			  <?php require_once 'navbar.php'; ?>
-			</div>		
+			</nav>		
 		</div>
 		</div>
 
