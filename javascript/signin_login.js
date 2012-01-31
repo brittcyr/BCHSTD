@@ -3,6 +3,7 @@ var long_enough = false;
 var pass_confirm = false;
 var email_used=true;
 var email_valid=false;
+var username_used=true;
 var username_valid=false;
 
 //Opens menu for login or signup if no menu is open already
@@ -14,7 +15,8 @@ function view(id)
 		document.getElementById(id).style.display="block";
 		document.getElementById("signup").style.display="block";
 		document.getElementById("button1").disabled=true;
-		if (id == "signup")
+
+		if (id == "outer")
 		{
 			document.getElementById("text1").value="";
 			document.getElementById("text2").value="";
@@ -104,19 +106,49 @@ function emailCheck()
 
 }
 
+function usernameCheck()
+{
+
+	var username = document.getElementById("text5").value;
+	if (username==""){
+		username_valid = false;
+		username_used = false;
+		return;
+	}
+
+
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function(){
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+			var response =xmlhttp.responseText;
+			if (response[0]== 0){
+				username_used = true;
+				alert("This username is already being used.");
+			} else {
+				 username_used = false; 
+			}if (response[1]== 0){
+				username_valid = false;
+			} else {
+				 username_valid = true; 
+			}
+
+		}
+	}
+	var url = "ajax_php_files/check_username.php?username="+username;
+	
+
+	xmlhttp.open("GET",url, true);
+	xmlhttp.send();
+
+}
+
 function checkSubmit(){
 
 	emailCheck();
 	passwordCheck();
+        usernameCheck();
 	
-	var username = document.getElementById("text5").value;
-	if (username == ""){
-		username_valid = false;
-	} else {
-		username_valid = true;
-	}
-	
-	if (long_enough && pass_confirm && !email_used && email_valid && username_valid){
+	if (long_enough && pass_confirm && !email_used && email_valid && !username_used && username_valid){
 		document.getElementById("button1").disabled=false;
 	}else{
 		document.getElementById("button1").disabled=true;
