@@ -13,6 +13,10 @@ session_start();
 	</head>
 
 	<body background="images/flag.jpg">
+		<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
 		<div id="top">
 		<div class="inner">
 			<div id="logo">
@@ -69,7 +73,29 @@ else {echo "<tr class='alt'>" . "\n";}
   }
 echo "\n </table>" . "\n";
 ?>	
-		</div>	
+		</div>
+		
+		<script src="javascript/jquery.js"></script>
+		<script src="javascript/modernizr.js"></script>
+		<script>
+			(function($){
+				var nav = $("#navbar");
+
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						$(this).mouseenter(function(){
+							$(this).find("ul").stop(true, true).slideDown(70);
+						});
+
+						$(this).mouseleave(function(){
+							$(this).find("ul").stop(true, true).slideUp(200);
+						});
+					}
+				});
+			})(jQuery);
+		</script>	
 	</body>
 </html>
 
