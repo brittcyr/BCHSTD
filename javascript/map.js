@@ -24,8 +24,8 @@ function changeMode(new_mode){
     mode=new_mode
 	if (mode == "choices")
 	{
-		document.getElementById("page_title").innerHTML="My Selections";
-		document.getElementById("hint").innerHTML="Click on the states to make your picks";
+		document.getElementById("page_title").innerHTML="My Predictions";
+		document.getElementById("hint").innerHTML="Click on the states to predict the winner";
 		getUpdate();
 	}
 	if (mode == "results")
@@ -40,7 +40,15 @@ function changeMode(new_mode){
 		document.getElementById("page_title").innerHTML="Poll Results";
 		document.getElementById("hint").innerHTML="These are the popular choices";
 	}
+	if (mode == "friend")
+	{
+		document.getElementById("page_title").innerHTML="Friend's Predictions";
+		document.getElementById("hint").innerHTML="These are your friend's predictions";
+		var friend = document.getElementById("friend").value;
+		getFriend(friend);
+	}
 }
+
 
 
 function onHover(state_id){
@@ -193,6 +201,43 @@ function getProjections()
 	}
 
 	xmlhttp.open("GET","ajax_php_files/get_poll.php",true);
+	xmlhttp.send();
+
+}
+
+function getFriend(friend)
+{
+
+	var j;
+	var temp_state;
+	for (j=0; j<=49; j++){
+		temp_state=STATES[j];
+		document.getElementById(temp_state).style.fill="gray";
+	}
+
+
+
+
+	xmlhttp=new XMLHttpRequest();
+
+
+	xmlhttp.onreadystatechange=function(){
+		
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+			var result = xmlhttp.responseText.split('!');
+			var i = 1;
+			for (i=1; i< result.length; i++){
+				var temp = result[i].split('#');
+				document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
+			}
+		}
+					
+		
+	}
+
+	var url = "ajax_php_files/get_friend.php?friend="+friend
+
+	xmlhttp.open("GET", url,true);
 	xmlhttp.send();
 
 }

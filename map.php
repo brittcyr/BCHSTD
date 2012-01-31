@@ -53,6 +53,7 @@ $user = $_SESSION['user'];
 						<input type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> Choices </br>
 						<input type='radio' name='r2' value="RESULTS" onClick="changeMode('results')"> Results </br>
 						<input type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Poll Results </br>
+						<input type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('friend')"> Friend: <input type="text" id="friend" /> </br>
 					</form>
 					<form id='f1'>
 						<h3> Make Your Picks </h3>
