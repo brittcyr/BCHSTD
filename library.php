@@ -223,6 +223,7 @@ mysql_close($db);
 function pull_friend_selections($username)
 {
 $email = getemail($username);
+return $email;
 require_once 'db.php';
 $query = "SELECT A.state, A.candidate 
 	  FROM user_selections AS A 
