@@ -95,10 +95,10 @@ if(isset($_SESSION['user']))
 					Confirm Password <br/>
 				</div>
 				<div id="form_b">
-					<input id="text5" type="text" name="username" onkeyup="checkSubmit()"/><br/> 
-					<input id="text3" type="text" name="user_email" onkeyup="checkSubmit()" /> <br/>
-					<input id="text1" type="password" name="user_password" onkeyup="checkSubmit()"/> <br/>
-					<input id="text2" type="password" name="confirm_password" onkeyup="checkSubmit()"/><br/>
+					<input id="text5" type="text" name="username"/><br/> 
+					<input id="text3" type="text" name="user_email" /> <br/>
+					<input id="text1" type="password" name="user_password" onkeyup="passwordCheck()"/> <br/>
+					<input id="text2" type="password" name="confirm_password" onkeyup="passwordCheck()"/><br/>
 				</div>
 				<div id='x_check'>
 					<img id="x" src="images/x.png"/> <img id="check" src="images/check.png" style="display:none;"/>
@@ -106,7 +106,7 @@ if(isset($_SESSION['user']))
 				<div id="help_message"> Reminder: The password must be at least six characters or numbers
 				 </div>
 				<div id="button1div">
-					<input id="button1" type="submit" value="Sign Up!!" />
+					<button id="button1" type="button" onclick="checkSubmit()"/> Sign Up!! </button>
 				</div>
       			</form>
 		</div>
