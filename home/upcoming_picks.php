@@ -28,6 +28,7 @@ echo "<table>
 while($row = mysql_fetch_array($result))
   {
 $date = $row['DATE'];
+$date = formatdate($date);
 $state = $row['STATE'];
 $query = "SELECT CANDIDATE
 	  FROM user_selections

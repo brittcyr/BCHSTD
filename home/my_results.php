@@ -43,6 +43,7 @@ if ($parity==0)
 else
  { echo "<tr>" . "\n";}
 $date = $row['DATE'];
+$date = formatdate($date);
 $pick = $row['PICK'];
 if ($pick == '')
 {$pick = "&nbsp;";}
