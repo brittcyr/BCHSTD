@@ -363,7 +363,7 @@ $query = "SELECT username
 $result = mysql_query($query) or die($query);
 $return = '';
 while($row = mysql_fetch_array($result))
-{$return .= $row['username'] . '#';}
+{$return .= '#' . $row['username'];}
 mysql_close($db);
 return $return;
 }
