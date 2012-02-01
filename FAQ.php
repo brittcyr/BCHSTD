@@ -34,6 +34,7 @@ require_once 'checkcookies.php';
 				<a href="#win">How do I increase my chances of winning?</a></br>
 				<a href="#how">How do I play?</a></br>
 				<a href="#why">Why was Fantasy Politics created?</a></br>
+				<a href="#contact">How do I contact the makers of this awesome site?</a></br>
 			</div>
 			<div id="text">
 				<div class="q">
@@ -67,6 +68,12 @@ require_once 'checkcookies.php';
 				</div>
 				<div class="answer">
 					Fantasy Politics was created for the MIT class 6.470. The goal of Fantasy Politics is to encourage an interest in politics. Most people are not very politically informed. We hope that when we throw a little competition into the mix, more people will be inspired to read up on candidates in order to make an educated selection.
+				</div>
+				<div class="q">
+				<a name="contact"></a><b>How do I contact the makers of this awesome site?</b>
+				</div>
+				<div class="answer">
+					You can contact us at <a href="mailto:bchstd@mit.edu">BCHSTD@mit.edu</a>.
 				</div>
 				
 			<script src="javascript/jquery.js"></script>
