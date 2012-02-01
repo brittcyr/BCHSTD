@@ -40,7 +40,7 @@ $user = $_SESSION['user'];
 			</div>
 			<div id="left">
 				<div id="score">
-					score:
+					my score:
 	<?php
 	echo getscore($_SESSION['user']);
 	?>

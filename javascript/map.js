@@ -22,6 +22,9 @@ var STATES = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 
 
 
 function changeMode(new_mode){
+
+
+	
     mode=new_mode
 	if (mode == "choices")
 	{
@@ -225,20 +228,20 @@ function getFriend(friend)
 	xmlhttp.onreadystatechange=function(){
 		
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
-			if (xmlhttp.responseText == ""){
+			if (xmlhttp.responseText == "0"){
 				close2();
 				changeMode(mode);
 				return;
 			}
 			var result = xmlhttp.responseText.split('!');
 			var i = 1;
+			document.getElementById("hint").innerHTML = friend+"'s score: "+result[0];
 			for (i=1; i< result.length; i++){
 				var temp = result[i].split('#');
 				document.getElementById(temp[0]).style.fill=CANDIDATE_COLORS[temp[1]];
 			}
 			
 		document.getElementById("page_title").innerHTML=friend+"'s Predictions";
-		document.getElementById("hint").innerHTML="These are "+friend+ "'s predictions";
 		}
 					
 		
