@@ -28,12 +28,13 @@ h1
     border-width: 2px;
 	border-radius: 5px;
     text-align: center;
+    color: black;
 }
 
 
 #main tr
 {
-    background-color: gray;
+    background-color:#ADDFFF;
 }
 
 #main tr.alt

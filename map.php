@@ -57,10 +57,10 @@ $user = $_SESSION['user'];
 					</form>
 					<form id='f1'>
 						<h3> Select A Candidate </h3>
-						<input type='radio' name='r1' value="ROMNEY" onClick="changeCandidate('ROMNEY')" checked/> <span id="ROMNEY"> Romney </span> </br>
-						<input type='radio' name='r1' value="PAUL" onClick="changeCandidate('PAUL')"/> <span id="PAUL">Paul</span> </br>
-						<input type='radio' name='r1' value="SANTORUM" onClick="changeCandidate('SANTORUM')"/> <span id="SANTORUM"> Santorum</span></br>
-						<input type='radio' name='r1' value="GINGRICH" onClick="changeCandidate('GINGRICH')"/> <span id="GINGRICH"> Gingrich </span></br>
+						<input type='radio' name='r1' value="ROMNEY" onClick="changeCandidate('ROMNEY')" id="R" checked/> <span id="ROMNEY"><label for="R">Romney</label></span> </br>
+						<input type='radio' name='r1' value="PAUL" onClick="changeCandidate('PAUL')" id="P" /> <span id="PAUL"><label for="P">Paul</label></span> </br>
+						<input type='radio' name='r1' value="SANTORUM" onClick="changeCandidate('SANTORUM')" id="S" /> <span id="SANTORUM"><label for="S">Santorum</label></span></br>
+						<input type='radio' name='r1' value="GINGRICH" onClick="changeCandidate('GINGRICH')" id="G" /> <span id="GINGRICH"><label for="G">Gingrich</label></span></br>
 					</form>
 				</div>
 			</div>

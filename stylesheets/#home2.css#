@@ -324,7 +324,7 @@ border: solid;
 
 .inner table tr
 {
-    background-color:#ADDFFF;
+    background-color: gray;
 }
 
 
