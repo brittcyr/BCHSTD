@@ -117,6 +117,14 @@ svg.state-map
 	top: 100px;
 }
 
+#autocomplete
+{
+	list-style: none;
+	border-style: solid;
+	background-color: black;
+	color: white;
+}
+
 
 #close
 {
