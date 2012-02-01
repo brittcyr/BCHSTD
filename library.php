@@ -339,4 +339,24 @@ return "$month" . " " . "$day";
 }
 
 
+
+function autocompletesuggestion($usernamepart)
+{
+require 'db.php';
+$usernamepart = htmlspecialchars($usernamepart);
+$usernamepart = strtoupper($usernamepart);
+$query = "SELECT username
+	  FROM users
+	  WHERE UCASE(username) LIKE '%" . "$usernamepart" . "%'
+          LIMIT 5";
+$result = mysql_query($query) or die($query);
+$return = '';
+while($row = mysql_fetch_array($result))
+{$return .= $row['username'] . '#';}
+mysql_close($db);
+return $return;
+}
+
+
+
 ?>
