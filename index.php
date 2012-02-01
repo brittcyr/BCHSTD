@@ -12,6 +12,7 @@ if(isset($_SESSION['user']))
 
 	<head>
 		<title> Fantasy Politics </title>
+		<meta name="google-site-verification" content="x93G0XngZdiatTaEM3RvOvkW9Uvk6Sj3gvgV6NkwA6g"/>
 		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/index_menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/index_main.css"/>
@@ -118,10 +119,15 @@ if(isset($_SESSION['user']))
 
 
 
+<div id="outer2"
+<?php
+if (!isset($_SESSION['failed']))
+{echo "style='display:none;'";}
+?>
+> </div>
 
 
-
-<div id="failedlogin" onload="alert('hi'); document.getElementById('outer').style.display = 'block';" 
+<div id="failedlogin"
 <?php
 if (!isset($_SESSION['failed']))
 {echo "style='display:none;'";}
@@ -129,7 +135,7 @@ else
 {unset($_SESSION['failed']);}
 ?>
 >
-			<a id="close" href="#" onclick="hide2('outer')"> <img src="icon_images/close.gif"/></a>
+			<a id="close" href="#" onclick="hide2('outer2')"> <img src="icon_images/close.gif"/></a>
 				<h1> Login Failed </h1>
 				<h1> Try Again or Send Recovery Email </h1>
 			<form class="forms" id="failedloginform" action="login.php" method="post">
