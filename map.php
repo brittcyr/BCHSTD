@@ -130,8 +130,15 @@ $user = $_SESSION['user'];
 		</div>
 		<div id="friend_select">
 			<a id="close" href="#" onclick="close2()"> <img src="icon_images/close.gif"/></a>
-			<div id="div1"> Select a friend: <input type="text" id="friend_text" /> 
+			<div id="div1"> Select a friend: <input type="text" id="friend_text" onkeyup="autocomplete();" /> 
 			<a id="go" href="#" onclick="changeMode('friend'); hide();"> Go! </a>
+			<ul id="autocomplete">
+				<li id="ac1"> Suggestion 1 </li>
+				<li id="ac2"> Suggestion 2 </li>
+				<li id="ac3"> Suggestion 3 </li>
+				<li id="ac4"> Suggestion 4 </li>
+				<li id="ac5"> Suggestion 5 </li>
+			</ul>
 			</div>
 		</div>
 

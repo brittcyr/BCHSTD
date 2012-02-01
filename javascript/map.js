@@ -251,6 +251,37 @@ function getFriend(friend)
 
 }
 
+function autocomplete()
+{
+
+	var inp = document.getElementById("friend_text").value;
+	xmlhttp=new XMLHttpRequest();
+
+	xmlhttp.onreadystatechange=function(){
+		
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+			alert(xmlhttp.responseText);
+			var result2 = xmlhttp.responseText.split('#');
+			var min = Math.min(result2.length, 5);
+			for (i=1; i<5; i++){
+				if (i < min){
+					document.getElementById('ac'+i).innerHTML = result2[i];
+				}
+			}
+							
+
+		}
+	}
+				
+
+
+	var url = "ajax_php_files/autocomplete.php?inp="+inp;
+	
+	xmlhttp.open("GET",url, true);
+	xmlhttp.send();
+
+}
+
 
 
 function view()
