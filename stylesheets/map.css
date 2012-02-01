@@ -125,6 +125,11 @@ svg.state-map
 	color: white;
 }
 
+#autocomplete li
+{
+	display: none;
+}
+
 
 #close
 {
