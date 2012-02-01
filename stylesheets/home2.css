@@ -303,7 +303,7 @@ border: solid;
 
 .inner tr
 {
-    background-color: #ADDFFF;
+    background-color: gray;
     width: 800px;
 }
 
@@ -324,7 +324,7 @@ border: solid;
 
 .inner table tr
 {
-    background-color:#ADDFFF;
+    background-color: #ADDFFF;
 }
 
 
