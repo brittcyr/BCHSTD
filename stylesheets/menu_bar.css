@@ -205,9 +205,15 @@ nav ul ul a
 
 .csstransforms ul a span 
 { 
+    display: inline-block;
     -moz-transform:rotate(-180deg);
     -webkit-transform:rotate(-180deg); 
     margin-left: 4px;
+    height: 15px;
+    line-height: 100%;
+    vertical-align: middle;
+    padding-top: 5px;
+    
 }
 
 
