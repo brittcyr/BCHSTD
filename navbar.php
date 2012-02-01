@@ -8,14 +8,14 @@ if (isset($_SESSION['user']))
         <a href="map.php">Map</a>
 </li>
 <li>
-        <a href="#">Home</a>
+        <a href="home.php">Home</a>
         <ul>
         <li><a href="home.php"> My Profile </a></li>
         <li><a href="leaderboard.php">Leaderboard</a></li>
         </ul>
 </li>
 <li>
-        <a href="#">Candidates</a>
+        <a href="candidates.php">Candidates</a>
         <ul>
         <li><a href="http://www.mittromney.com" target="_blank">Mitt Romney</a></li>
         <li><a href="http://www.ronpaul2012.com" target="_blank">Ron Paul</a></li>
@@ -25,7 +25,7 @@ if (isset($_SESSION['user']))
         </ul>
 </li>
 <li>
-        <a href="#">Account</a>
+        <a href="home.php">Account</a>
         <ul>
         <li><a href="FAQ.php">FAQ</a></li>
         <li><a href="about_us.php">About Us</a></li>

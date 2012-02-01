@@ -52,7 +52,7 @@ $user = $_SESSION['user'];
 						<h3> Map Type </h3>
 						<input id="choices" type='radio' name='r2' value="CHOICES" onClick="changeMode('choices')" checked> My Predictions </br>
 						<input id="results" type='radio' name='r2' value="RESULTS" onClick="changeMode('results')"> Primary Results </br>
-						<input id="projections" type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Poll Results </br>
+						<input id="projections" type='radio' name='r2' value="PROJECTIONS" onClick="changeMode('projections')"> Cumulative Picks </br>
 						<input id="friend" type='radio' name='r2' value="FRIEND" onClick="view()"> Friend's Predictions </br>
 					</form>
 					<form id='f1'>
