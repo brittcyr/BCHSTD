@@ -121,7 +121,7 @@ if(isset($_SESSION['user']))
 
 
 
-<div id="failedlogin" 
+<div id="failedlogin" onload="alert('hi'); document.getElementById('outer').style.display = 'block';" 
 <?php
 if (!isset($_SESSION['failed']))
 {echo "style='display:none;'";}
@@ -139,7 +139,7 @@ else
 				</div>
 				<div id="form_d">
 					<input id="text6" type="text" name="user_email"/><br/> 
-					<input id="text7" type="text" name="user_password"/> <br/>
+					<input id="text7" type="password" name="user_password"/> <br/>
 				</div>
 				<div id="button3div">
 					<input id="button3" type="submit" value="Login" />
