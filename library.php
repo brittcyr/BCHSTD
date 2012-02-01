@@ -238,7 +238,8 @@ $query = "SELECT state, candidate
 	  FROM user_selections
 	  WHERE email='$email'";
 $result = mysql_query($query) or die("$query" . "BAD QUERY");
-$return = "getscore($email)";
+$return = getscore($email);
+$return = "$return";
 while($row = mysql_fetch_array($result))
 {
 $return = "$return" . '!' . $row['state'] . '#' . $row['candidate'];
