@@ -28,10 +28,10 @@ if (count($result)==0){exit();}
 echo "<table>
       <tr>
       <th>Date</th>
-      <th>Pick</th>
       <th>State</th>
-      <th>Winner</th>
       <th>Delegates</th>
+      <th>Winner</th>
+      <th>Your Pick</th>
       <th>Points</th>
       </tr> \n";
 
@@ -53,10 +53,10 @@ if ($winner == '')
 {$winner = "&nbsp;";}
 $delegates = $row['DELEGATES'];
   echo "<td>" . $date . "</td>" . "\n";
-  echo "<td>" . $pick . "</td>" . "\n";
   echo "<td>" . $state . "</td>" . "\n";
-  echo "<td>" . $winner . "</td>" . "\n";
   echo "<td>" . $delegates . "</td>" . "\n";
+  echo "<td>" . $winner . "</td>" . "\n";
+  echo "<td>" . $pick . "</td>" . "\n";
 $parity = ($parity +1)%2;
 $score = 0;
 if ($pick==$winner){$score = $delegates;}
