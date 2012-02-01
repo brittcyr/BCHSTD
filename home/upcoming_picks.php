@@ -21,8 +21,8 @@ $result = mysql_query($query) or die ("$query");
 echo "<table>
       <tr>
       <th>Date</th>
-      <th>Candidate</th>
       <th>State</th>
+      <th>Your Pick</th>
       </tr> \n";
 
 while($row = mysql_fetch_array($result))
@@ -45,8 +45,8 @@ if ($count==1)
  {echo "<tr>" . "\n";}
 else {echo "<tr class='alt'>" . "\n";}
   echo "<td>" . $date . "</td>" . "\n";
-  echo "<td>" . $candidate . "</td>" . "\n";
   echo "<td>" . $state . "</td>" . "\n";
+  echo "<td>" . $candidate . "</td>" . "\n";
   echo "</tr>" . "\n";
 $count=($count+1)%2;
   }
