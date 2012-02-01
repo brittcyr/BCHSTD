@@ -160,6 +160,17 @@ function insert_user_selection($state, $candidate)
 {
 require_once 'db.php';
 session_start();
+
+$query = "SELECT COUNT(*) AS COUNT
+	  FROM results
+	  WHERE candidate = ''
+	    AND state = '$state'";
+$result = mysql_query($query) or die($query);
+$result = mysql_fetch_array($result);
+$result = $result['COUNT'];
+if ($result == 0)
+{return ;}
+
 $email = $_SESSION['user'];
 if ($email == ''){return;}
 $query = "SELECT count(*) 
