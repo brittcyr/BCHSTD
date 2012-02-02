@@ -13,6 +13,8 @@ if(isset($_SESSION['user']))
 	<head>
 		<title> Fantasy Politics </title>
 		<meta name="google-site-verification" content="x93G0XngZdiatTaEM3RvOvkW9Uvk6Sj3gvgV6NkwA6g"/>
+		<meta name="keywords" content="fantasy, politics, chief, choose">
+		<meta name="description" content="Play Fantasy Politics!">
 		<link rel="SHORTCUT ICON" href="images/icon.jpg"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/index_menu_bar.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/index_main.css"/>
