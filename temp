@@ -1,2 +1,0 @@
-		document.getElementById("page_title").innerHTML="Friend's Predictions";
-		document.getElementById("hint").innerHTML="These are your friend's predictions";
